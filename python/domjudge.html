@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domjudge</title>
+    <link rel="stylesheet" href="./python.css">
+    <link rel="stylesheet" href="./border-cards.css">
+    <link rel="stylesheet" href="./Glass morphism.css">
+</head>
+
+<body>
+    <div id="Python">
+
+        <a href="./python.html" class="Python-logo">Back</a>
+        <div class="python">
+
+            <div class="container2">
+                <div class="box">
+                    <span></span>
+                    <div class="content2">
+                        <h2>未讀訊息1</h2>
+                        <p>還想看更多?</p>
+                        <p>到底了喔!</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <p
+            style="color:rgb(255, 238, 140);display: flex;justify-content: center;text-shadow: 0 0 1em rgb(255, 229, 79),0 0 1em rgb(255, 230, 88);border-radius: 10px;font-size: 30px;">
+            ________________________________________________________________________________
+        </p>
+        <div id="morphism">
+            <div class="box">
+                <span></span>
+                <div class="content">
+                    <h2>103數學問題</h2>
+                    <p>def is_prime(num):</p>
+                    <p>　　for i in range(2,num//2+1):</p>
+                    <p>　　　if num % i == 0 :</p>
+                    <p>　　　　　return False</p>
+                    <p>　　return True</p>
+                    <p>n = int(input())</p>
+                    <p>for _ in range(n):</p>
+                    <p>　　a,b = list(map(int,input().split(',')))</p>
+                    <p>　　ans = 'N'</p>
+                    <p>　　if b - a >= 2:</p>
+                    <p>　　　　if is_prime(a) and is_prime(b):</p>
+                    <p>　　　　　　ans = "Y"</p>
+                    <p>　　print(ans)</p>
+
+                </div>
+            </div>
+
+
+            <div class="box">
+                <span></span>
+                <div class="content">
+                    <h2>103買郵票</h2>
+                    <p>n = int(input())</p>
+                    <p>for i in range(n):</p>
+                    <p>　　a,b,c,d = list(map(int,input().split(',')))</p>
+                    <p>　　for i in range(a+1):</p>
+                    <p>　　　　for j in range(a+1):</p>
+                    <p>　　　　　　if b*i + c*j == d and j+i == a:</p>
+                    <p>　　　　　　　　print(f'{i},{j}')</p>
+
+                </div>
+            </div>
+
+
+            <div class="box">
+                <span></span>
+                <div class="content">
+                    <h2>103在兩字串中,共同出現的英文字母</h2>
+                    <p>for i in range(int(input())):</p>
+                    <p>　　Lstr = []</p>
+                    <p>　　string_a = input()</p>
+                    <p>　　string_b = input()</p>
+                    <p>　　if len(string_a) > len(string_b):</p>
+                    <p>　　　　string_a, string_b = string_b, string_a</p>
+                    <p>　　for i in string_a:</p>
+                    <p>　　　　if i in string_b:</p>
+                    <p>　　　　　　Lstr.append(i)</p>
+                    <p>　　Lstr = list(set(Lstr))</p>
+                    <p>　　Lstr.sort()</p>
+                    <p>　　if Lstr != []:</p>
+                    <p>　　　　print(''.join(Lstr))</p>
+                    <p>　　else:</p>
+                    <p>　　　　print('N')</p>
+                </div>
+            </div>
+            <div class="box">
+                <span></span>
+                <div class="content">
+                    <h2>Card three</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi beatae impedit dicta atque
+                        culpa
+                        sit natus ullam deserunt quaerat repellat aliquam praesentium ratione fugiat vel debitis,
+                        reprehenderit aspernatur laborum quis?</p>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</body>
+
+</html>
