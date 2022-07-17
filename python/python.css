@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: consolas;
+    text-decoration: none;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #111;
+
+}
+
+#Python .Python-logo {
+
+    color: rgb(100, 100, 100);
+    background-color: rgba(255, 255, 255, 0.752);
+    border-radius: 6px;
+    font-size: 30px;
+    margin: 30px auto auto auto;
+
+    width: 200px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#Python .Python-logo:hover {
+    transition: 0.5s;
+    width: 250px;
+}   
