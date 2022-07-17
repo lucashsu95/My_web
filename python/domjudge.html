@@ -21,10 +21,8 @@
                 <div class="box">
                     <span></span>
                     <div class="content2">
-                        <h2>未讀訊息1</h2>
-                        <p>還想看更多?</p>
-                        <p>到底了喔!</p>
-
+                        <h2>未讀訊息1:</h2>
+                        <h3>到底了喔!~</h2>
                     </div>
                 </div>
             </div>
@@ -38,7 +36,7 @@
             <div class="box">
                 <span></span>
                 <div class="content">
-                    <h2>103數學問題</h2>
+                    <h2>103A數學問題</h2>
                     <p>def is_prime(num):</p>
                     <p>　　for i in range(2,num//2+1):</p>
                     <p>　　　if num % i == 0 :</p>
@@ -60,7 +58,7 @@
             <div class="box">
                 <span></span>
                 <div class="content">
-                    <h2>103買郵票</h2>
+                    <h2>103B買郵票</h2>
                     <p>n = int(input())</p>
                     <p>for i in range(n):</p>
                     <p>　　a,b,c,d = list(map(int,input().split(',')))</p>
@@ -76,7 +74,7 @@
             <div class="box">
                 <span></span>
                 <div class="content">
-                    <h2>103在兩字串中,共同出現的英文字母</h2>
+                    <h2>103C在兩字串中,共同出現的英文字母</h2>
                     <p>for i in range(int(input())):</p>
                     <p>　　Lstr = []</p>
                     <p>　　string_a = input()</p>
@@ -92,6 +90,175 @@
                     <p>　　　　print(''.join(Lstr))</p>
                     <p>　　else:</p>
                     <p>　　　　print('N')</p>
+                </div>
+            </div>
+            <div class="box">
+                <span></span>
+                <div class="content">
+                    <h2>103D計算兩個人之間共同朋友的數量</h2>
+                    <p>n = int(input())</p>
+                    <p>for i in range(n):</p>
+                    <p>　　ID_a = input().split()</p>
+                    <p>　　ID_b = input().split()</p>
+                    <p>　　ID_a.pop(0)</p>
+                    <p>　　ID_b.pop(0)</p>
+                    <p>　　if len(ID_a) > len(ID_b):</p>
+                    <p>　　　　ID_a, ID_b = ID_b, ID_a</p>
+                    <p>　　Lcount = []</p>
+                    <p>　　for i in ID_b:</p>
+                    <p>　　　　if (i in ID_a )and( i not in Lcount):</p>
+                    <p>　　　　　　Lcount.append(i)</p>
+                    <p>　　# Lcount = list(set(Lcount))</p>
+                    <p>　　print(len(Lcount))</p>
+                </div>
+            </div>
+            <div class="box">
+                <span></span>
+                <div class="content">
+                    <h2>103E撲克牌遊戲</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi beatae impedit dicta atque
+                        culpa
+                        sit natus ullam deserunt quaerat repellat aliquam praesentium ratione fugiat vel debitis,
+                        reprehenderit aspernatur laborum quis?</p>
+                </div>
+            </div>
+            <div class="box">
+                <span></span>
+                <div class="content">
+                    <p>
+                    <h2>103F費氏數列</h2>
+                    </p>
+                    <p>n = int(input())</p>
+                    <p>fib = [1, 2]</p>
+                    <p>while fib[-1] < 10000:</p>
+                            <p>　　fib.append(fib[-1] + fib[-2])</p>
+
+                            <p>fib = fib[:-1]</p>
+                            <p>fib = fib[::-1]</p>
+
+                            <p>def f(x):</p>
+                            <p>　　output = ''</p>
+                            <p>　　for i in fib:</p>
+                            <p>　　　　if x >= i:</p>
+                            <p>　　　　　　x -= i</p>
+                            <p>　　　　　　output += '1'</p>
+                            <p>　　　　elif output != '':</p>
+                            <p>　　　　　　output += '0'</p>
+
+                            <p>　　return output</p>
+
+
+                            <p>for _ in range(n):</p>
+                            <p>　　x = int(input())</p>
+                            <p>　　y = f(x)</p>
+                            <p>　　print(f'{x}={y}')</p>
+                </div>
+            </div>
+            <div class="box">
+                <span></span>
+                <div class="content">
+                    <h2>104A電梯電費計算系統</h2>
+                    <p>Ln = int(input())</p>
+                    <p>for i in range(Ln):</p>
+                    <p>　　Ln2 = int(input())</p>
+                    <p>　　Lstr = list(map(int,input().split(',')))</p>
+                    <p>　　Lmoney = 0</p>
+                    <p>　　for j in range(1,len(Lstr)):</p>
+                    <p>　　　　if Lstr[j-1] < Lstr[j]:</p>
+                            <p>　　　　　　Lmoney += (Lstr[j] - Lstr[j-1]) * 20</p>
+                            <p>　　　　else:</p>
+                            <p>　　　　　　Lmoney += (Lstr[j-1] - Lstr[j]) * 10</p>
+                            <p>　　print(Lmoney)</p>
+                </div>
+            </div>
+            <div class="box">
+                <span></span>
+                <div class="content">
+                    <h2>104B樂透</h2>
+                    <p>Ln = int(input())</p>
+                    <p>Lans = input().split(',')</p>
+                    <p>for i in range(Ln):</p>
+                    <p>　　Lcut = Lcut2 = Lcut3 = Lcut4 = Lcut5 = 0</p>
+                    <p>　　Linput = input().split(',')</p>
+                    <p>　　Linput2 = []</p>
+                    <p>　　for j in range(0,6):</p>
+                    <p>　　　　Linput2.append([])</p>
+                    <p>　　　　for k in range(len(Linput)):</p>
+                    <p>　　　　　　Linput2[j].append(Linput[k])</p>
+                    <p>　　　　Linput2[j].remove(Linput[j])</p>
+                    <p>　　for p in Linput2:</p>
+                    <p>　　　　Lcut = 0</p>
+                    <p>　　　　for m in p:</p>
+                    <p>　　　　　　if m in Lans:</p>
+                    <p>　　　　　　　　Lcut += 1</p>
+                    <p>　　　　　　# print('m in Lans:',m,p)</p>
+                    <p>　　　　　　# print(Lcut)</p>
+                    <p>　　　　if Lcut == 5:Lcut5 += 1</p>
+                    <p>　　　　elif Lcut == 4:Lcut4 += 1</p>
+                    <p>　　　　elif Lcut == 3:Lcut3 += 1</p>
+                    <p>　　　　elif Lcut == 2:Lcut2 += 1</p>
+                    <p>　　print(f'{Lcut2},{Lcut3},{Lcut4},{Lcut5}')</p>
+
+                </div>
+            </div>
+            <div class="box">
+                <span></span>
+                <div class="content">
+                    <h2>Card three</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi beatae impedit dicta atque
+                        culpa
+                        sit natus ullam deserunt quaerat repellat aliquam praesentium ratione fugiat vel debitis,
+                        reprehenderit aspernatur laborum quis?</p>
+                </div>
+            </div>
+            <div class="box">
+                <span></span>
+                <div class="content">
+                    <h2>Card three</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi beatae impedit dicta atque
+                        culpa
+                        sit natus ullam deserunt quaerat repellat aliquam praesentium ratione fugiat vel debitis,
+                        reprehenderit aspernatur laborum quis?</p>
+                </div>
+            </div>
+            <div class="box">
+                <span></span>
+                <div class="content">
+                    <h2>Card three</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi beatae impedit dicta atque
+                        culpa
+                        sit natus ullam deserunt quaerat repellat aliquam praesentium ratione fugiat vel debitis,
+                        reprehenderit aspernatur laborum quis?</p>
+                </div>
+            </div>
+            <div class="box">
+                <span></span>
+                <div class="content">
+                    <h2>Card three</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi beatae impedit dicta atque
+                        culpa
+                        sit natus ullam deserunt quaerat repellat aliquam praesentium ratione fugiat vel debitis,
+                        reprehenderit aspernatur laborum quis?</p>
+                </div>
+            </div>
+            <div class="box">
+                <span></span>
+                <div class="content">
+                    <h2>Card three</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi beatae impedit dicta atque
+                        culpa
+                        sit natus ullam deserunt quaerat repellat aliquam praesentium ratione fugiat vel debitis,
+                        reprehenderit aspernatur laborum quis?</p>
+                </div>
+            </div>
+            <div class="box">
+                <span></span>
+                <div class="content">
+                    <h2>Card three</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi beatae impedit dicta atque
+                        culpa
+                        sit natus ullam deserunt quaerat repellat aliquam praesentium ratione fugiat vel debitis,
+                        reprehenderit aspernatur laborum quis?</p>
                 </div>
             </div>
             <div class="box">
