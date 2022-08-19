@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domjudge</title>
+    <link rel="stylesheet" href="../python.css">
+    <link rel="stylesheet" href="../border-cards.css">
+    <link rel="stylesheet" href="../Glass morphism.css">
+</head>
+
+<body>
+    <div id="Python">
+
+        <a href="#" onclick="history.back()" class="Python-logo">Go back</a>
+        <div class="python">
+
+            <div class="container2">
+                <div class="box">
+                    <span></span>
+                    <div class="content2">
+                        <h2>未讀訊息1:</h2>
+                        <h3>到底了喔!~</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <p
+            style="color:rgb(255, 238, 140);display: flex;justify-content: center;text-shadow: 0 0 1em rgb(255, 229, 79),0 0 1em rgb(255, 230, 88);border-radius: 10px;font-size: 30px;">
+            ________________________________________________________________________________
+        </p>
+        <div id="morphism">
+            <div class="box">
+                <span></span>
+                <div class="content">
+                    <h2>103A數學問題</h2>
+                    <p>def is_prime(num):</p>
+                    <p>　　for i in range(2,num//2+1):</p>
+                    <p>　　　if num % i == 0 :</p>
+                    <p>　　　　　return False</p>
+                    <p>　　return True</p>
+                    <p>n = int(input())</p>
+                    <p>for _ in range(n):</p>
+                    <p>　　a,b = list(map(int,input().split(',')))</p>
+                    <p>　　ans = 'N'</p>
+                    <p>　　if b - a >= 2:</p>
+                    <p>　　　　if is_prime(a) and is_prime(b):</p>
+                    <p>　　　　　　ans = "Y"</p>
+                    <p>　　print(ans)</p>
+
+                </div>
+            </div>
+
+
+            <div class="box">
+                <span></span>
+                <div class="content">
+                    <h2>103B買郵票</h2>
+                    <p>n = int(input())</p>
+                    <p>for i in range(n):</p>
+                    <p>　　a,b,c,d = list(map(int,input().split(',')))</p>
+                    <p>　　for i in range(a+1):</p>
+                    <p>　　　　for j in range(a+1):</p>
+                    <p>　　　　　　if b*i + c*j == d and j+i == a:</p>
+                    <p>　　　　　　　　print(f'{i},{j}')</p>
+
+                </div>
+            </div>
+
+
+            <div class="box">
+                <span></span>
+                <div class="content">
+                    <h2>103C在兩字串中,共同出現的英文字母</h2>
+                    <p>for i in range(int(input())):</p>
+                    <p>　　Lstr = []</p>
+                    <p>　　string_a = input()</p>
+                    <p>　　string_b = input()</p>
+                    <p>　　if len(string_a) > len(string_b):</p>
+                    <p>　　　　string_a, string_b = string_b, string_a</p>
+                    <p>　　for i in string_a:</p>
+                    <p>　　　　if i in string_b:</p>
+                    <p>　　　　　　Lstr.append(i)</p>
+                    <p>　　Lstr = list(set(Lstr))</p>
+                    <p>　　Lstr.sort()</p>
+                    <p>　　if Lstr != []:</p>
+                    <p>　　　　print(''.join(Lstr))</p>
+                    <p>　　else:</p>
+                    <p>　　　　print('N')</p>
+                </div>
+            </div>
+            <div class="box">
+                <span></span>
+                <div class="content">
+                    <h2>103D計算兩個人之間共同朋友的數量</h2>
+                    <p>n = int(input())</p>
+                    <p>for i in range(n):</p>
+                    <p>　　ID_a = input().split()</p>
+                    <p>　　ID_b = input().split()</p>
+                    <p>　　ID_a.pop(0)</p>
+                    <p>　　ID_b.pop(0)</p>
+                    <p>　　if len(ID_a) > len(ID_b):</p>
+                    <p>　　　　ID_a, ID_b = ID_b, ID_a</p>
+                    <p>　　Lcount = []</p>
+                    <p>　　for i in ID_b:</p>
+                    <p>　　　　if (i in ID_a )and( i not in Lcount):</p>
+                    <p>　　　　　　Lcount.append(i)</p>
+                    <p>　　# Lcount = list(set(Lcount))</p>
+                    <p>　　print(len(Lcount))</p>
+                </div>
+            </div>
+            <div class="box">
+                <span></span>
+                <div class="content">
+                    <h2>103E撲克牌遊戲</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi beatae impedit dicta atque
+                        culpa
+                        sit natus ullam deserunt quaerat repellat aliquam praesentium ratione fugiat vel debitis,
+                        reprehenderit aspernatur laborum quis?</p>
+                </div>
+            </div>
+            <div class="box">
+                <span></span>
+                <div class="content">
+                    <p>
+                    <h2>103F費氏數列</h2>
+                    </p>
+                    <p>n = int(input())</p>
+                    <p>fib = [1, 2]</p>
+                    <p>while fib[-1] < 10000:</p>
+                            <p>　　fib.append(fib[-1] + fib[-2])</p>
+
+                            <p>fib = fib[:-1]</p>
+                            <p>fib = fib[::-1]</p>
+
+                            <p>def f(x):</p>
+                            <p>　　output = ''</p>
+                            <p>　　for i in fib:</p>
+                            <p>　　　　if x >= i:</p>
+                            <p>　　　　　　x -= i</p>
+                            <p>　　　　　　output += '1'</p>
+                            <p>　　　　elif output != '':</p>
+                            <p>　　　　　　output += '0'</p>
+
+                            <p>　　return output</p>
+
+
+                            <p>for _ in range(n):</p>
+                            <p>　　x = int(input())</p>
+                            <p>　　y = f(x)</p>
+                            <p>　　print(f'{x}={y}')</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
