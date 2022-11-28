@@ -5,214 +5,229 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>碳棄-碳中和網站</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./button.css">
-    <link rel="stylesheet" href="./border-cards.css">
-    <link rel="stylesheet" href="./reel.css">
-    <link rel="icon" href="./img/Icon-LOGO.png">
-    <link rel="stylesheet" href="./background.css">
-    <title>首頁</title>
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100px;
-            height: 100px;
-            border-radius: 20px;
-        }
-
-        .line {
-            margin-left: -120px;
-            transform: rotate(90deg);
-            color: gold;
-            position: absolute;
-            margin-top: -100px;
-            display: flex;
-            text-shadow: 0 0 0.6em goldenrod, 0 0 0.6em goldenrod, 0 0 0.6em goldenrod;
-        }
-    </style>
 </head>
 
 <body>
+    <a href="index.html" target="_top"><button class="TopButton"></button></a>
 
-    <div class="Lbody" id="Lbody">
-        <section>
-            <header>
-                <a href="#">
-                    <img class='logo' id="logo" src="./img/Icon-LOGO.png">
-                </a>
-                <ul class="navbar">
-                    <li><a href="#Lbody" class="button">Home</a></li>
-                    <li><a href="#about" class="button">About</a></li>
-                    <li><a href="#trainers" class="button">Trainers</a></li>
-                    <li><a href="#Python" class="button">Python</a></li>
-                    <li><a href="#carousel-h2" class="button">Carousel</a></li>
-                    <li><a href="#Contact" class="button">Contact</a></li>
+    <!-- Nav Start -->
+    <nav class="navbar navbar-expand-lg nav__class">
+        <div class="container-fluid">
+
+            <!-- LOGO -->
+            <div class="nav-left">
+                <a href="index.html">碳棄</a>
+            </div>
+
+            <!-- 第一部份:手機版 -->
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#linkbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- 第二部份:電腦版 -->
+
+
+            <div class="collapse navbar-collapse " id="linkbar">
+                <ul class="navbar-nav" style="margin-left:auto; font-size: 18px;">
+                    <li class="nav-item">
+                        <a href="index.html" target="_top" class="nav-link">首頁</a>
+                    </li>
+                    <li class="nav-item">
+                        <a type="button" class="nav-link" data-bs-toggle="modal" data-bs-target="#loginModal">更多資訊</a>
+                    </li>
                 </ul>
-            </header>
-            <div class="content">
-                <div class="contentBx">
-                    <h2>這是一個網站</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste obcaecati ratione eaque tempora
-                        expedita temporibus natus delectus facere cupiditate, reiciendis quaerat, nulla quia officiis
-                        rerum
-                        ipsum eligendi consequuntur incidunt porro.</p>
-                </div>
             </div>
-            <ul class="sci">
-                <!-- <li><a href="https://www.facebook.com/lucas.hsu.9615/"><img src="./img/facebook.png" alt="1"></a></li>
-                <li><a href="https://twitter.com/lucas153580433"><img src="./img/Icon-Twitter-PNG.png" alt="2"></a></li>
-                <li><a href="https://www.instagram.com/lucashsu95/"><img src="./img/Instagram-Logo-PNG-Pic-1.png" -->
-                <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"><img
-                            src="./img/facebook.png" alt="1"></a></li>
-                <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"><img
-                            src="./img/Twitter-PNG.png" alt="2"></a></li>
-                <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"><img
-                            src="./img/Instagram-Logo-PNG-Pic-1.png" alt="3"></a></li>
-            </ul>
+
+
+        </div>
+    </nav>
+    <!-- Nav End -->
+
+    <!-- Main Content Start -->
+    <article class="main">
+        <section class="main-article">
+            <h1>什麼是碳中和?</h1>
+            <hr>
+
+            
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi eius sint nemo neque, eum tempora
+                alias officiis debitis quas iusto, aspernatur aliquam amet dignissimos suscipit dolorum dolores sit
+                tenetur obcaecati.
+            </p>
         </section>
+        <section class="main-article">
+            <h1>低碳的好處</h1>
+            <hr>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi eius sint nemo neque, eum tempora
+                alias officiis debitis quas iusto, aspernatur aliquam amet dignissimos suscipit dolorum dolores sit
+                tenetur obcaecati.
+            </p>
+        </section>
+        <section class="main-article">
+            <h1>多吃健康餐</h1>
+            <hr>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi eius sint nemo neque, eum tempora
+                alias officiis debitis quas iusto, aspernatur aliquam amet dignissimos suscipit dolorum dolores sit
+                tenetur obcaecati.
+            </p>
+        </section>
+        <section class="main-article">
+            <h1>主題4</h1>
+            <hr>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi eius sint nemo neque, eum tempora
+                alias officiis debitis quas iusto, aspernatur aliquam amet dignissimos suscipit dolorum dolores sit
+                tenetur obcaecati.
+            </p>
+        </section>
+    </article>
+    <!-- Main Content End -->
 
-        <div id="about">
-            <h1></h1>
-            <h2>About us</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, nobis ab incidunt velit rerum
-                quibusdam
-                aut adipisci. Placeat quaerat ratione, quidem et modi molestias, officia hic voluptatum ad
-                repre henderit
-                nisi?</p>
-        </div>
-        <div id="trainers">
-            <h1></h1>
-            <h2>Animation</h2>
-            <div class="BoxOverFlow">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque atque
-                    perspiciatis non, nobis
-                    earum
-                    recusandae asperiores voluptatibus molestias nostrum in. Aspernatur, iure ipsam! Error non
-                    quia
-                    dolore necessitatibus blanditiis vel!</p>
-                <div class="line">___________________________________</div>
+    <!-- 跳出視窗內容 Start -->
 
-            </div>
-        </div>
-        <div id="Python">
-            <h1></h1>
-            <div class="background">
-                <div class="bubbles">
-                    <span style="--i:11;"></span>
-                    <span style="--i:12;"></span>
-                    <span style="--i:24;"></span>
-                    <span style="--i:10;"></span>
-                    <span style="--i:14;"></span>
-                    <span style="--i:23;"></span>
-                    <span style="--i:18;"></span>
-                    <span style="--i:16;"></span>
-                    <span style="--i:19;"></span>
-                    <span style="--i:20;"></span>
-                    <span style="--i:22;"></span>
-                    <span style="--i:25;"></span>
-                    <span style="--i:18;"></span>
-                    <span style="--i:21;"></span>
-                    <span style="--i:15;"></span>
-                    <span style="--i:13;"></span>
-                    <span style="--i:26;"></span>
-                    <span style="--i:17;"></span>
-                    <span style="--i:13;"></span>
-                    <span style="--i:28;"></span>
-                    <a href="./python/python.html" class="Python-logo">Python</a>
-                    <span style="--i:11;"></span>
-                    <span style="--i:12;"></span>
-                    <span style="--i:24;"></span>
-                    <span style="--i:10;"></span>
-                    <span style="--i:14;"></span>
-                    <span style="--i:23;"></span>
-                    <span style="--i:18;"></span>
-                    <span style="--i:16;"></span>
-                    <span style="--i:19;"></span>
-                    <span style="--i:20;"></span>
-                    <span style="--i:22;"></span>
-                    <span style="--i:25;"></span>
-                    <span style="--i:18;"></span>
-                    <span style="--i:21;"></span>
-                    <span style="--i:15;"></span>
-                    <span style="--i:13;"></span>
-                    <span style="--i:26;"></span>
-                    <span style="--i:17;"></span>
-                    <span style="--i:13;"></span>
-                    <span style="--i:28;"></span>
+    <div class="modal fade" id="loginModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- 頭 -->
+                <div class="modal-header">
+                    <h2>更多資訊</h2>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <!-- 內容 -->
+                <div class="modal-body">
+                    <div class="box">
+                        <section class="modal_section">
+                            <img src="./images/1.png">
+                            <div class="content content1">
+                                <h5>主題</h5>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                Itaque quae dolores
+                                error! Hic eos soluta tempore totam sunt harum ipsam amet eveniet, eaque, nemo itaque,
+                                sapiente debitis
+                                voluptatum optio voluptas.
+                            </div>
+                        </section>
+                        <section class="modal_section">
+                            <img src="./images/2.png">
+                            <div class="content content2">
+                                <h5>主題</h5>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Consectetur culpa
+                                iste nobis, maiores rerum perspiciatis voluptatum ut obcaecati autem beatae nostrum
+                                ullam expedita eaque
+                                quo, veniam nihil accusantium aut aperiam.
+                            </div>
+                        </section>
+                        <section class="modal_section">
+                            <img src="./images/3.png">
+                            <div class="content content3">
+                                <h4>5大低碳飲食祕訣</h4>
+                                1. 不需複雜計算熱量，避開澱粉類就好！<br>
+                                2. 選擇好的蛋白質食物！<br>
+                                3. 搭配優質油脂食用！<br>
+                                4. 嚴禁攝取大量含砂糖的食物！<br>
+                                5. 充分攝取低碳蔬菜、多喝水！
+                            </div>
+                        </section>
+                        <section class="modal_section">
+                            <img src="./images/4.png">
+                            <div class="content content4">
+                                <h4>
+                                    要讓碳水攝取量不超標，可吃以下的「低醣食物」：
+                                </h4>
+                                <ul>
+                                    <li>海鮮</li>
+                                    <li>低碳蔬菜（番茄、菠菜）</li>
+                                    <li>雞蛋</li>
+                                    <li>希臘優格</li>
+                                    <li>低醣水果（酪梨、藍莓）</li>
+                                    <li>橄欖油</li>
+                                    <li>堅果、種子</li>
+                                </ul>
+
+                            </div>
+                        </section>
+                    </div>
+
+
+                </div>
+                <!-- 尾 -->
+                <div class="modal-footer">
 
                 </div>
             </div>
-            <h1></h1>
-        </div>
-
-        <h2 id='carousel-h2' class="carousel-h2">&lt;Carousel&gt;</h2>
-        <div id="carousel">
-            <div class="container">
-                <img src="./img/reel1.jpg">
-                <img src="./img/reel2.png">
-                <img src="./img/reel3.png">
-                <img src="./img/reel4.jpg">
-                <img src="./img/reel5.png">
-            </div>
-
-            <div class="shift">
-                <button class='btn left' onclick="leftShift()">&lt;</button>
-                <button class='btn right' onclick="rightShift()">&gt;</button>
-            </div>
-
-            <div class="bottom">
-                <button class='indicator' onclick="setIndex(0)"></button>
-                <button class='indicator' onclick="setIndex(1)"></button>
-                <button class='indicator' onclick="setIndex(2)"></button>
-                <button class='indicator' onclick="setIndex(3)"></button>
-                <button class='indicator' onclick="setIndex(4)"></button>
-            </div>
-
         </div>
     </div>
+    <!-- 跳出視窗內容 End -->
 
+    <script>
+        let sections = document.querySelectorAll('.modal_section');
+        // 開啟和關閉時要重新設定top
+        let flag = 1;
 
+        sections.forEach((element, index) => {
+
+            element.onclick = () => {
+                flag++;
+                if (flag % 2 == 0) {
+
+                    let Ltotal = 0;
+                    for (let i = 0; i < index; i++) {
+                        Ltotal += 130
+                    }
+                    // console.log(Ltotal);
+                    fs_Time(0, -1 * Ltotal, 0);
+                    function fs_Time(Lstart, Lend) {
+
+                        //alert(Lstart +","+Lend);
+                        if (Lstart >= Lend) {
+                            // <-----Section Img----->
+                            element.style.top = Lstart + 'px';
+                            setTimeout(() => { fs_Time(Lstart - 3, Lend) }, 1);
+                        }
+                        else {
+                            // <-----Content----->
+                            document.querySelector('.content' + (index + 1)).classList.toggle('DisplayBlock');
+                            fs_Time_content(-400, 0, 0);
+                            var Lvalue = 0
+                            function fs_Time_content(Lstart, Lend, Lopacity) {
+                                // <---淡入特效--->
+                                // Lvalue++
+                                // if (Lvalue == 5) {
+                                //     Lvalue = 0
+                                //     Lopacity += 0.1
+                                //     document.querySelector('.content' + (index + 1)).style.opacity = Lopacity;
+                                //     console.log(document.querySelector('.content' + (index + 1)).style.opacity, Lopacity);
+                                // }
+
+                                //alert(Lstart +","+Lend);
+                                if (Lstart < Lend) {
+                                    document.querySelector('.content' + (index + 1)).style.top = Lstart + 'px';
+                                    setTimeout(() => { fs_Time_content(Lstart + 8, Lend, Lopacity) }, 6);
+                                }
+                            }
+                        }
+                    }
+                    element.classList.toggle('title');
+
+                } else {
+                    element.style.top = 0 + 'px';
+                    element.classList.toggle('title');
+                    document.querySelector('.content' + (index + 1)).classList.toggle('DisplayBlock');
+                }
+            }
+        });
+    </script>
 </body>
 
 </html>
-<script>
-    if (document.body.clientWidth < 1920) {
-        document.body.style.zoom = document.body.clientWidth / 1920;
-    }
-
-
-    // <-----輪播----->
-    let index = 0
-    function refresh() {
-        if (index < 0) {
-            index = 4
-        } else if (index > 4) {
-            index = 0
-        }
-        let carousel = document.querySelector('#carousel')
-        let width = getComputedStyle(carousel).width
-        width = Number(width.slice(0, -2))
-        carousel.querySelector('.container').style.left =
-            index * width * -1 + "px"
-    }
-    function leftShift() {
-        index--
-        refresh()
-    }
-    function rightShift() {
-        index++
-        refresh()
-    }
-    function setIndex(idx) {
-        index = idx
-        refresh()
-    }
-    refresh()
-    // <-----輪播----->
-</script>

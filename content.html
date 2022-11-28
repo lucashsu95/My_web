@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            width: 400px;
+            height: 700px;
+
+            border: 1px solid #333;
+            border-radius: 10px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+
+        section {
+            position: relative;
+            height: 130px;
+
+        }
+
+        section img {
+            border-radius: 10px;
+            width: 370px;
+            height: 120px;
+        }
+
+        .content {
+            position: relative;
+            display: none;
+
+            top: -400px;
+            width: 370px;
+            height: 60vh;
+
+
+            background-color: rgb(137, 253, 255);
+            padding: 10px;
+            margin-top: -10px;
+            z-index: -1;
+        }
+
+        .title {
+            transform: scale(1.09);
+            z-index: 3;
+        }
+
+        .DisplayBlock {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <section>
+            <img src="./images/1.png">
+            <div class="content content1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque quae dolores
+                error! Hic eos soluta tempore totam sunt harum ipsam amet eveniet, eaque, nemo itaque, sapiente debitis
+                voluptatum optio voluptas.</div>
+        </section>
+        <section>
+            <img src="./images/2.png">
+            <div class="content content2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur culpa
+                iste nobis, maiores rerum perspiciatis voluptatum ut obcaecati autem beatae nostrum ullam expedita eaque
+                quo, veniam nihil accusantium aut aperiam.</div>
+        </section>
+        <section>
+            <img src="./images/3.png">
+            <div class="content content3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate,
+                exercitationem culpa libero sequi laboriosam eum est quam pariatur ex obcaecati dignissimos repellat ad
+                aspernatur quaerat accusantium quae beatae vel dolor.</div>
+        </section>
+        <section>
+            <img src="./images/下載.jpg">
+            <div class="content content4">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit excepturi fugit qui?
+                Exercitationem fugiat corrupti quaerat quis illum perspiciatis adipisci corporis deleniti! Ex,
+                voluptates! Similique suscipit nihil doloribus eveniet fugiat.
+            </div>
+        </section>
+    </div>
+
+    <script>
+        let sections = document.querySelectorAll('section');
+        // 開啟和關閉時要重新設定top
+        let flag = 1;
+
+        sections.forEach((element, index) => {
+
+            element.onclick = () => {
+                flag++;
+                if (flag % 2 == 0) {
+
+                    let Ltotal = 0;
+                    for (let i = 0; i < index; i++) {
+                        Ltotal += 130
+                    }
+                    // console.log(Ltotal);
+                    fs_Time(0, -1 * Ltotal);
+                    function fs_Time(Lstart, Lend) {
+                        //alert(Lstart +","+Lend);
+                        if (Lstart >= Lend) {
+                            element.style.top = Lstart + 'px';
+                            setTimeout(() => { fs_Time(Lstart - 2, Lend) }, 1);
+                        }
+                        else {
+                            document.querySelector('.content' + (index + 1)).classList.toggle('DisplayBlock');
+
+                            fs_Time_content(-400, 0);
+                            function fs_Time_content(Lstart, Lend) {
+                                //alert(Lstart +","+Lend);
+                                if (Lstart < Lend) {
+                                    document.querySelector('.content' + (index + 1)).style.top = Lstart + 'px';
+                                    setTimeout(() => { fs_Time_content(Lstart + 5, Lend) }, 1);
+                                }
+                            }
+                        }
+                    }
+                    element.classList.toggle('title');
+
+                } else {
+                    element.style.top = 0 + 'px';
+                    element.classList.toggle('title');
+                    document.querySelector('.content' + (index + 1)).classList.toggle('DisplayBlock');
+                }
+            }
+        });
+
+
+
+
+    </script>
+</body>
+
+</html>
