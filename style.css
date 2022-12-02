@@ -64,7 +64,7 @@
 
 /* Main Content Start  */
 
-.main {
+.main-article {
     height: auto;
     width: 100%;
     align-items: center;
@@ -74,8 +74,8 @@
     justify-content: center;
 }
 
-.main-article {
-    padding: 100px;
+.main-section {
+    padding: 90px 15px;
     width: 70%;
     background-color: #666;
     color: #fff;
@@ -100,30 +100,27 @@
     height: 130px;
 }
 
-.modal-dialog{
-    box-shadow: 1px 1px 10px black;
-}
-
-
-
 .modal-body {
-    overflow: hidden;
+    overflow: auto;
 }
 
 .modal_section img {
-    border-radius: 10px;
+    width:370px;
+    height:120px;
+    box-shadow: 1px 1px 10px #333;
 }
 
 .content {
-    position: relative;
     display: none;
+    position: relative;
 
     top: -400px;
     width: 370px;
-    height: 100vh;
-    overflow: hidden;
+    min-height: 41vh;
 
     background-color: rgb(255, 243, 192);
+    box-shadow: 1px 1px 10px #333;
+
     padding: 25px;
     margin-top: -10px;
     z-index: -1;
@@ -140,3 +137,10 @@
 }
 
 /* 跳出視窗內容 End */
+
+
+@media(min-height:1000px){
+    .main-section{
+        padding:40px 10px;
+    }
+}
