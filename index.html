@@ -5,22 +5,97 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>碳棄</title>
-    <!-- bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- Vue3 -->
+    <script src="https://unpkg.com/vue@next"></script>
+
+    <!-- bootstrap JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
+    <!-- bootstrap CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <!-- aos.js -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link rel="stylesheet" href="./style.css">
+    <title>碳棄</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --move: 0px;
+            --MoreNews_container_height: 100px;
+        }
+
+        #MoreNews {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .MoreNews_container {
+            margin-bottom: 10px;
+            transition: all .3s;
+            outline: 3px solid #fff;
+            outline-offset: -1.5px;
+            border-radius: 3px;
+            box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.7);
+
+        }
+
+        .MoreNews_container img {
+            width: 400px;
+            height: var(--MoreNews_container_height);
+            object-fit: cover;
+        }
+
+        .top_title_modal {
+            outline: 0;
+
+            transform: translateY(var(--move)) scaleX(1.25) scaleY(1.2);
+
+        }
+
+        .MoreNews_content {
+            position: absolute;
+            top: -400px;
+            padding: 25px;
+
+            width: 500px;
+            height: 530px;
+
+            background: #444;
+            color: #fff;
+
+            opacity: 0;
+            transform: scale(0);
+            transition: all .3s;
+
+        }
+
+        .MoreNews_content_active {
+            z-index: 1;
+            transform: scale(1) translateY(510px);
+        }
+
+        .modal-body {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            padding: 0;
+            height: 100vh;
+            overflow: hidden;
+        }
+    </style>
 </head>
 
 <body>
     <a href="index.html" target="_top"><button class="TopButton"></button></a>
-
     <!-- Nav Start -->
     <nav class="navbar navbar-expand-lg nav__class">
         <div class="container-fluid">
@@ -43,7 +118,7 @@
                         <a href="index.html" target="_top" class="nav-link">首頁</a>
                     </li>
                     <li class="nav-item">
-                        <a type="button" class="nav-link" data-bs-toggle="modal" data-bs-target="#loginModal">更多資訊</a>
+                        <a type="button" class="nav-link" data-bs-toggle="modal" data-bs-target="#MoreNews_modal">更多資訊</a>
                     </li>
                 </ul>
             </div>
@@ -52,7 +127,6 @@
         </div>
     </nav>
     <!-- Nav End -->
-
 
     <!-- Main Content Start -->
     <article class="main-article">
@@ -103,101 +177,46 @@
     </article>
 
     <!-- Main Content End -->
-
-
-
-    <!-- 跳出視窗內容 Start -->
-
-    <div class="modal fade" id="loginModal">
+    <!-- 更多資訊 Start -->
+    <div class="modal fade" id="MoreNews_modal">
         <div class="modal-dialog">
             <div class="modal-content">
-                <!-- 頭 -->
                 <div class="modal-header">
                     <h2>更多資訊</h2>
-                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
-                <!-- 內容 -->
+                <!-- Start -->
                 <div class="modal-body">
-                    <div class="box">
-                        <section class="modal_section">
-                            <img src="./images/1.png">
-                            <div class="content content1">
-                                <h5>主題</h5>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos totam recusandae veniam
-                                molestiae magnam aliquam ipsum quidem accusamus iure nobis? Accusamus provident quidem
-                                voluptas placeat repudiandae, sint dolore veritatis quam!
-                                Itaque, error cum. Debitis culpa voluptas numquam eum, porro perferendis vel ratione
-                                officiis architecto optio commodi reprehenderit, assumenda voluptatum explicabo natus
-                                veritatis suscipit. Itaque veritatis in fugiat, soluta expedita eligendi.
-                                Doloribus et iure minus labore aut reprehenderit non dolorum sit eligendi dolore
-                                similique, voluptates ratione, doloremque illum! Provident consequatur quod animi
-                                quidem, exercitationem, nemo, error perspiciatis a accusamus dolores nam.
-                                Fugit accusamus impedit repellat similique eum veritatis porro praesentium quam! Maxime
-                                esse ab aliquam ut sint laboriosam necessitatibus culpa in! Necessitatibus praesentium
-                                veniam ratione officia est, vel dolor commodi sint.
-                                Voluptatem atque soluta asperiores possimus quia fugit iure cupiditate praesentium
-                                architecto recusandae tenetur, facere illum esse voluptatum exercitationem accusamus
-                                natus quos, ducimus numquam nihil deserunt delectus facilis laboriosam. Voluptatem,
-                                quis!
-                            </div>
-                        </section>
-                        <section class="modal_section">
-                            <img src="./images/2.png">
-                            <div class="content content2">
-                                <h5>主題</h5>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Consectetur culpa
-                                iste nobis, maiores rerum perspiciatis voluptatum ut obcaecati autem beatae nostrum
-                                ullam expedita eaque
-                                quo, veniam nihil accusantium aut aperiam.
-                            </div>
-                        </section>
-                        <section class="modal_section">
-                            <img src="./images/3.png">
-                            <div class="content content3">
-                                <h4>5大低碳飲食祕訣</h4>
-                                1. 不需複雜計算熱量，避開澱粉類就好！<br>
-                                2. 選擇好的蛋白質食物！<br>
-                                3. 搭配優質油脂食用！<br>
-                                4. 嚴禁攝取大量含砂糖的食物！<br>
-                                5. 充分攝取低碳蔬菜、多喝水！
-                            </div>
-                        </section>
-                        <section class="modal_section">
-                            <img src="./images/4.png">
-                            <div class="content content4">
-                                <h4>
-                                    要讓碳水攝取量不超標，可吃以下的「低醣食物」：
-                                </h4>
-                                <ul>
-                                    <li>海鮮</li>
-                                    <li>低碳蔬菜（番茄、菠菜）</li>
-                                    <li>雞蛋</li>
-                                    <li>希臘優格</li>
-                                    <li>低醣水果（酪梨、藍莓）</li>
-                                    <li>橄欖油</li>
-                                    <li>堅果、種子</li>
-                                </ul>
-
-                            </div>
-                        </section>
+                    <div id="MoreNews">
+                        <div v-for="data in datas" class="MoreNews_container" :id="data.id"
+                            @click="fs_click_modalMoveTop(data.id)">
+                            <img :src="data.img">
+                        </div>
+                        <div class="MoreNews_content" @click="fs_click_modalMoveTop('close')">
+                            <h5>{{text_h}}</h5>
+                            <div v-html="text_content"></div>
+                            <button type="button" class="btn btn-secondary"
+                                style="position: absolute;bottom:25px;right:25px;">Close</button>
+                        </div>
                     </div>
-
-
                 </div>
-                <!-- 尾 -->
+                <!-- End -->
                 <div class="modal-footer">
-
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
     </div>
-    <!-- AOS  -->
+    <!-- 更多資訊 End -->
+    <!-- AOS Start -->
     <script>
         AOS.init();
     </script>
-    <!-- 跳出視窗內容 End -->
-    <script src="script.js"></script>
+    <!-- AOS End -->
+    <!-- 更多資訊 JavaScript Start -->
+    <script src="./js/MoreNews.js"></script>
+    <!-- 更多資訊 JavaScript End -->
+
 </body>
 
 </html>
