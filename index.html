@@ -18,13 +18,17 @@
     <!-- aos.js -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Chart.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.0.1/chart.umd.js"
+        integrity="sha512-gQhCDsnnnUfaRzD8k1L5llCCV6O9HN09zClIzzeJ8OJ9MpGmIlCxm+pdCkqTwqJ4JcjbojFr79rl2F1mzcoLMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <link rel="stylesheet" href="./css/style.css">
     <title>碳棄</title>
 </head>
 
 <body>
-    <a href="index.html" target="_top"><button class="TopButton"></button></a>
+    <div id='Top'></div>
 
     <!-- Nav Start -->
     <nav class="navbar navbar-expand-lg nav__class">
@@ -32,7 +36,7 @@
 
             <!-- LOGO -->
             <div class="nav-left" data-aos="fade-right">
-                <a href="index.html">碳棄</a>
+                <a href="index.html">「碳」棄</a>
             </div>
 
             <!-- 第一部份:手機版 -->
@@ -58,6 +62,8 @@
     <!-- Nav End -->
     <!-- Carousel Start -->
 
+
+    <a href="#Top" class="ToTop"></a>
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-aos-duration='1000'>
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
@@ -69,7 +75,7 @@
             <div class="carousel-item active">
                 <img src="./images/carousel1.jpg" class="d-block w-100" alt="carousel1.jpg">
                 <div class="carousel-caption d-none d-md-block">
-                    <h3 data-aos='fade-right'>2050淨零碳排不僅是全球的目標</h3>
+                    <h3 data-aos='fade-right' class="test1">2050淨零碳排不僅是全球的目標</h3>
                     <p data-aos='fade-left'>淨零軌跡與行動路徑探討生活轉型</p>
                 </div>
             </div>
@@ -94,42 +100,76 @@
         <button class="carousel-control-next" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
             <span class="carousel-control-next-icon"></span>
         </button>
+        <a href="#main" class="ToBottom">
+        </a>
     </div>
-
-
-
     <!-- Carousel End -->
     <!-- Main Content Start -->
-    <section class="main-section">
+    <section class="main-section" id='main'>
         <article class="main-article">
-            <h3 data-aos="fade-down-right">什麼是碳中和？</h3>
+            <h3 data-aos="fade-down-right">低碳</h3>
             <hr>
             <p data-aos="fade-up-left">
-                碳中和 (Carbon Neutral) 是什麼？
-                科學家早在 1960 年代就示警溫室氣體對地球的傷害，歷經超過 50 年的爭論與忽視，氣候變遷正以乾旱、暴雨、熱浪等極端型態威脅您我生存，各種因應措施也隨著危機浮上檯面，其中，訂定碳中和（Carbon
-                Neutral）目標就是常見的手段之一。
-                碳中和，簡而言之，是企業、組織或政府在一定時間的二氧化碳排放量，與植樹、使用再生能源等方式所累積的減碳量相互抵換，過程中需透過碳盤查掌握碳排放量／碳足跡，接著採取減量措施或抵換行動，使大氣的碳排放量維持現狀、無增無減，達成「碳中和」的狀態。
+                低碳飲食是讓碳的排放量減少，也可稱為低醣飲食，意思就是指<b>「減少飲食中的碳水化合物含量，增加好的油脂和蛋白質」</b>，而我們可以選用當地的食材，不做加工，來增加當季和在地蔬果的攝取，不僅能減少碳排放量，還能增進健康也環保。
             </p>
         </article>
         <article class="main-article">
-            <h3 data-aos="fade-down-right">淨零排放 (Net Zero) 是什麼？</h3>
+            <h3 data-aos="fade-down-right">淨零排放(Net Zero)</h3>
             <hr>
             <p data-aos="fade-up-left">
-                然而，碳中和概念專注於控制驟增的二氧化碳（CO2），卻忽略了甲烷（CH4）、氧化亞氮（N2O）等暖化潛力更高的溫室氣體，取而代之的淨零排放（Net
-                Zero）成為減緩氣候變遷主要訴求，目的在於讓所有種類的溫室氣體排放量與削減量達到平衡。
-                不過，透過植樹等方式作為碳抵換手段，必須考量環境現實。根據統計，全球每年的碳排放超過土地吸收力 10
-                倍，若人類繼續燃燒化石燃料，再「假設」這些排放會被增加的碳匯所抵消，一樣會讓地球持續升溫，悖離減緩氣候變遷的目的。植樹、碳捕捉等都是排放之後的「挽救措施」，企業及政府不應該因這些抵換手段，而忽略最根本且最重要的，是從源頭減少溫室氣體排放。
+                又稱為碳中和，國家、企業、組織或個人等等在一定時間內透過各種節能減碳策略（例如負碳技術、森林碳匯、使用低碳能源取代化石燃料……等等）或購買其他企業碳權，以抵消自身產生的二氧化碳排放量，實現正負抵消，達到相對「零排放」。
             </p>
         </article>
         <article class="main-article">
-            <h3 data-aos="fade-down-right">主題</h3>
+            <h3 data-aos="fade-down-right">節能減碳</h3>
             <hr>
             <p data-aos="fade-up-left">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque amet exercitationem in, accusamus quo eum
-                minima iure porro incidunt quasi esse quam quos illo laborum nisi, repellat voluptate tenetur suscipit?
-
+                節能減碳意指藉由節約能源、減少碳排放的方式保護地球資源，進而降低對地球的傷害。近幾年全球暖化造成的氣候變遷，不僅改變了生態環境，造成生物多樣性的保存不易，也影響到人類的日常生活，例如乾旱與水災發生的頻率增加，導致民生用水供應不穩定，若繼續忽視氣候變遷帶來的影響，毫無節制地浪費資源，只會加重全球暖化問題，最後面臨不可挽回的生態浩劫，為了延緩氣候變遷。
             </p>
         </article>
+        <article class="main-article">
+            <h3 data-aos="fade-down-right">碳足跡標籤</h3>
+            <hr>
+            <p data-aos="fade-up-left">
+                又稱碳標籤或碳排放標籤。主要以標示公司、生產製程、產品及個人的碳排放量，其意思指一個產品從原料取得，經過工廠製造、配送銷售、消費者使用到最後廢棄回收等生命週期各階段所產生的溫室氣體，經過換算成二氧化碳當量的總和。
+            </p>
+        </article>
+    </section>
+    <section id="ShoppingCart">
+        <h1 data-aos="fade-left">線上訂購　購物車</h1>
+        <div class="ShoppingCart_container" data-aos="fade-right" data-aos-duration="2000">
+            <div v-for="product in products" class="ShoppingCart_box">
+                <img :src="product.img" alt="">
+                <p>{{product.name}}</p>
+                <p class="price">{{'$' + product.price}}</p>
+                <div class="buy">
+                    <button @click="fs_updateValue(product,product.amount - 1)" class="Btn">-</button>
+                    <div class="amount">{{product.amount}}</div>
+                    <button @click="fs_updateValue(product,product.amount + 1)" class="Btn">+</button>
+                </div>
+            </div>
+        </div>
+        <p>
+        <div class="sum_box">
+            <p>
+                {{'總額:$'+Lsum+'元'}}
+            </p>
+            <p>
+                <template v-for="product in products" class="check_box">
+                    <template v-if="product.amount > 0">
+                        <p>
+                            {{product.name +' '+ product.amount + '盒'}}
+                        </p>
+                    </template>
+                </template>
+            </p>
+            <p>
+                <button @click="fs_submit" class="Btn">送出</button>
+            </p>
+        </div>
+        </p>
+        <h1>熱銷推薦</h1>
+        <canvas id="myChart" class="chart_section"></canvas>
     </section>
 
     <!-- Main Content End -->
@@ -167,8 +207,8 @@
     <footer id="footer">
         <div class="footer_1">
             參考文獻：
-            <div class="spinner-border text-danger"></div>
-            <div class="spinner-grow text-danger"></div>
+            <!-- <div class="spinner-border text-danger"></div> -->
+            <!-- <div class="spinner-grow text-danger"></div> -->
 
         </div>
         <div class="footer_2">
@@ -181,20 +221,16 @@
     <!-- AOS Start -->
     <script>
         AOS.init({
-            duration: 700,
+            duration: 800,
         });
     </script>
     <!-- AOS End -->
 
+
+
     <!-- script.js Start -->
     <script src="./js/script.js"></script>
     <!-- script.js End -->
-
-
-    <!-- 更多資訊 JavaScript Start -->
-    <script src="./js/MoreNews.js"></script>
-    <!-- 更多資訊 JavaScript End -->
-
 </body>
 
 </html>
