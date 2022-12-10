@@ -16,28 +16,28 @@ const ShoppingCart = Vue.createApp({
             Lsum:0,
             check_box:[],
             products:[{
-                img:'./images/ShoppingCart1.jpg',
-                name:'魚肉餐低碳餐盒',
-                price:25,
+                img:'./images/元氣滿滿魚肉餐.jpg',
+                name:'元氣滿滿魚肉餐',
+                price:130,
                 amount:0
             },{
-                img:'./images/ShoppingCart2.jpg',
-                name:'松阪豬低碳餐盒',
-                price:25,
+                img:'./images/元氣滿滿松阪豬.jpg',
+                name:'元氣滿滿松阪豬',
+                price:180,
                 amount:0
             },{
-                img:'./images/ShoppingCart3.jpg',
-                name:'ShoppingCart3',
-                price:25,
+                img:'./images/元氣滿滿烤鮭魚.jpg',
+                name:'元氣滿滿烤鮭魚',
+                price:180,
                 amount:0
             },{
-                img:'./images/ShoppingCart1.jpg',
-                name:'ShoppingCart1',
-                price:25,
+                img:'./images/元氣滿滿豬肉餐.jpg',
+                name:'元氣滿滿豬肉餐',
+                price:150,
                 amount:0
             },{
-                img:'./images/ShoppingCart1.jpg',
-                name:'ShoppingCart1',
+                img:'./images/元氣滿滿雞肉餐.jpg',
+                name:'元氣滿滿雞肉餐',
                 price:25,
                 amount:0
             }]
