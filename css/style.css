@@ -263,17 +263,17 @@
 }
 
 #ShoppingCart .ShoppingCart_box:hover img {
-    height: 250px;
+    height: 200px;
 }
 
-#ShoppingCart .product-name{
+#ShoppingCart .product-name {
     position: absolute;
-    bottom:0;
+    bottom: 0;
     font-size: 1.3rem;
     font-weight: 200;
     background: #fff;
     border-radius: 3px;
-    padding:4px;
+    padding: 1% 4%;
 }
 
 #ShoppingCart .buy {
@@ -287,21 +287,21 @@
     flex-direction: column;
     align-items: center;
 
-    line-height: 10px;
+    line-height: 20px;
 
-    top:400px;
+    top: 400px;
     position: absolute;
     transition: all .5s;
 }
 
 #ShoppingCart .ShoppingCart_box:hover .shoppingCart_hidden {
-    top:250px;
+    top: 220px;
 }
 
 #ShoppingCart .carbon {
-    line-height: 20px;
     font-size: 18px;
 }
+
 #ShoppingCart .amount {
     border: 2px solid #ddd;
     border-radius: 6px;
@@ -382,16 +382,18 @@
         transform: rotate(-90deg);
         transition: all .5s;
     }
-    
+
     @keyframes shopingCart_toggle {
-        0%{
-            
+        0% {
+
             transform: translateX(0px) rotate(-90deg) scale(1);
         }
-        50%{
+
+        50% {
             transform: translateX(40px) rotate(-90deg) scale(1.2);
 
         }
+
         100% {
             transform: translateX(0px) rotate(-90deg) scale(1);
         }
@@ -440,6 +442,126 @@
 /* chart_section End */
 
 
+
+/* slide Start */
+#services {
+    background: #41744a;
+}
+
+#services .slide {
+    padding: 2rem 1rem;
+    color: #000;
+    position: relative;
+    width: 80%;
+    margin: auto;
+
+    display: flex;
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
+    #services .slide {
+        height: calc(500px + 4rem);
+    }
+}
+
+#services .slide .slide-control {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translateY(-50%);
+    z-index: 99;
+    width: 100%;
+    color: #fff;
+    justify-content: space-between;
+    background: rgba(0, 0, 0, 0);
+}
+
+@media (min-width: 768px) {
+    #services .slide .slide-control {
+        display: flex;
+    }
+}
+
+#services .slide .slide-prev,
+#services .slide .slide-next {
+    opacity: .8;
+    transition: .5s;
+    cursor: pointer;
+    font-size: 3rem;
+}
+
+#services .slide .slide-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+    width: 100%;
+}
+
+#services .slide .slide-project {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    padding: 2rem;
+
+    opacity: .95;
+    background-color: #fff;
+    border-radius: 8px;
+    width: 400px;
+    transition: .5s;
+}
+
+#services .slide .slide-project .slide-header {
+    padding: 2rem 0 0;
+}
+
+#services .slide .slide-project .slide-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+    line-height: 2;
+    font-size: 1.2rem;
+}
+
+#services .slide .slide-project .slide-footer button {
+    font-size: 1.2rem;
+    padding: .5rem 2.5rem;
+}
+
+@media (min-width: 768px) {
+    #services .slide .slide-project {
+        height: 90%;
+        position: absolute;
+    }
+
+    #services .slide .slide-project.show {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 5;
+    }
+
+    #services .slide .slide-project.prev {
+        top: 50%;
+        left: 5%;
+        transform: translateY(-50%) scale(0.75);
+        z-index: 4;
+        opacity: .5;
+    }
+
+    #services .slide .slide-project.next {
+        top: 50%;
+        left: 95%;
+        transform: translate(-100%, -50%) scale(0.75);
+        z-index: 4;
+        opacity: .5;
+    }
+}
+
+/* slide End */
 /* footer Start */
 footer {
     display: flex;
@@ -469,7 +591,6 @@ footer {
 }
 
 /* footer End */
-
 /* 跳出視窗內容 Start */
 
 
@@ -523,7 +644,6 @@ footer {
     text-shadow: 2px 2px 7px black;
     line-height: 32px;
     font-size: 1rem;
-
 }
 
 .MoreNews_content_active {

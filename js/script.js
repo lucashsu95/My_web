@@ -76,36 +76,62 @@ const app = Vue.createApp({
                 price: 130,
                 amount: 0,
                 product_class: '減脂系列',
-                carbon_content:"禽肉 6kg/1 k"
-            },{
+                carbon_content: "禽肉 6kg/1 k"
+            }, {
                 img: './images/元氣滿滿豬肉餐.jpg',
                 name: '元氣滿滿豬肉餐【減脂】',
                 price: 130,
                 amount: 0,
                 product_class: '減脂系列',
-                carbon_content:"豬肉 7kg/1 k"
-            },{
+                carbon_content: "豬肉 7kg/1 k"
+            }, {
                 img: './images/元氣滿滿魚肉餐.jpg',
                 name: '元氣滿滿魚肉餐【減脂】',
                 price: 130,
                 amount: 0,
                 product_class: '減脂系列',
-                carbon_content:"魚肉 5kg/1 k"
+                carbon_content: "魚肉 5kg/1 k"
             }, {
                 img: './images/元氣滿滿松阪豬.jpg',
                 name: '元氣滿滿松阪豬',
                 price: 180,
                 amount: 0,
                 product_class: '豪華系列',
-                carbon_content:"豬肉 7kg/1 k"
+                carbon_content: "豬肉 7kg/1 k"
             }, {
                 img: './images/元氣滿滿烤鮭魚.jpg',
                 name: '元氣滿滿烤鮭魚',
                 price: 180,
                 amount: 0,
                 product_class: '豪華系列',
-                carbon_content:"魚肉 5kg/1 k"
-            },  ],
+                carbon_content: "魚肉 5kg/1 k"
+            },
+            ], 
+            slide_id: 0,
+            slide: [{
+                title: '年齡層的影響',
+                english: 'Age group',
+                content: '年齡層一般女生會多於男生，年齡層的話大概都是普遍上班族，像以年輕人的角度來講吃的口味一般就會比較重，所以比較容易乎略飲食的均衡問題，低碳餐飲客的喜愛度會很高，固定的客源，回頭客回頭率很高。',
+                btn: '搶先體驗',
+                color: 'text-danger',
+                class: 'btn-outline-danger'
+            },
+            {
+                title: '價格方面',
+                english: 'Price',
+                content: '明明健康餐的東西既不調味又不油炸，為什麼這麼貴，像是低碳飲食類的東西，其實這些飲食他會變貴是有一個有個很大的原因就是食材的新鮮度、而且沒有調味食材就要更新鮮，才會讓人覺得好吃。',
+                btn: '會員登入',
+                color: 'text-success',
+                class: 'btn-outline-success'
+            },
+            {
+                title: '食物的出產地',
+                english: 'Origin',
+                content: '我們都採用在地的新鮮食材，我們家的豬肉吃起來是沒有腥味的那種，我們的活菌豬吃的飼料跟一般的不一樣，這也就是我們低碳便當會比一般便當貴的原因，想要健康又想要好吃，食材就要新鮮，選擇在地的食材。',
+                btn: '聯絡我們',
+                color: 'text-info',
+                class: 'btn-outline-info'
+            }],
             date: new Date().getFullYear(),
 
         }

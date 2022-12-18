@@ -223,7 +223,31 @@
         </section>
         <!-- 熱銷推薦 End -->
         <!-- 資訊列 Start -->
-
+        <section id="services">
+            <div class="slide">
+                <div class="slide-control">
+                    <div class="slide-prev" @click="slide_id = slide_id == 0 ? 2 : slide_id - 1">
+                        < </div>
+                            <div class="slide-next" @click="slide_id = slide_id == 2 ? 0 : slide_id + 1">></div>
+                    </div>
+                    <div class="slide-container">
+                        <div class="slide-project"
+                            :class="(index === slide_id && 'show') || ((index + 1) % 3 === slide_id && 'prev') || ((index + 2 ) % 3 === slide_id && 'next')"
+                            v-for="i , index in slide">
+                            <div class="slide-header">
+                                <h1>{{i.title}}</h1>
+                                <h3 :class="i.color">{{i.english}}</h3>
+                            </div>
+                            <div class="slide-body">
+                                <div>{{i.content}}</div>
+                            </div>
+                            <div class="slide-footer">
+                                <button class="btn" :class="i.class" @click="toggle(index)">{{i.btn}}</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
         <!-- 資訊列 End -->
 
         <!-- Main Content End -->
@@ -261,9 +285,6 @@
         <footer id="footer">
             <div class="footer_1">
                 參考文獻：
-                <!-- <div class="spinner-border text-danger"></div> -->
-                <!-- <div class="spinner-grow text-danger"></div> -->
-
             </div>
             <div class="footer_2">
                 版權所有 &copy;{{date}}
