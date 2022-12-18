@@ -5,8 +5,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Vue3 -->
-    <script src="https://unpkg.com/vue@next"></script>
 
     <!-- bootstrap JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
@@ -22,203 +20,261 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.0.1/chart.umd.js"
         integrity="sha512-gQhCDsnnnUfaRzD8k1L5llCCV6O9HN09zClIzzeJ8OJ9MpGmIlCxm+pdCkqTwqJ4JcjbojFr79rl2F1mzcoLMQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Vue3 -->
+    <script src="https://unpkg.com/vue@next"></script>
 
     <link rel="stylesheet" href="./css/style.css">
     <title>碳棄</title>
 </head>
 
 <body>
-    <div id='Top'></div>
+    <div id="app">
 
-    <!-- Nav Start -->
-    <nav class="navbar navbar-expand-lg nav__class">
-        <div class="container-fluid">
-
-            <!-- LOGO -->
-            <div class="nav-left" data-aos="fade-right">
-                <a href="index.html">「碳」棄</a>
-            </div>
-
-            <!-- 第一部份:手機版 -->
-            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#linkbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <!-- 第二部份:電腦版 -->
-
-            <div class="collapse navbar-collapse " id="linkbar">
-                <ul class="navbar-nav" style="margin-left:auto; font-size: 18px;" data-aos="fade-left">
-                    <li class="nav-item">
-                        <a href="index.html" target="_top" class="nav-link">首頁</a>
-                    </li>
-                    <li class="nav-item">
-                        <a type="button" class="nav-link" data-bs-toggle="modal"
-                            data-bs-target="#MoreNews_modal">更多資訊</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <!-- Nav End -->
-    <!-- Carousel Start -->
+        <a href="#Top" class="ToTop"></a>
+        <div id='Top'></div>
 
 
-    <a href="#Top" class="ToTop"></a>
-    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-aos-duration='1000'>
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
-                class="active"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></button>
-        </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="./images/carousel1.jpg" class="d-block w-100" alt="carousel1.jpg">
-                <div class="carousel-caption d-none d-md-block">
-                    <h3 data-aos='fade-right' class="test1">2050淨零碳排不僅是全球的目標</h3>
-                    <p data-aos='fade-left'>淨零軌跡與行動路徑探討生活轉型</p>
+        <!-- Nav Start -->
+        <nav class="navbar navbar-expand-lg nav__class">
+            <div class="container-fluid">
+
+                <!-- LOGO -->
+                <div class="nav-left" data-aos="fade-right">
+                    <a href="index.html">「碳」棄</a>
+                </div>
+
+                <!-- 第一部份:手機版 -->
+                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#linkbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- 第二部份:電腦版 -->
+
+                <div class="collapse navbar-collapse " id="linkbar">
+                    <ul class="navbar-nav" style="margin-left:auto; font-size: 18px;" data-aos="fade-left">
+                        <li class="nav-item">
+                            <a href="index.html" target="_top" class="nav-link">首頁</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#main" class="nav-link">什麼是低碳飲食</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#ShoppingCart" class="nav-link">線上訂購服務</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#Chart" class="nav-link">熱銷推薦</a>
+                        </li>
+                        <li class="nav-item">
+                            <a type="button" class="nav-link" data-bs-toggle="modal"
+                                data-bs-target="#MoreNews_modal">更多資訊</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <div class="carousel-item">
-                <img src="./images/carousel2.jpg" class="d-block w-100" alt="carousel2.jpg">
-                <div class="carousel-caption d-none d-md-block">
-                    <h3 data-aos='fade-right'>減碳「酷」地球</h3>
-                    <p data-aos='fade-left'> 行政院環境保護署於2009年12月發布碳標籤圖示<br>台灣成為全世界第11個推動碳標籤的國家</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="./images/carousel3.jpg" class="d-block w-100" alt="carousel3.jpg">
-                <div class="carousel-caption d-none d-md-block">
-                    <h3 data-aos='fade-right'>每人平均碳排放量為10.77公噸</h3>
-                    <p data-aos='fade-left'>我國2019年能源使用CO2排放總量為256.0百萬公噸<br>占全球排放總量的0.76 %；每人平均排放量為10.77公噸。</p>
-                </div>
-            </div>
-        </div>
-        <button class="carousel-control-prev" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-        </button>
-        <button class="carousel-control-next" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-            <span class="carousel-control-next-icon"></span>
-        </button>
-        <a href="#main" class="ToBottom">
-        </a>
-    </div>
-    <!-- Carousel End -->
-    <!-- Main Content Start -->
-    <section class="main-section" id='main'>
-        <article class="main-article">
-            <h3 data-aos="fade-down-right">低碳</h3>
-            <hr>
-            <p data-aos="fade-up-left">
-                低碳飲食是讓碳的排放量減少，也可稱為低醣飲食，意思就是指<b>「減少飲食中的碳水化合物含量，增加好的油脂和蛋白質」</b>，而我們可以選用當地的食材，不做加工，來增加當季和在地蔬果的攝取，不僅能減少碳排放量，還能增進健康也環保。
-            </p>
-        </article>
-        <article class="main-article">
-            <h3 data-aos="fade-down-right">淨零排放(Net Zero)</h3>
-            <hr>
-            <p data-aos="fade-up-left">
-                又稱為碳中和，國家、企業、組織或個人等等在一定時間內透過各種節能減碳策略（例如負碳技術、森林碳匯、使用低碳能源取代化石燃料……等等）或購買其他企業碳權，以抵消自身產生的二氧化碳排放量，實現正負抵消，達到相對「零排放」。
-            </p>
-        </article>
-        <article class="main-article">
-            <h3 data-aos="fade-down-right">節能減碳</h3>
-            <hr>
-            <p data-aos="fade-up-left">
-                節能減碳意指藉由節約能源、減少碳排放的方式保護地球資源，進而降低對地球的傷害。近幾年全球暖化造成的氣候變遷，不僅改變了生態環境，造成生物多樣性的保存不易，也影響到人類的日常生活，例如乾旱與水災發生的頻率增加，導致民生用水供應不穩定，若繼續忽視氣候變遷帶來的影響，毫無節制地浪費資源，只會加重全球暖化問題，最後面臨不可挽回的生態浩劫，為了延緩氣候變遷。
-            </p>
-        </article>
-        <article class="main-article">
-            <h3 data-aos="fade-down-right">碳足跡標籤</h3>
-            <hr>
-            <p data-aos="fade-up-left">
-                又稱碳標籤或碳排放標籤。主要以標示公司、生產製程、產品及個人的碳排放量，其意思指一個產品從原料取得，經過工廠製造、配送銷售、消費者使用到最後廢棄回收等生命週期各階段所產生的溫室氣體，經過換算成二氧化碳當量的總和。
-            </p>
-        </article>
-    </section>
-    <section id="ShoppingCart">
-        <h1 data-aos="fade-left">線上訂購　購物車</h1>
-        <div class="ShoppingCart_container" data-aos="fade-right" data-aos-duration="2000">
-            <div v-for="product in products" class="ShoppingCart_box">
-                <img :src="product.img" alt="">
-                <p>{{product.name}}</p>
-                <p class="price">{{'$' + product.price}}</p>
-                <div class="buy">
-                    <button @click="fs_updateValue(product,product.amount - 1)" class="Btn">-</button>
-                    <div class="amount">{{product.amount}}</div>
-                    <button @click="fs_updateValue(product,product.amount + 1)" class="Btn">+</button>
-                </div>
-            </div>
-        </div>
-        <p>
-        <div class="sum_box">
-            <h1>購物籃</h1>
-            <p>
-                {{'總額:$'+Lsum+'元'}}
-            </p>
-            <p>
-                <template v-for="product in products" class="check_box">
-                    <template v-if="product.amount > 0">
-                        <p>
-                            {{product.name +' '+ product.amount + '盒'}}
-                        </p>
-                    </template>
-                </template>
-            </p>
-            <p>
-                <button @click="fs_submit" class="Btn">送出</button>
-            </p>
-        </div>
-        </p>
-        <h1>熱銷推薦</h1>
-        <canvas id="myChart" class="chart_section"></canvas>
-    </section>
+        </nav>
+        <!-- Nav End -->
+        <!-- Carousel Start -->
 
-    <!-- Main Content End -->
-    <!-- 更多資訊 Start -->
-    <div class="modal fade" id="MoreNews_modal">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h2>更多資訊</h2>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <!-- Start -->
-                <div class="modal-body">
-                    <div id="MoreNews">
-                        <div v-for="data in datas" class="MoreNews_container" :id="data.id"
-                            @click="fs_click_modalMoveTop(data.id)">
-                            <img :src="data.img">
-                        </div>
-                        <div class="MoreNews_content" @click="fs_click_modalMoveTop('close')">
-                            <h5>{{text_h}}</h5>
-                            <div v-html="text_content"></div>
 
-                        </div>
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-aos-duration='1000'>
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+                    class="active"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./images/carousel1.jpg" class="d-block w-100" alt="carousel1.jpg">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3 data-aos='fade-right' class="test1">2050淨零碳排不僅是全球的目標</h3>
+                        <p data-aos='fade-left'>淨零軌跡與行動路徑探討生活轉型</p>
                     </div>
                 </div>
-                <!-- End -->
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <div class="carousel-item">
+                    <img src="./images/carousel2.jpg" class="d-block w-100" alt="carousel2.jpg">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3 data-aos='fade-right'>減碳「酷」地球</h3>
+                        <p data-aos='fade-left'> 行政院環境保護署於2009年12月發布碳標籤圖示<br>台灣成為全世界第11個推動碳標籤的國家</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/carousel3.jpg" class="d-block w-100" alt="carousel3.jpg">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3 data-aos='fade-right'>每人平均碳排放量為10.77公噸</h3>
+                        <p data-aos='fade-left'>我國2019年能源使用CO2排放總量為256.0百萬公噸<br>占全球排放總量的0.76 %；每人平均排放量為10.77公噸。</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+            <a href="#main" class="ToBottom"></a>
+        </div>
+        <!-- Carousel End -->
+        <!-- Main Content Start -->
+        <section class="main-section" id='main'>
+            <article class="main-article">
+                <h3 data-aos="fade-down-right">什麼是低碳飲食?</h3>
+                <hr>
+                <p data-aos="fade-up-left">
+                    低碳飲食是讓碳的排放量減少，也可稱為低醣飲食，意思就是指<b>「減少飲食中的碳水化合物含量，增加好的油脂和蛋白質」</b>，而我們可以選用當地的食材，不做加工，來增加當季和在地蔬果的攝取，不僅能減少碳排放量，還能增進健康也環保。
+                </p>
+            </article>
+            <article class="main-article">
+                <h3 data-aos="fade-down-right">淨零排放(Net Zero)</h3>
+                <hr>
+                <p data-aos="fade-up-left">
+                    又稱為碳中和，國家、企業、組織或個人等等在一定時間內透過各種節能減碳策略（例如負碳技術、森林碳匯、使用低碳能源取代化石燃料……等等）或購買其他企業碳權，以抵消自身產生的二氧化碳排放量，實現正負抵消，達到相對「零排放」。
+                </p>
+            </article>
+            <article class="main-article">
+                <h3 data-aos="fade-down-right">節能減碳</h3>
+                <hr>
+                <p data-aos="fade-up-left">
+                    節能減碳意指藉由節約能源、減少碳排放的方式保護地球資源，進而降低對地球的傷害。近幾年全球暖化造成的氣候變遷，不僅改變了生態環境，造成生物多樣性的保存不易，也影響到人類的日常生活，例如乾旱與水災發生的頻率增加，導致民生用水供應不穩定，若繼續忽視氣候變遷帶來的影響，毫無節制地浪費資源，只會加重全球暖化問題，最後面臨不可挽回的生態浩劫，為了延緩氣候變遷。
+                </p>
+            </article>
+            <article class="main-article">
+                <h3 data-aos="fade-down-right">碳足跡標籤</h3>
+                <hr>
+                <p data-aos="fade-up-left">
+                    又稱碳標籤或碳排放標籤。主要以標示公司、生產製程、產品及個人的碳排放量，其意思指一個產品從原料取得，經過工廠製造、配送銷售、消費者使用到最後廢棄回收等生命週期各階段所產生的溫室氣體，經過換算成二氧化碳當量的總和。
+                </p>
+            </article>
+        </section>
+        <!-- 購物車 Start -->
+        <section id="ShoppingCart">
+            <h1 data-aos="fade-left"><img src="./images/豬會飛LOGO.jpg" class="icon">豬會飛-低GI健康餐　<span
+                    style="color:#498351">線上</span><span style="color:#ffd0c5">訂購</span></h1>
+            <div class="select_container">
+                <input type="radio" id="r1" name="drone" value="全部" v-model="select_value" checked>
+                <div>
+                    <label for="r1" class="select_radio">全部</label>
+                </div>
+                <input type="radio" id="r2" name="drone" value="減脂系列" v-model="select_value">
+                <div>
+                    <label for="r2" class="select_radio">減脂系列</label>
+                </div>
+                <input type="radio" id="r3" name="drone" value="增肌系列" v-model="select_value">
+                <div>
+                    <label for="r3" class="select_radio">增肌系列</label>
+                </div>
+                <input type="radio" id="r4" name="drone" value="豪華系列" v-model="select_value">
+                <div>
+                    <label for="r4" class="select_radio">豪華系列</label>
+                </div>
+            </div>
+            <div class="ShoppingCart_bg">
+                <div class="ShoppingCart_container">
+                    <template v-for="product in products">
+                        <div v-if="product.product_class == select_value || select_value == '全部'"
+                            class="ShoppingCart_box">
+                            <img :src="product.img" alt="">
+                            <p class="product-name">{{product.name}}</p>
+                            <div class="shoppingCart_hidden">
+                                <p class="carbon">{{'$' + product.carbon_content}}</p>
+                                <p class="price">{{'$' + product.price}}</p>
+                                <div class="buy">
+                                    <button @click="fs_updateValue(product,product.amount - 1)"
+                                        class="btn btn-outline-success">-</button>
+                                    <div class="amount">{{product.amount}}</div>
+                                    <button @click="fs_updateValue(product,product.amount + 1)"
+                                        class="btn btn-outline-success">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+
+                </div>
+            </div>
+
+            <p>
+                <a @click="fs_shopingCartToggle" class="shopingCart_toggle"></a>
+
+            <div class="sum_box">
+                <h3>購物籃</h3>
+                <p class="product_content">
+                    <template v-for="product in products" class="check_box">
+                        <template v-if="product.amount > 0">
+                            <p>
+                                <img :src="product.img">{{product.name +' '+ product.amount + '盒'}}
+                            </p>
+                        </template>
+                    </template>
+                </p>
+                <p>
+                    {{'總額:$'+Lsum+'元'}}
+                </p>
+                <p style="margin:auto;">
+                    <button @click="fs_submit" class="btn btn-outline-success">送出</button>
+                </p>
+            </div>
+            </p>
+        </section>
+        <!-- 購物車 End -->
+        <!-- 熱銷推薦 Start -->
+        <section id="Chart">
+            <h1>熱銷推薦</h1>
+            <canvas id="myChart" width='330' height='330'></canvas>
+        </section>
+        <!-- 熱銷推薦 End -->
+        <!-- 資訊列 Start -->
+
+        <!-- 資訊列 End -->
+
+        <!-- Main Content End -->
+        <!-- 更多資訊 Start -->
+        <div class="modal fade" id="MoreNews_modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2>更多資訊</h2>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <!-- Start -->
+                    <div class="modal-body">
+                        <div id="MoreNews">
+                            <div v-for="data in datas" class="MoreNews_container" :id="data.id"
+                                @click="fs_click_modalMoveTop(data.id)">
+                                <img :src="data.img">
+                            </div>
+                            <div class="MoreNews_content" @click="fs_click_modalMoveTop('close')">
+                                <h5>{{text_h}}</h5>
+                                <div v-html="text_content"></div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
                 </div>
             </div>
         </div>
+        <!-- 更多資訊 End -->
+
+        <footer id="footer">
+            <div class="footer_1">
+                參考文獻：
+                <!-- <div class="spinner-border text-danger"></div> -->
+                <!-- <div class="spinner-grow text-danger"></div> -->
+
+            </div>
+            <div class="footer_2">
+                版權所有 &copy;{{date}}
+            </div>
+        </footer>
+
     </div>
-    <!-- 更多資訊 End -->
 
-    <footer id="footer">
-        <div class="footer_1">
-            參考文獻：
-            <!-- <div class="spinner-border text-danger"></div> -->
-            <!-- <div class="spinner-grow text-danger"></div> -->
-
-        </div>
-        <div class="footer_2">
-            版權所有 &copy;{{date}}
-        </div>
-    </footer>
-
-
-
+    <!-- script.js Start -->
+    <script src="./js/script.js"></script>
+    <!-- script.js End -->
     <!-- AOS Start -->
     <script>
         AOS.init({
@@ -229,9 +285,6 @@
 
 
 
-    <!-- script.js Start -->
-    <script src="./js/script.js"></script>
-    <!-- script.js End -->
 </body>
 
 </html>
