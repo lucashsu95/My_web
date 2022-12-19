@@ -1,5 +1,6 @@
 // <!--------------------------------------------------------main Start-------------------------------------------------------->
 var flag = '';
+var flag2 = 1;
 const root = document.querySelector(':root');
 
 const app = Vue.createApp({
@@ -69,44 +70,104 @@ const app = Vue.createApp({
                          含量高連營養師都說讚！</li></ul>`,
                 }
             ],
-
+            shopingCart_toggle_img: "<i class='bi bi-cart4'></i>",
             products: [{
+                // 減脂系列
                 img: './images/元氣滿滿雞肉餐.jpg',
-                name: '元氣滿滿雞肉餐【減脂】',
+                name: '減脂滿滿雞肉餐',
                 price: 130,
                 amount: 0,
                 product_class: '減脂系列',
-                carbon_content: "禽肉 6kg/1 k"
+                carbon_content: "禽肉 6kg/1 kg"
             }, {
                 img: './images/元氣滿滿豬肉餐.jpg',
-                name: '元氣滿滿豬肉餐【減脂】',
+                name: '減脂滿滿豬肉餐',
                 price: 130,
                 amount: 0,
                 product_class: '減脂系列',
-                carbon_content: "豬肉 7kg/1 k"
+                carbon_content: "豬肉 7kg/1 kg"
             }, {
                 img: './images/元氣滿滿魚肉餐.jpg',
-                name: '元氣滿滿魚肉餐【減脂】',
+                name: '減脂滿滿魚肉餐',
                 price: 130,
                 amount: 0,
                 product_class: '減脂系列',
-                carbon_content: "魚肉 5kg/1 k"
+                carbon_content: "1kg魚肉5kg碳"
+            }, {
+                img: './images/元氣滿滿烤鯖魚.jpg',
+                name: '減脂滿滿烤鯖魚',
+                price: 150,
+                amount: 0,
+                product_class: '減脂系列',
+                carbon_content: "1kg魚肉5kg碳"
+            }, {
+                img: './images/元氣滿滿泡菜豬.jpg',
+                name: '減脂滿滿泡菜豬',
+                price: 150,
+                amount: 0,
+                product_class: '減脂系列',
+                carbon_content: "豬肉 7kg/1 kg"
+            }, {
+                img: './images/元氣滿滿牛肉餐.jpg',
+                name: '減脂滿滿牛肉餐',
+                price: 160,
+                amount: 0,
+                product_class: '減脂系列',
+                carbon_content: "牛肉 60kg/1 kg"
+            }, {
+                // 增肌系列
+                img: './images/元氣滿滿雞肉餐.jpg',
+                name: '增肌滿滿雞肉餐',
+                price: 150,
+                amount: 0,
+                product_class: '增肌系列',
+                carbon_content: "禽肉 6kg/1 kg"
+            }, {
+                img: './images/元氣滿滿豬肉餐.jpg',
+                name: '增肌滿滿豬肉餐',
+                price: 150,
+                amount: 0,
+                product_class: '增肌系列',
+                carbon_content: "豬肉 7kg/1 kg"
+            }, {
+                img: './images/元氣滿滿魚肉餐.jpg',
+                name: '增肌滿滿魚肉餐',
+                price: 150,
+                amount: 0,
+                product_class: '增肌系列',
+                carbon_content: "魚肉 5kg/1 kg"
+            }, {
+                img: './images/元氣滿滿烤鯖魚.jpg',
+                name: '增肌滿滿烤鯖魚',
+                price: 170,
+                amount: 0,
+                product_class: '增肌系列',
+                carbon_content: "魚肉 5kg/1 kg"
+            }, {
+                img: './images/元氣滿滿牛肉餐.jpg',
+                name: '增肌滿滿牛肉餐',
+                price: 180,
+                amount: 0,
+                product_class: '增肌系列',
+                carbon_content: "牛肉 60kg/1 kg"
+            }, {
+                // 豪華系列
+
+                img: './images/元氣滿滿烤鮭魚.jpg',
+                name: '豪華滿滿烤鮭魚',
+                price: 180,
+                amount: 0,
+                product_class: '豪華系列',
+                carbon_content: "魚肉 5kg/1 kg"
             }, {
                 img: './images/元氣滿滿松阪豬.jpg',
-                name: '元氣滿滿松阪豬',
+                name: '豪華滿滿松阪豬',
                 price: 180,
                 amount: 0,
                 product_class: '豪華系列',
-                carbon_content: "豬肉 7kg/1 k"
-            }, {
-                img: './images/元氣滿滿烤鮭魚.jpg',
-                name: '元氣滿滿烤鮭魚',
-                price: 180,
-                amount: 0,
-                product_class: '豪華系列',
-                carbon_content: "魚肉 5kg/1 k"
-            },
-            ], 
+                carbon_content: "豬肉 7kg/1 kg"
+            }
+            ],
             slide_id: 0,
             slide: [{
                 title: '年齡層的影響',
@@ -132,8 +193,6 @@ const app = Vue.createApp({
                 color: 'text-info',
                 class: 'btn-outline-info'
             }],
-            date: new Date().getFullYear(),
-
         }
     }, methods: {
 
@@ -176,9 +235,12 @@ const app = Vue.createApp({
             let total = 0
             this.products.forEach(product => {
                 total += product.price * product.amount
+                product.amount = 0
             });
 
             alert('非常感謝您的訂購!\r總計:' + total);
+            total = 0
+            this.Lsum = 0
         },
         fs_updateValue(product, amount) {
             if (amount < 0) return
@@ -192,8 +254,13 @@ const app = Vue.createApp({
         fs_shopingCartToggle() {
             document.querySelector('.sum_box').classList.toggle('sum_box_active');
             document.querySelector('.shopingCart_toggle').classList.toggle('shopingCart_toggle_active');
+            if (flag2 % 2 == 0){
+                this.shopingCart_toggle_img = "<i class='bi bi-cart4'></i>";
+            }else{
+                this.shopingCart_toggle_img = '<i class="bi bi-arrow-left-square-fill"></i>';
+            }
+            flag2 ++;
         }
-
     }
 }).mount('#app');
 // <!--------------------------------------------------------main End-------------------------------------------------------->
