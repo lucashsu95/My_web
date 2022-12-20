@@ -10,7 +10,7 @@ const app = Vue.createApp({
             text_content: '',
             Lsum: 0,
             select_value: '全部',
-            check_box: [],
+            product_ary:[],
             datas: [
                 {
                     id: 1,
@@ -197,7 +197,7 @@ const app = Vue.createApp({
     }, methods: {
 
         fs_click_modalMoveTop(idx) {
-            console.log();
+            console.log(idx);
             if (flag == '') {
                 flag = idx;
                 //取root裡的--MoreNews_container_height值
@@ -237,10 +237,9 @@ const app = Vue.createApp({
                 total += product.price * product.amount
                 product.amount = 0
             });
-
             alert('非常感謝您的訂購!\r總計:' + total);
-            total = 0
-            this.Lsum = 0
+            total = 0;
+            this.Lsum = 0;
         },
         fs_updateValue(product, amount) {
             if (amount < 0) return
@@ -250,6 +249,7 @@ const app = Vue.createApp({
                 total += product.price * product.amount
             });
             this.Lsum = total;
+            
         },
         fs_shopingCartToggle() {
             document.querySelector('.sum_box').classList.toggle('sum_box_active');
@@ -267,6 +267,7 @@ const app = Vue.createApp({
 
 // <!--------------------------------------------------------chart Start-------------------------------------------------------->
 Chart.defaults.font.size = 18;
+
 var chart = new Chart(document.getElementById('myChart'), {
     type: 'polarArea',
     data: {
@@ -294,7 +295,7 @@ var chart = new Chart(document.getElementById('myChart'), {
     }, options: {
         plugins: {
             legend: {
-                position: 'bottom',
+                position: 'right',
             },
         },
     }

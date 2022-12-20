@@ -67,6 +67,9 @@
                             <a href="#Chart" class="nav-link">熱銷推薦</a>
                         </li>
                         <li class="nav-item">
+                            <a href="#Chart" class="nav-link">餐盒小故事</a>
+                        </li>
+                        <li class="nav-item">
                             <a type="button" class="nav-link" data-bs-toggle="modal"
                                 data-bs-target="#MoreNews_modal">更多資訊</a>
                         </li>
@@ -183,7 +186,8 @@
                                 <div class="buy">
                                     <button @click="fs_updateValue(product,product.amount - 1)"
                                         class="btn btn-outline-warning">-</button>
-                                    <div class="amount">{{product.amount}}</div>
+                                    <input type="text" class="amount" v-model='product.amount' value="product.amount">
+
                                     <button @click="fs_updateValue(product,product.amount + 1)"
                                         class="btn btn-outline-warning">+</button>
                                 </div>
@@ -195,11 +199,13 @@
 
             <p>
                 <a @click="fs_shopingCartToggle" class="shopingCart_toggle" v-html="shopingCart_toggle_img"></a>
+            <form action="buy.php" method="post">
 
-            <div class="sum_box">
-                <h3>購物車</h3>
-                <p class="product_content">
-                    <template v-for="product in products" class="check_box">
+                <div class="sum_box">
+                    <h3>購物車</h3>
+                    <p class="product_content">
+                    <div v-if="Lsum == 0">您目前還未訂購任何商品</div>
+                    <template v-for="product in products">
                         <template v-if="product.amount > 0">
                             <p>
                                 <img :src="product.img">{{product.name +' '+ product.amount + '盒'}}　
@@ -208,26 +214,34 @@
                             </p>
                         </template>
                     </template>
-                </p>
-                <p>
-                    {{'總額:$'+Lsum+'元'}}
-                </p>
-                <p style="margin:auto;">
-                    <button @click="fs_submit" class="btn btn-outline-warning">送出</button>
-                </p>
-            </div>
+                    </p>
+                    <p>
+                        {{'總額:$'+Lsum+'元'}}
+                    </p>
+                    <p style="margin:auto;">
+                        <!-- <button @click="fs_submit" class="btn btn-warning btn-lg">送出</button> -->
+                        <input type="submit" value="送出">
+                        <input type="hidden" name="Lsum" :value="Lsum">
+                    </p>
+
+                </div>
+            </form>
             </p>
         </section>
         <!-- 購物車 End -->
+
         <!-- 熱銷推薦 Start -->
         <section id="Chart">
             <h1>熱銷推薦</h1>
             <canvas id="myChart" width='230' height='230'></canvas>
         </section>
         <!-- 熱銷推薦 End -->
+
         <!-- 資訊列 Start -->
         <section id="services">
-            <h1><span style="font-size:45px;color: transparent;background-image: linear-gradient(#fd30e5, #4535f3 80%);-webkit-background-clip: text;">餐盒小故事</span></h1>
+            <h1><span
+                    style="font-size:45px;color: transparent;background-image: linear-gradient(#fd30e5, #4535f3 80%);-webkit-background-clip: text;">餐盒小故事</span>
+            </h1>
             <div class="slide">
                 <div class="slide-control">
 
@@ -270,7 +284,7 @@
                     點餐: ubereats.com, foodpanda.com.tw<br>
 
                 </p>
-                <form action="#" method="post">
+                <form action="buy.php" method="post">
                     <div class="title">聯絡我們</div>
                     <br>
                     <p>
@@ -285,47 +299,52 @@
                     <h2 class="title">留言*</h2>
                     <textarea name="usercontent" id="usercontent" cols="30" rows="5" class="form-control"></textarea>
                     </p>
-                    <input type="submit" value="送出" class="btn">
-                    <input type="reset" value="重製" class="btn">
+                    <p>
+                        <input type="submit" value="送出" class="btn btn-outline-light">
+                        <input type="reset" value="重製" class="btn btn-outline-light" style="margin-left:10px;">
+                    </p>
                 </form>
             </div>
         </footer>
 
-    </div>
 
-    <!-- footer End -->
-    <!-- 更多資訊 Start -->
-    <div class="modal fade" id="MoreNews_modal">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h2>更多資訊</h2>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <!-- Start -->
-                <div class="modal-body">
-                    <div id="MoreNews">
-                        <div v-for="data in datas" class="MoreNews_container" :id="data.id"
-                            @click="fs_click_modalMoveTop(data.id)">
-                            <img :src="data.img">
-                        </div>
-                        <div class="MoreNews_content" @click="fs_click_modalMoveTop('close')">
-                            <h5>{{text_h}}</h5>
-                            <div v-html="text_content"></div>
+        <!-- footer End -->
+        <!-- 更多資訊 Start -->
+        <div class="modal fade" id="MoreNews_modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2>更多資訊</h2>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <!-- Start -->
+                    <div class="modal-body">
+                        <div id="MoreNews">
+                            <div v-for="data in datas" class="MoreNews_container" :id="data.id"
+                                @click="fs_click_modalMoveTop(data.id)">
+                                <img :src="data.img">
+                            </div>
+                            <div class="MoreNews_content" @click="fs_click_modalMoveTop('close')">
+                                <h5>{{text_h}}</h5>
+                                <div v-html="text_content"></div>
 
+                            </div>
                         </div>
                     </div>
-                </div>
-                <!-- End -->
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <!-- End -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-link" data-bs-dismiss="modal">Close</button>
+                    </div>
                 </div>
             </div>
         </div>
+        <!-- 更多資訊 End -->
     </div>
-    <!-- 更多資訊 End -->
+
     <!-- script.js Start -->
-    <script src="./js/script.js"></script>
+    <script src="./js/script.js">
+
+    </script>
     <!-- script.js End -->
     <!-- AOS Start -->
     <script>

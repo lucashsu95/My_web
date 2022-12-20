@@ -79,7 +79,7 @@
     opacity: 0.7;
     box-shadow: 1px 1px 10px black;
     font-weight: bold;
-    z-index: 3;
+    z-index: 6;
 }
 
 .nav-left {
@@ -326,6 +326,7 @@
     height: 90%;
 
     display: flex;
+    align-items: center;
     flex-direction: column;
 
     font-size: 20px;
@@ -336,6 +337,9 @@
     background-color: rgba(255, 255, 255, 0.9);
     margin: auto;
     transition: .5s all;
+
+    overflow: auto;
+    z-index: 4;
 }
 
 #ShoppingCart .product_content {
@@ -425,7 +429,7 @@
 /* chart_section Start */
 #Chart {
     margin: auto;
-    width: 40%;
+    width: 45%;
 }
 
 @media (max-width:1000px) {
@@ -583,14 +587,13 @@ footer {
 footer::before {
     content: '';
     position: absolute;
-    top: -500px;
+    top: -400px;
     left: -120px;
     width: 0;
     height: 0;
     border-style: solid;
-    border-width: 90rem 0 0 90rem;
+    border-width: 150rem 0 0 150rem;
     border-color: transparent transparent transparent #0000006d;
-
 }
 
 footer::after {
