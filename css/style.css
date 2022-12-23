@@ -15,8 +15,8 @@
     position: fixed;
     bottom: 50px;
     right: 50px;
-    width: 4em;
-    height: 4em;
+    width: 3em;
+    height: 3em;
 
     box-shadow: 0 0 0.4em #fff;
     background-color: #fff;
@@ -130,6 +130,7 @@
     flex-direction: column;
     justify-content: center;
     background: #498351;
+    overflow:hidden;
 }
 
 .main-article {
@@ -138,6 +139,11 @@
     width: 70%;
     background: #41744a;
 
+}
+@media(max-width:900px){
+    .main-article{
+        width:90%;
+    }
 }
 
 .main-article h3 {
@@ -439,7 +445,7 @@
 
     #ShoppingCart h1,
     #Chart h1 {
-        margin: 3rem 1rem 0 0;
+        
         font-weight: 600;
     }
 }
@@ -455,18 +461,18 @@
 }
 
 #services .slide {
-    padding: 2rem 1rem;
     color: #000;
     position: relative;
     width: 80%;
     margin: auto;
-
+    
     display: flex;
     justify-content: center;
 }
 
 @media (min-width: 768px) {
     #services .slide {
+        padding: 2rem 1rem;
         height: calc(500px + 4rem);
     }
 }
@@ -515,8 +521,13 @@
     opacity: .95;
     background-color: #fff;
     border-radius: 8px;
-    width: 400px;
     transition: .5s;
+}
+@media(min-width:1000px){
+    #services .slide .slide-project {
+        
+        width: 400px;
+    }
 }
 
 #services .slide .slide-project .slide-header {
@@ -607,7 +618,7 @@ footer::after {
 footer .footer-container {
     width: 30%;
     height: 80vh;
-    margin: 5rem;
+    margin: 3rem;
     padding: 50px;
     z-index: 3;
     color: #fff;
@@ -619,7 +630,13 @@ footer .title {
     border-left: 3px solid rgb(255, 255, 255);
 }
 
-
+@media (max-width:900px) {
+    footer .footer-container {
+        width:100%;
+        padding:0;
+        
+    }
+}
 /* footer End */
 /* 跳出視窗內容 Start */
 
