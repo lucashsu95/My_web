@@ -26,6 +26,7 @@
     <script src="https://unpkg.com/vue@next"></script>
 
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="./images/logo.png">
     <title>碳棄</title>
 </head>
 
@@ -158,26 +159,40 @@
         <section id="Computer" data-aos="zoom-in">
             <div class="Computer_container">
                 <h1><i class="bi bi-calculator"></i>排碳計算機</h1>
-                <h3>請輸入公克</h3>
+                <div class="Computer_Grid">
+                    <div class="Computer_img" @click="computer_now = 'first'">
+                        <img src="./images/六大食物分類_01_全穀雜糧類.jpg" alt="六大食物分類_01_全穀雜糧類.jpg">
+                    </div>
+                    <div class="Computer_img" @click="computer_now = 'second'">
+                        <img src="./images/六大食物分類_02_豆魚蛋肉類.jpg" alt="六大食物分類_02_豆魚蛋肉類.jpg">
+                    </div>
+                    <div class="Computer_img" @click="computer_now = 'third'">
+                        <img src="./images/六大食物分類_03_蔬菜類.jpg" alt="六大食物分類_03_蔬菜類.jpg">
+                    </div>
+                    <div class="Computer_img" @click="computer_now = 'fourth'">
+                        <img src="./images/六大食物分類_04_水果類.jpg" alt="六大食物分類_04_水果類.jpg">
+                    </div>
+                    <div class="Computer_img" @click="computer_now = 'fifth'">
+                        <img src="./images/六大食物分類_05_乳品類.jpg" alt="六大食物分類_05_乳品類.jpg">
+                    </div>
+                    <div class="Computer_img" @click="computer_now = 'sixth'">
+                        <img src="./images/六大食物分類_06_油脂與堅果種子類.jpg" alt="六大食物分類_06_油脂與堅果種子類.jpg">
+                    </div>
+                </div>
+                <div class="Computer_sum">
+                    <h3>總排碳量：{{carbon_sum}}g</h3>
+                </div>
                 <div class="Computer_table">
-                    <div class="Computer_tr">
-                        <img src="./images/六大食物分類_01_全穀雜糧類.jpg" alt="">
-                    </div>
-                    <div class="Computer_tr">
-                        <img src="./images/六大食物分類_02_豆魚蛋肉類.jpg" alt="">
-                    </div>
-                    <div class="Computer_tr">
-                        <img src="./images/六大食物分類_03_蔬菜類.jpg" alt="">
-                    </div>
-                    <div class="Computer_tr">
-                        <img src="./images/六大食物分類_04_水果類.jpg" alt="">
-                    </div>
-                    <div class="Computer_tr">
-                        <img src="./images/六大食物分類_05_乳品類.jpg" alt="">
-                    </div>
-                    <div class="Computer_tr">
-                        <img src="./images/六大食物分類_06_油脂與堅果種子類.jpg" alt="">
-                    </div>
+                    <template v-for="computer in computers">
+                        <template v-if="computer.class == computer_now">
+                            <div class="computer_tr" :style="'background:'+computer.bg">
+                                <h4 class="computer_td_1">{{computer.name}}</h4>
+                                <input type="text" class="form-control computer_td_2" v-model="computer.amount" placeholder="請輸入公克數">
+                                <div class="computer_td_3">1g排出{{computer.carbon}}g</div>
+                            </div>
+                        </template>
+                    </template>
+
                 </div>
 
             </div>
@@ -252,7 +267,7 @@
                     </p>
                     <p style="margin:auto;">
                         <!-- <button @click="fs_submit" class="btn btn-warning btn-lg">送出</button> -->
-                        <input type="submit" value="送出">
+                        <input type="submit" value="送出" class="btn btn-warning">
                         <input type="hidden" name="Lsum" :value="Lsum">
                     </p>
 

@@ -187,27 +187,72 @@
 #Computer .Computer_container {
     padding: 1% 4%;
     text-align: center;
-    outline: 1px solid red;
-    width: 60%;
-    margin:auto;
+    width: 53%;
+    margin: auto;
 }
 
-#Computer .Computer_table {
+#Computer .Computer_Grid {
     display: grid;
     grid-template-columns: 33% 33% 33%;
 }
 
-#Computer .Computer_tr img{
-    width:100%;
+#Computer .Computer_img img {
+    width: 100%;
     border-radius: 10px;
     transition: all .1s;
-    
+    cursor: pointer;
+
 }
 
-#Computer .Computer_tr img:hover{
+#Computer .Computer_img img:hover {
     transform: scale(1.1);
 }
 
+#Computer .computer_tr {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    margin: auto;
+}
+
+@media(max-width:900px) {
+    #Computer .Computer_container {
+        width: 100%;
+        padding: 0;
+    }
+
+    #Computer .computer_tr {
+        width: 100%;
+    }
+}
+
+#Computer .computer_td_1,
+#Computer .computer_td_2,
+#Computer .computer_td_3 {
+    padding: 10px;
+}
+
+
+#Computer .computer_td_1 {
+    width: 25%;
+}
+
+#Computer .computer_td_2 {
+    width: 50%;
+    text-align: center;
+}
+
+#Computer .computer_td_3 {
+    width: 25%;
+}
+
+.Computer_sum {
+    width: 100%;
+
+}
 
 /* Computer End */
 
