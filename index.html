@@ -61,6 +61,9 @@
                             <a href="#main" class="nav-link">什麼是低碳飲食</a>
                         </li>
                         <li class="nav-item">
+                            <a href="#carbonComputer" class="nav-link">排碳計算機</a>
+                        </li>
+                        <li class="nav-item">
                             <a href="#ShoppingCart" class="nav-link">線上訂購服務</a>
                         </li>
                         <li class="nav-item">
@@ -151,11 +154,40 @@
                 </p>
             </article>
         </section>
+        <!-- 排碳計算機 Start -->
+        <section id="Computer" data-aos="zoom-in">
+            <div class="Computer_container">
+                <h1><i class="bi bi-calculator"></i>排碳計算機</h1>
+                <h3>請輸入公克</h3>
+                <div class="Computer_table">
+                    <div class="Computer_tr">
+                        <img src="./images/六大食物分類_01_全穀雜糧類.jpg" alt="">
+                    </div>
+                    <div class="Computer_tr">
+                        <img src="./images/六大食物分類_02_豆魚蛋肉類.jpg" alt="">
+                    </div>
+                    <div class="Computer_tr">
+                        <img src="./images/六大食物分類_03_蔬菜類.jpg" alt="">
+                    </div>
+                    <div class="Computer_tr">
+                        <img src="./images/六大食物分類_04_水果類.jpg" alt="">
+                    </div>
+                    <div class="Computer_tr">
+                        <img src="./images/六大食物分類_05_乳品類.jpg" alt="">
+                    </div>
+                    <div class="Computer_tr">
+                        <img src="./images/六大食物分類_06_油脂與堅果種子類.jpg" alt="">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- 排碳計算機 End -->
         <!-- 購物車 Start -->
         <section id="ShoppingCart">
             <h1 data-aos="fade-right"><img src="./images/豬會飛LOGO.jpg" class="icon">豬會飛 <span
                     style="color:#ff7b00">線上訂購</span></h1>
-            <div class="select_container">
+            <div class="select_container" data-aos="filp-up">
                 <input type="radio" id="r1" name="drone" value="全部" v-model="select_value" checked>
                 <div>
                     <label for="r1" class="select_radio">全部</label>
@@ -232,16 +264,14 @@
 
         <!-- 熱銷推薦 Start -->
         <section id="Chart">
-            <h1>熱銷推薦</h1>
+            <h1><i class="bi bi-bar-chart-line"></i>熱銷推薦</h1>
             <canvas id="myChart" width='230' height='230'></canvas>
         </section>
         <!-- 熱銷推薦 End -->
 
         <!-- 資訊列 Start -->
         <section id="services">
-            <h1><span
-                    style="font-size:45px;color: transparent;background-image: linear-gradient(#fd30e5, #4535f3 80%);-webkit-background-clip: text;">餐盒小故事</span>
-            </h1>
+            <h1><i class="bi bi-book-fill"></i>餐盒小故事</h1>
             <div class="slide">
                 <div class="slide-control">
 

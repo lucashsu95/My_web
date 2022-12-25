@@ -11,6 +11,12 @@
     --MoreNews_container_height: 120px;
 }
 
+@media(min-width:900px) {
+    section {
+        padding-top: 30px;
+    }
+}
+
 .ToTop {
     position: fixed;
     bottom: 50px;
@@ -130,7 +136,7 @@
     flex-direction: column;
     justify-content: center;
     background: #498351;
-    overflow:hidden;
+    overflow: hidden;
 }
 
 .main-article {
@@ -140,9 +146,10 @@
     background: #41744a;
 
 }
-@media(max-width:900px){
-    .main-article{
-        width:90%;
+
+@media(max-width:900px) {
+    .main-article {
+        width: 90%;
     }
 }
 
@@ -174,6 +181,35 @@
 }
 
 /* Main Content End  */
+
+/* Computer Start */
+
+#Computer .Computer_container {
+    padding: 1% 4%;
+    text-align: center;
+    outline: 1px solid red;
+    width: 60%;
+    margin:auto;
+}
+
+#Computer .Computer_table {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
+
+#Computer .Computer_tr img{
+    width:100%;
+    border-radius: 10px;
+    transition: all .1s;
+    
+}
+
+#Computer .Computer_tr img:hover{
+    transform: scale(1.1);
+}
+
+
+/* Computer End */
 
 /* ShoppingCart_container Start */
 
@@ -445,7 +481,7 @@
 
     #ShoppingCart h1,
     #Chart h1 {
-        
+
         font-weight: 600;
     }
 }
@@ -460,12 +496,19 @@
 
 }
 
+#services h1 {
+    font-size: 45px;
+    color: transparent;
+    background-image: linear-gradient(#fd30e5, #4535f3 80%);
+    -webkit-background-clip: text;
+}
+
 #services .slide {
     color: #000;
     position: relative;
     width: 80%;
     margin: auto;
-    
+
     display: flex;
     justify-content: center;
 }
@@ -523,9 +566,10 @@
     border-radius: 8px;
     transition: .5s;
 }
-@media(min-width:1000px){
+
+@media(min-width:1000px) {
     #services .slide .slide-project {
-        
+
         width: 400px;
     }
 }
@@ -632,11 +676,12 @@ footer .title {
 
 @media (max-width:900px) {
     footer .footer-container {
-        width:100%;
-        padding:0;
-        
+        width: 100%;
+        padding: 0;
+
     }
 }
+
 /* footer End */
 /* 跳出視窗內容 Start */
 
