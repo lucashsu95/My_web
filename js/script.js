@@ -340,7 +340,10 @@ const app = Vue.createApp({
                 amount: '',
                 class: 'sixth',
                 bg:'#c99f63',
-            }]
+            }],
+            userName:'',
+            userGmail:'',
+            usercontent:''
         }
     },
     computed: {
@@ -409,7 +412,7 @@ const app = Vue.createApp({
             this.Lsum = total;
 
         },
-        fs_shopingCartToggle() {
+        fs_shopingCartToggle(val) {
             document.querySelector('.sum_box').classList.toggle('sum_box_active');
             document.querySelector('.shopingCart_toggle').classList.toggle('shopingCart_toggle_active');
             if (flag2 % 2 == 0) {
@@ -418,6 +421,11 @@ const app = Vue.createApp({
                 this.shopingCart_toggle_img = '<i class="bi bi-arrow-left-square-fill"></i>';
             }
             flag2++;
+        },
+        fs_footerSubmit(){
+            if(this.userName != '' && this.userGmail != '' && this.usercontent != ''){
+                alert('我們己經接收到您的留言!\r請等待我們的回復')
+            }
         }
     }
 }).mount('#app');

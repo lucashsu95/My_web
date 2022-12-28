@@ -59,7 +59,7 @@
                             <a href="index.html" target="_top" class="nav-link">首頁</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#main" class="nav-link">什麼是低碳飲食</a>
+                            <a href="#main" class="nav-link">低碳</a>
                         </li>
                         <li class="nav-item">
                             <a href="#carbonComputer" class="nav-link">排碳計算機</a>
@@ -72,6 +72,9 @@
                         </li>
                         <li class="nav-item">
                             <a href="#services" class="nav-link">餐盒小故事</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#footer" class="nav-link">聯絡我們</a>
                         </li>
                         <li class="nav-item">
                             <a type="button" class="nav-link" data-bs-toggle="modal"
@@ -127,7 +130,7 @@
         <!-- Main Content Start -->
         <section class="main-section" id='main'>
             <article class="main-article">
-                <h3 data-aos="fade-down-right">什麼是低碳飲食?</h3>
+                <h3 data-aos="fade-down-right">低碳</h3>
                 <hr>
                 <p data-aos="fade-up-left">
                     低碳飲食是讓碳的排放量減少，也可稱為低醣飲食，意思就是指<b>「減少飲食中的碳水化合物含量，增加好的油脂和蛋白質」</b>，而我們可以選用當地的食材，不做加工，來增加當季和在地蔬果的攝取，不僅能減少碳排放量，還能增進健康也環保。
@@ -137,21 +140,21 @@
                 <h3 data-aos="fade-down-right">淨零排放(Net Zero)</h3>
                 <hr>
                 <p data-aos="fade-up-left">
-                    又稱為碳中和，國家、企業、組織或個人等等在一定時間內透過各種節能減碳策略（例如負碳技術、森林碳匯、使用低碳能源取代化石燃料……等等）或購買其他企業碳權，以抵消自身產生的二氧化碳排放量，實現正負抵消，達到相對「零排放」。
+                    又稱為碳中和，國家、企業、組織或個人等等在一定時間內透過各種節能減碳策略（例如負碳技術、森林碳匯、使用低碳能源取代化石燃料……等等）或購買其他企業碳權，以抵消自身產生的二氧化碳排放量，實現正負抵消，達到相對「零排放」。（新創圓夢網，2022）
                 </p>
             </article>
             <article class="main-article">
                 <h3 data-aos="fade-down-right">節能減碳</h3>
                 <hr>
                 <p data-aos="fade-up-left">
-                    節能減碳意指藉由節約能源、減少碳排放的方式保護地球資源，進而降低對地球的傷害。近幾年全球暖化造成的氣候變遷，不僅改變了生態環境，造成生物多樣性的保存不易，也影響到人類的日常生活，例如乾旱與水災發生的頻率增加，導致民生用水供應不穩定，若繼續忽視氣候變遷帶來的影響，毫無節制地浪費資源，只會加重全球暖化問題，最後面臨不可挽回的生態浩劫，為了延緩氣候變遷。
+                    節能減碳意指藉由節約能源、減少碳排放的方式保護地球資源，進而降低對地球的傷害（配客嘉，2021）。隨著全球暖化的氣候變遷，越來越多的生態系正陸續消失，我們因該學習節能減碳的小技巧來保護地球，譬如像隨手關燈、資源分類做好、自備購物袋減少塑膠袋垃圾的產生等，為地球盡一步節能減碳，給我們後代一個乾淨又健康的地球。
                 </p>
             </article>
             <article class="main-article">
                 <h3 data-aos="fade-down-right">碳足跡標籤</h3>
                 <hr>
                 <p data-aos="fade-up-left">
-                    又稱碳標籤或碳排放標籤。主要以標示公司、生產製程、產品及個人的碳排放量，其意思指一個產品從原料取得，經過工廠製造、配送銷售、消費者使用到最後廢棄回收等生命週期各階段所產生的溫室氣體，經過換算成二氧化碳當量的總和。
+                    又稱碳標籤或碳排放標籤。主要以標示公司、生產製程、產品及個人的碳排放量，其意思指一個產品從原料取得，經過工廠製造、配送銷售、消費者使用到最後廢棄回收等生命週期各階段所產生的溫室氣體，經過換算成二氧化碳當量的總和。（產品碳足跡資訊網，2022）
                 </p>
             </article>
         </section>
@@ -187,7 +190,8 @@
                         <template v-if="computer.class == computer_now">
                             <div class="computer_tr" :style="'background:'+computer.bg">
                                 <h4 class="computer_td_1">{{computer.name}}</h4>
-                                <input type="text" class="form-control computer_td_2" v-model="computer.amount" placeholder="請輸入公克數">
+                                <input type="text" class="form-control computer_td_2" v-model="computer.amount"
+                                    placeholder="請輸入公克數">
                                 <div class="computer_td_3">1g排出{{computer.carbon}}g</div>
                             </div>
                         </template>
@@ -246,7 +250,7 @@
 
             <p>
                 <a @click="fs_shopingCartToggle" class="shopingCart_toggle" v-html="shopingCart_toggle_img"></a>
-            <form action="buy.php" method="post">
+            <form action="#" method="post">
 
                 <div class="sum_box">
                     <h3>購物車</h3>
@@ -267,7 +271,7 @@
                     </p>
                     <p style="margin:auto;">
                         <!-- <button @click="fs_submit" class="btn btn-warning btn-lg">送出</button> -->
-                        <input type="submit" value="送出" class="btn btn-warning">
+                        <input type="submit" value="送出" class="btn btn-warning" @click="fs_submit">
                         <input type="hidden" name="Lsum" :value="Lsum">
                     </p>
 
@@ -329,23 +333,24 @@
                     點餐: ubereats.com, foodpanda.com.tw<br>
 
                 </p>
-                <form action="buy.php" method="post">
+                <form action="#" method="post">
                     <div class="title">聯絡我們</div>
                     <br>
                     <p>
                     <h2 class="title">姓名*</h2>
-                    <input type="text" name="userName" class="form-control">
+                    <input type="text" v-model="userName" class="form-control" required>
                     </p>
                     <p>
                     <h2 class="title">電子信箱*</h2>
-                    <input type="gmail" name="userGmail" class="form-control">
+                    <input type="email" v-model="userGmail" class="form-control" required>
                     </p>
                     <p>
                     <h2 class="title">留言*</h2>
-                    <textarea name="usercontent" id="usercontent" cols="30" rows="5" class="form-control"></textarea>
+                    <textarea v-model="usercontent" id="usercontent" cols="30" rows="5" class="form-control"
+                        required></textarea>
                     </p>
                     <p>
-                        <input type="submit" value="送出" class="btn btn-outline-light">
+                        <input type="submit" @click="fs_footerSubmit" value="送出" class="btn btn-outline-light">
                         <input type="reset" value="重製" class="btn btn-outline-light" style="margin-left:10px;">
                     </p>
                 </form>
@@ -372,7 +377,6 @@
                             <div class="MoreNews_content" @click="fs_click_modalMoveTop('close')">
                                 <h5>{{text_h}}</h5>
                                 <div v-html="text_content"></div>
-
                             </div>
                         </div>
                     </div>

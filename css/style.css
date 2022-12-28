@@ -466,7 +466,7 @@
         display: block;
 
         color: #000;
-        font-size: 38px;
+        font-size: 45px;
 
         cursor: pointer;
         z-index: 998;
@@ -477,16 +477,16 @@
     @keyframes shopingCart_toggle {
         0% {
 
-            transform: translateX(0px) scale(1);
+            transform: translateX(0px);
         }
 
         50% {
-            transform: translateX(30px) scale(1.5);
+            transform: translateX(30px);
 
         }
 
         100% {
-            transform: translateX(0px) scale(1);
+            transform: translateX(0px);
         }
     }
 
