@@ -56,9 +56,6 @@
                 <div class="collapse navbar-collapse " id="linkbar">
                     <ul class="navbar-nav" style="margin-left:auto; font-size: 18px;" data-aos="fade-left">
                         <li class="nav-item">
-                            <a href="index.html" target="_top" class="nav-link">首頁</a>
-                        </li>
-                        <li class="nav-item">
                             <a href="#main" class="nav-link">低碳</a>
                         </li>
                         <li class="nav-item">
@@ -251,7 +248,6 @@
             <p>
                 <a @click="fs_shopingCartToggle" class="shopingCart_toggle" v-html="shopingCart_toggle_img"></a>
             <form action="#" method="post">
-
                 <div class="sum_box">
                     <h3>購物車</h3>
                     <p class="product_content">
@@ -262,19 +258,27 @@
                                 <img :src="product.img">{{product.name +' '+ product.amount + '盒'}}　
                                 <button @click="fs_updateValue(product,product.amount - product.amount)"
                                     class="btn btn-outline-danger">取消</button>
+                                <input type="hidden" :name="product.name" :value="product.amount">
                             </p>
                         </template>
                     </template>
+                    <div v-if="Lsum != 0">
+                            姓名*
+                            <input type="text" name="name" class='form-control ' placeholder="請輸入姓名" required>
+                            地址*
+                            <input type="text" name="address" class='form-control ' placeholder="請輸入地址" required>
+                            備註
+                            <input type="text" name="content" class='form-control'>
+
+                    </div>
                     </p>
                     <p>
                         {{'總額:$'+Lsum+'元'}}
                     </p>
                     <p style="margin:auto;">
-                        <!-- <button @click="fs_submit" class="btn btn-warning btn-lg">送出</button> -->
-                        <input type="submit" value="送出" class="btn btn-warning" @click="fs_submit">
+                        <input v-if='Lsum != 0' type="submit" value="送出" class="btn btn-warning">
                         <input type="hidden" name="Lsum" :value="Lsum">
                     </p>
-
                 </div>
             </form>
             </p>
@@ -338,16 +342,15 @@
                     <br>
                     <p>
                     <h2 class="title">姓名*</h2>
-                    <input type="text" v-model="userName" class="form-control" required>
+                    <input type="text" v-model="userName" class="form-control" required name="username">
                     </p>
                     <p>
                     <h2 class="title">電子信箱*</h2>
-                    <input type="email" v-model="userGmail" class="form-control" required>
+                    <input type="email" v-model="userGmail" class="form-control" required name="usergmail">
                     </p>
                     <p>
                     <h2 class="title">留言*</h2>
-                    <textarea v-model="usercontent" id="usercontent" cols="30" rows="5" class="form-control"
-                        required></textarea>
+                    <textarea v-model="usercontent" id="usercontent" rows="5" class="form-control" required name="usercontent"></textarea>
                     </p>
                     <p>
                         <input type="submit" @click="fs_footerSubmit" value="送出" class="btn btn-outline-light">
