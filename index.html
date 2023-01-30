@@ -335,7 +335,7 @@
                     <span v-html="test.title"></span>
                     <div class="test_title">
                         <template v-if="idx != 0">
-                            {{"Q" + idx}}<span v-html="test.question"></span>
+                            {{"Q" + idx}} <span v-html="test.question"></span>
                         </template>
                         <template v-else>
                             準備好測驗了嗎？<br>
@@ -357,17 +357,21 @@
                             </div>
                         </label><br>
                     </template>
-                    <button @click="tests[idx].show = !tests[idx].show,test_change++" class="btn btn-lg btn-secondary">
-                        <template v-if='idx == 0'>
+                    <template v-if='idx == 0'>
+                        <button @click="tests[idx].show = !tests[idx].show,test_change++" class="btn btn-lg btn-secondary">
                             開始作答
-                        </template>
-                        <template v-else-if='idx+1 == tests.length'>
+                        </button>
+                    </template>
+                    <template v-else-if="idx+1 == tests.length">
+                        <button @click="tests[idx].show = !tests[idx].show,test_change++" class="btn btn-lg btn-secondary">
                             作答完畢
-                        </template>
-                        <template v-else>
+                        </button>
+                    </template>
+                    <template v-else-if="test.user">
+                        <button @click="tests[idx].show = !tests[idx].show,test_change++" class="btn btn-lg btn-secondary">
                             下一題
-                        </template>
-                    </button>
+                        </button>
+                    </template>
                 </div>
             </div>
             <div class="test_result">
