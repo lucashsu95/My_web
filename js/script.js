@@ -352,7 +352,9 @@ const app = Vue.createApp({
             this.computers.forEach(computer => {
                 total += computer.amount * computer.carbon
             });
-            total = total.toFixed(1);
+            console.log(total, total.toFixed(1));
+            total = `總排碳量：${total.toFixed(1)}g`;
+            if (total == '總排碳量：0.0g') total = '可點擊上方圖片變換食物種類'
             return total
         }
     }, methods: {

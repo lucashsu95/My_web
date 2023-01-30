@@ -141,10 +141,18 @@
 
 .main-article {
     color: #fff;
-    padding: 90px 15px;
-    width: 70%;
-    background: #41744a;
+    padding: 60px 45px;
+    width: 65%;
+    background: #3a6442;
+    margin-bottom: 1rem;
+    border: 1px solid #0fd9b6;
+    box-shadow: 0 0 30px 0 rgba(15, 227, 192, 0.429);
+    border-radius: 20px 0 20px 0;
+    transition: .8s all;
+}
 
+.main-article:hover {
+    box-shadow: 0 0 100px 1px rgba(15, 227, 163, 0.429);
 }
 
 @media(max-width:900px) {
@@ -154,17 +162,25 @@
 }
 
 .main-article h3 {
-    width: 33%;
+    width: 35%;
     height: 50px;
 
-    margin-left: 3rem;
-    border: 3px solid #00ea02;
-    border-radius: 0 10px 0 10px;
+    margin-left: 1.8rem;
+    margin-bottom: 1.8rem;
+    border: 3px solid #60c93d;
+    border-radius: 0 15px 0 15px;
     font-weight: 700;
+    transition: .7s all;
 
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 10px;
+}
+
+
+.main-article:hover h3 {
+    transform: rotate(-4deg);
 }
 
 @media(max-width:1100px) {
@@ -189,6 +205,10 @@
     text-align: center;
     width: 53%;
     margin: auto;
+}
+
+#carbonComputer h3 {
+    padding: 10px 0;
 }
 
 #carbonComputer .Computer_Grid {
@@ -229,6 +249,13 @@
     }
 }
 
+.Computer_table {
+    border: 1px solid #333;
+    border-radius: 25px;
+    padding: 25px 0;
+    width: 100%;
+}
+
 #carbonComputer .computer_td_1,
 #carbonComputer .computer_td_2,
 #carbonComputer .computer_td_3 {
@@ -251,7 +278,6 @@
 
 .Computer_sum {
     width: 100%;
-
 }
 
 /* Computer End */
@@ -590,6 +616,8 @@
     transition: .5s;
     cursor: pointer;
     font-size: 3rem;
+    padding: 20%;
+
 }
 
 #services .slide .slide-container {

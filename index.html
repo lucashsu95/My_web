@@ -56,7 +56,7 @@
                 <div class="collapse navbar-collapse " id="linkbar">
                     <ul class="navbar-nav" style="margin-left:auto; font-size: 18px;" data-aos="fade-left">
                         <li class="nav-item">
-                            <a href="#main" class="nav-link">低碳</a>
+                            <a href="#main" class="nav-link">低碳小觀念</a>
                         </li>
                         <li class="nav-item">
                             <a href="#carbonComputer" class="nav-link">排碳計算機</a>
@@ -127,31 +127,34 @@
         <!-- Main Content Start -->
         <section class="main-section" id='main'>
             <article class="main-article">
-                <h3 data-aos="fade-down-right">低碳</h3>
+                <h3>碳中和(Carbon Neutral)</h3>
                 <hr>
                 <p data-aos="fade-up-left">
-                    低碳飲食是讓碳的排放量減少，也可稱為低醣飲食，意思就是指<b>「減少飲食中的碳水化合物含量，增加好的油脂和蛋白質」</b>，而我們可以選用當地的食材，不做加工，來增加當季和在地蔬果的攝取，不僅能減少碳排放量，還能增進健康也環保。
+                    「碳中和」（Carbon Neutral）指的是，企業、組織或政府在特定一段時間的二氧化碳排放量，透過植樹、使用再生能源等方式累積的減碳量相互抵銷、清除。
+                    不同於淨零排放是強調「人為造成的溫室氣體排放量」。 也就是說，在特定期間內，「碳排放量」與「碳清除量」相等、無增無減，達成「碳中和」的狀態
                 </p>
             </article>
             <article class="main-article">
-                <h3 data-aos="fade-down-right">淨零排放(Net Zero)</h3>
+                <h3>淨零排放(Net Zero)</h3>
                 <hr>
                 <p data-aos="fade-up-left">
-                    又稱為碳中和，國家、企業、組織或個人等等在一定時間內透過各種節能減碳策略（例如負碳技術、森林碳匯、使用低碳能源取代化石燃料……等等）或購買其他企業碳權，以抵消自身產生的二氧化碳排放量，實現正負抵消，達到相對「零排放」。（新創圓夢網，2022）
+                    「淨零排放」指的是在特定一段時間內，全球人為造成的溫室氣體排放量，扣除人為移除的量等於零。 也就是，淨零並不是不排放，而是盡力讓人為造成的溫室氣體排放極小化。
+                    為了達到淨零排放，許多政府和企業會透過負碳技術（利用碳捕集封存、再利用CCS、CCUS）、自然碳匯（森林碳匯、海洋吸附）等方式抵消碳排放。
                 </p>
             </article>
             <article class="main-article">
-                <h3 data-aos="fade-down-right">節能減碳</h3>
+                <h3>台灣的淨零碳排政策</h3>
                 <hr>
                 <p data-aos="fade-up-left">
-                    節能減碳意指藉由節約能源、減少碳排放的方式保護地球資源，進而降低對地球的傷害（配客嘉，2021）。隨著全球暖化的氣候變遷，越來越多的生態系正陸續消失，我們因該學習節能減碳的小技巧來保護地球，譬如像隨手關燈、資源分類做好、自備購物袋減少塑膠袋垃圾的產生等，為地球盡一步節能減碳，給我們後代一個乾淨又健康的地球。
+                    2022年3月30日，在眾人的期盼下，行政院國家發展委員會公布了「台灣2050淨零排放路徑及策略」，預計在2030年前編列約9000億預算，執行能源、產業、生活、社會四大轉型策略，以及科技研發、氣候法制兩大治理基礎，並輔以12項關鍵戰略，計畫於2050年與世界同步邁向淨零目標。
                 </p>
             </article>
             <article class="main-article">
-                <h3 data-aos="fade-down-right">碳足跡標籤</h3>
+                <h3>低碳飲食</h3>
                 <hr>
                 <p data-aos="fade-up-left">
-                    又稱碳標籤或碳排放標籤。主要以標示公司、生產製程、產品及個人的碳排放量，其意思指一個產品從原料取得，經過工廠製造、配送銷售、消費者使用到最後廢棄回收等生命週期各階段所產生的溫室氣體，經過換算成二氧化碳當量的總和。（產品碳足跡資訊網，2022）
+                    低碳飲食是在每日飲食中減少碳水化合物的攝取量，並提高蛋白質、油脂、纖維質在飲食中的比重，低碳飲食全名為低碳水化合物飲食，也稱作低醣飲食，顧名思義就是降低碳水化合物，也就是醣類的攝取量，提高天然蛋白質及優良脂質的攝取。
+                    低碳飲食近年來很熱門，它沒有生酮飲食嚴格、也不需要精確計算熱量，是比較彈性、簡單的減重方式。
                 </p>
             </article>
         </section>
@@ -180,7 +183,7 @@
                     </div>
                 </div>
                 <div class="Computer_sum">
-                    <h3>總排碳量：{{carbon_sum}}g</h3>
+                    <h3>{{carbon_sum}}</h3>
                 </div>
                 <div class="Computer_table">
                     <template v-for="computer in computers">
@@ -263,12 +266,12 @@
                         </template>
                     </template>
                     <div v-if="Lsum != 0">
-                            姓名*
-                            <input type="text" name="name" class='form-control ' placeholder="請輸入姓名" required>
-                            地址*
-                            <input type="text" name="address" class='form-control ' placeholder="請輸入地址" required>
-                            備註
-                            <input type="text" name="content" class='form-control'>
+                        姓名*
+                        <input type="text" name="name" class='form-control ' placeholder="請輸入姓名" required>
+                        地址*
+                        <input type="text" name="address" class='form-control ' placeholder="請輸入地址" required>
+                        備註
+                        <input type="text" name="content" class='form-control'>
 
                     </div>
                     </p>
@@ -350,7 +353,8 @@
                     </p>
                     <p>
                     <h2 class="title">留言*</h2>
-                    <textarea v-model="usercontent" id="usercontent" rows="5" class="form-control" required name="usercontent"></textarea>
+                    <textarea v-model="usercontent" id="usercontent" rows="5" class="form-control" required
+                        name="usercontent"></textarea>
                     </p>
                     <p>
                         <input type="submit" @click="fs_footerSubmit" value="送出" class="btn btn-outline-light">
