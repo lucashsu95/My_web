@@ -71,6 +71,9 @@
                             <a href="#services" class="nav-link">餐盒小故事</a>
                         </li>
                         <li class="nav-item">
+                            <a href="#test" class="nav-link">減碳知識王</a>
+                        </li>
+                        <li class="nav-item">
                             <a href="#footer" class="nav-link">聯絡我們</a>
                         </li>
                         <li class="nav-item">
@@ -196,9 +199,7 @@
                             </div>
                         </template>
                     </template>
-
                 </div>
-
             </div>
         </section>
         <!-- 排碳計算機 End -->
@@ -272,7 +273,6 @@
                         <input type="text" name="address" class='form-control ' placeholder="請輸入地址" required>
                         備註
                         <input type="text" name="content" class='form-control'>
-
                     </div>
                     </p>
                     <p>
@@ -327,6 +327,54 @@
             </div>
         </section>
         <!-- 資訊列 End -->
+
+        <!-- test Start-->
+        <section id="test">
+            <div class="test_container">
+                <div v-for='test,idx in tests' :class="'test_box'+ ` t${idx - test_change}`" v-show="test.show">
+                    <span v-html="test.title"></span>
+                    <div class="test_title">
+                        <template v-if="idx != 0">
+                            {{"Q" + idx}}<span v-html="test.question"></span>
+                        </template>
+                        <template v-else>
+                            準備好測驗了嗎？<br>
+                            可以在網站上方找到答案喔！
+                        </template>
+                    </div>
+                    <hr>
+                    <template v-for="option,idx2 in test.options">
+                        <input type="radio" :name="test.title" :id="option" :value='sorts[idx2]' v-model="test.user">
+                        <label :for="option">
+                            <div>
+                                <span v-if="test.user == sorts[idx2]" class="test_flag">
+                                    {{sorts[idx2]}}
+                                </span>
+                                <span v-else>
+                                    {{sorts[idx2]}}
+                                </span>
+                                {{option}}。
+                            </div>
+                        </label><br>
+                    </template>
+                    <button @click="tests[idx].show = !tests[idx].show,test_change++" class="btn btn-lg btn-secondary">
+                        <template v-if='idx == 0'>
+                            開始作答
+                        </template>
+                        <template v-else-if='idx+1 == tests.length'>
+                            作答完畢
+                        </template>
+                        <template v-else>
+                            下一題
+                        </template>
+                    </button>
+                </div>
+            </div>
+            <div class="test_result">
+                {{test_result}}分
+            </div>
+        </section>
+        <!-- test End -->
 
         <!-- Main Content End -->
         <!-- footer Start -->

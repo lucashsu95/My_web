@@ -16,19 +16,37 @@ const app = Vue.createApp({
                     id: 1,
                     img: './images/image1.png',
                     h: '新手必看！5大低碳飲食祕訣',
-                    content: `1. 不需複雜計算熱量，避開澱粉類就好！
-                    幾乎每一樣食物中都含有碳水化合物，像是我們作為三餐主食的白飯、麵包、烏龍麵、蕎麥麵等，就都是澱粉類食物。外食的時候，請選擇含碳水化合物量較少的餐點，或是將份量減半來享用。
-                    2. 選擇好的蛋白質食物！
-                    幾乎所有的肉類、魚類的碳水化合物含量都很低，建議以魚貝類、肉類、豆腐、蛋等蛋白質為主的料理。好的蛋白質食物，搭配低碳且富含食物纖維的蔬菜，就是完美的低碳菜單了！ 
+                    content: `
+                    <ul>
+                        <li>
+                            <h6>
+                                低碳飲食是在每日飲食中減少碳水化合物的攝取量，並提高蛋白質、油脂、纖維質在飲食中的比重，低碳飲食全名為低碳水化合物飲食，也稱作低醣飲食，顧名思義就是降低碳水化合物，也就是醣類的攝取量，提高天然蛋白質及優良脂質的攝取。
+                                低碳飲食近年來很熱門，它沒有生酮飲食嚴格、也不需要精確計算熱量，是比較彈性、簡單的減重方式。
+                            </h6>
+                        </li>
+                    </ul>
+                    <ol>
+                        <li>
+                            不需複雜計算熱量，避開澱粉類就好！
+                            幾乎每一樣食物中都含有碳水化合物，像是我們作為三餐主食的白飯、麵包、烏龍麵、蕎麥麵等，就都是澱粉類食物。外食的時候，請選擇含碳水化合物量較少的餐點，或是將份量減半來享用。
+                        </li>
+                           選擇好的蛋白質食物！
+                            幾乎所有的肉類、魚類的碳水化合物含量都很低，建議以魚貝類、肉類、豆腐、蛋等蛋白質為主的料理。好的蛋白質食物，搭配低碳且富含食物纖維的蔬菜，就是完美的低碳菜單了！ 
+                        <li>
+
+                        </li>
+                            搭配優質油脂食用！
+                            一般在減重的時候，大家都會覺得不該吃油脂豐富的料理，例如豬排、雞皮、霜降牛排等。但這些看似高熱量的食物，其實碳水化合物含量很低，反而是執行低碳飲食時可以吃的食材喔！除了油脂豐富的料理之外，建議大家平時也可以攝取好油，將MCT油、亞麻仁籽油、紫蘇油、橄欖油、魚油等好油脂，拌入菜餚中食用。 
                      
-                    3. 搭配優質油脂食用！
-                    一般在減重的時候，大家都會覺得不該吃油脂豐富的料理，例如豬排、雞皮、霜降牛排等。但這些看似高熱量的食物，其實碳水化合物含量很低，反而是執行低碳飲食時可以吃的食材喔！除了油脂豐富的料理之外，建議大家平時也可以攝取好油，將MCT油、亞麻仁籽油、紫蘇油、橄欖油、魚油等好油脂，拌入菜餚中食用。 
-                     
-                    4. 嚴禁攝取大量含砂糖的食物！
-                    進行低碳飲食，除了醣類攝取要減少之外，更要避免「糖」類食物，尤其嚴禁將含有大量砂糖的甜點當作宵夜，如果晚上會嘴饞，可以挑選較低碳的食材，如水煮蛋、堅果、乳酪等食用。 
-                     
-                    5. 充分攝取低碳蔬菜、多喝水！
-                    少吃碳水化合物，但食物纖維的攝取量也隨之減少的話，就很容易導致便祕。因此建議大家多吃蔬菜、海藻類，可以多攝取低碳蔬菜。另外，每天補充2000cc的水分也非常重要。 `,
+                        <li>
+                            嚴禁攝取大量含砂糖的食物！
+                            進行低碳飲食，除了醣類攝取要減少之外，更要避免「糖」類食物，尤其嚴禁將含有大量砂糖的甜點當作宵夜，如果晚上會嘴饞，可以挑選較低碳的食材，如水煮蛋、堅果、乳酪等食用。 
+                        </li>
+                        <li>
+                        充分攝取低碳蔬菜、多喝水！
+                        少吃碳水化合物，但食物纖維的攝取量也隨之減少的話，就很容易導致便祕。因此建議大家多吃蔬菜、海藻類，可以多攝取低碳蔬菜。另外，每天補充2000cc的水分也非常重要。 
+                        </li>
+                        `
                 }, {
                     id: 2,
                     img: './images/image2.png',
@@ -341,6 +359,47 @@ const app = Vue.createApp({
                 class: 'sixth',
                 bg: '#c99f63',
             }],
+            test_change: 0,
+            sorts: ['A', 'B', 'C', 'D'],
+            ans: ['', 'C', 'A', 'B', 'D', 'A'],
+            tests: [{
+                title: '<h1 style="font-weight:800;color:#0fd9b6;">減碳知識王</h1>',
+                question: '',
+                options: [],
+                user: 'a',
+                show: true,
+            }, {
+                title: '碳中和',
+                question: '什麼是碳中和（carbon neutral）？',
+                options: ['鹼性和酸性飲料加在一起的過程', '碳治狼自創的呼吸法', '經過低碳能源、植樹等消除二氧化碳的方式正負抵消', '以上接是'],
+                user: '',
+                show: true,
+            }, {
+                title: '低碳飲食(1)',
+                question: '低碳飲食全名為「 」，也稱作「 」？<br>請在「 」填入正確的字詞。',
+                options: ['.', '.', '.', '.'],
+                user: '',
+                show: true,
+            }, {
+                title: '低碳飲食(2)',
+                question: '「 」近年來很熱門，它沒有生酮飲食嚴格、也不需要精確計算熱量，是比較彈性、簡單的減重方式。<br>請在「 」填入正確的字詞。',
+                options: ['.', '.', '.', '.'],
+                user: '',
+                show: true,
+            }, {
+                title: '食物的碳排名(1)',
+                question: '請選出以下碳排量最高的食物？',
+                options: ['.', '.', '.', '.'],
+                user: '',
+                show: true,
+            }, {
+                title: '食物的碳排名(2)',
+                question: '請選出以下碳排量最低的食物？',
+                options: ['.', '.', '.', '.'],
+                user: '',
+                show: true,
+            }
+            ],
             userName: '',
             userGmail: '',
             usercontent: ''
@@ -348,14 +407,22 @@ const app = Vue.createApp({
     },
     computed: {
         carbon_sum() {
-            total = 0
+            let compute_total = 0
             this.computers.forEach(computer => {
-                total += computer.amount * computer.carbon
+                compute_total += computer.amount * computer.carbon
             });
-            console.log(total, total.toFixed(1));
-            total = `總排碳量：${total.toFixed(1)}g`;
-            if (total == '總排碳量：0.0g') total = '可點擊上方圖片變換食物種類'
-            return total
+            compute_total = compute_total != 0 ? `總排碳量：${compute_total.toFixed(1)}g` : '可點擊上方圖片變換食物種類';
+            return compute_total
+        },
+        test_result() {
+            let test_total = 0
+            const fraction = 100 / (this.tests.length - 1);
+            console.log(this.tests);
+            this.tests.forEach((test, i) => {
+                console.log(test.user, this.ans[i]);
+                test_total += test.user == this.ans[i] ? fraction : 0;
+            });
+            return test_total.toFixed(1)
         }
     }, methods: {
 
@@ -432,7 +499,7 @@ const app = Vue.createApp({
         },
         fs_footerSubmit() {
             if (this.userName != '' && this.userGmail != '' && this.usercontent != '') {
-                alert('我們己經接收到您的留言!\r請等待我們的回復')
+                alert('我們己經接收到您的留言!\r')
             }
         }
     }
