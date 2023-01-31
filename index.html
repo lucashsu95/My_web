@@ -76,10 +76,6 @@
                         <li class="nav-item">
                             <a href="#footer" class="nav-link">聯絡我們</a>
                         </li>
-                        <li class="nav-item">
-                            <a type="button" class="nav-link" data-bs-toggle="modal"
-                                data-bs-target="#MoreNews_modal">更多資訊</a>
-                        </li>
                     </ul>
                 </div>
             </div>
@@ -358,17 +354,20 @@
                         </label><br>
                     </template>
                     <template v-if='idx == 0'>
-                        <button @click="tests[idx].show = !tests[idx].show,test_change++" class="btn btn-lg btn-secondary">
+                        <button @click="tests[idx].show = !tests[idx].show,test_change++"
+                            class="btn btn-lg btn-secondary">
                             開始作答
                         </button>
                     </template>
                     <template v-else-if="idx+1 == tests.length">
-                        <button @click="tests[idx].show = !tests[idx].show,test_change++" class="btn btn-lg btn-secondary">
+                        <button @click="tests[idx].show = !tests[idx].show,test_change++"
+                            class="btn btn-lg btn-secondary">
                             作答完畢
                         </button>
                     </template>
                     <template v-else-if="test.user">
-                        <button @click="tests[idx].show = !tests[idx].show,test_change++" class="btn btn-lg btn-secondary">
+                        <button @click="tests[idx].show = !tests[idx].show,test_change++"
+                            class="btn btn-lg btn-secondary">
                             下一題
                         </button>
                     </template>
@@ -384,35 +383,57 @@
         <!-- footer Start -->
         <footer id="footer">
             <div class="footer-container">
-                <h2 class="title">店家資訊</h2>
-                <p>
-                    服務選項: 內用 · 外帶 · 無接觸送餐服務<br>
-                    地址： 242新北市新莊區中原東路61號<br>
-                    電話： 02 2277 7833<br>
-                    點餐: ubereats.com, foodpanda.com.tw<br>
+                <div class="footer-left">
+                    <h2 class="title">店家資訊</h2>
+                    <p>
+                        服務選項: 內用 · 外帶 · 無接觸送餐服務<br>
+                        地址： 242新北市新莊區中原東路61號<br>
+                        電話： 02 2277 7833<br>
+                        點餐: ubereats.com, foodpanda.com.tw<br>
 
-                </p>
-                <form action="index.html" method="get">
-                    <div class="title">聯絡我們</div>
-                    <br>
-                    <p>
-                    <h2 class="title">姓名*</h2>
-                    <input type="text" v-model="userName" class="form-control" required name="username">
                     </p>
-                    <p>
-                    <h2 class="title">電子信箱*</h2>
-                    <input type="email" v-model="userGmail" class="form-control" required name="usergmail">
-                    </p>
-                    <p>
-                    <h2 class="title">留言*</h2>
-                    <textarea v-model="usercontent" id="usercontent" rows="5" class="form-control" required
-                        name="usercontent"></textarea>
-                    </p>
-                    <p>
-                        <input type="submit" @click="fs_footerSubmit" value="送出" class="btn btn-outline-light">
-                        <input type="reset" value="重製" class="btn btn-outline-light" style="margin-left:10px;">
-                    </p>
-                </form>
+                    <form action="index.html" method="get">
+                        <div class="title">聯絡我們</div>
+                        <br>
+                        <p>
+                        <h4>姓名*</h4>
+                        <input type="text" v-model="userName" class="form-control" required name="username">
+                        </p>
+                        <p>
+                        <h4>電子信箱*</h4>
+                        <input type="email" v-model="userGmail" class="form-control" required name="usergmail">
+                        </p>
+                        <p>
+                        <h4>留言*</h4>
+                        <textarea v-model="usercontent" id="usercontent" rows="5" class="form-control" required
+                            name="usercontent"></textarea>
+                        </p>
+                        <p>
+                            <input type="submit" @click="fs_footerSubmit" value="送出" class="btn btn-outline-light">
+                            <input type="reset" value="重製" class="btn btn-outline-light" style="margin-left:10px;">
+                        </p>
+                    </form>
+                </div>
+                <div class="footer-right">
+                    <div class="footer-right-top">
+                        <h2 class="title">競賽資訊</h2>
+                        <a href="/創意低碳便當設計.docx" download class="btn btn-link">下載word</a>
+                    </div>
+                    <div class="footer-right-bottom">
+                        <h2 class="title">快速連結</h2>
+                        <a href="#main" class="btn btn-link">低碳小觀念</a>
+                        <a href="#carbonComputer" class="btn btn-link">排碳計算機</a>
+                        <a href="#ShoppingCart" class="btn btn-link">線上訂購服務</a>
+                        <a href="#Chart" class="btn btn-link">熱銷推薦</a>
+                        <a href="#services" class="btn btn-link">餐盒小故事</a>
+                        <a href="#test" class="btn btn-link">減碳知識王</a>
+                        <a href="#footer" class="btn btn-link">聯絡我們</a>
+                        <a href="https://lucashsu95.github.io/Topic2/%E6%B8%9B%E7%A2%B3%E7%9B%B8%E6%A9%9F/%E6%B8%9B%E7%A2%B3%E7%9B%B8%E6%A9%9F.html"
+                            class="btn btn-link" target="_blank">減碳相機</a>
+                        <a href="" class="btn btn-link">減碳大作戰</a>
+                        <a class="btn btn-link" data-bs-toggle="modal" data-bs-target="#MoreNews_modal">更多資訊</a>
+                    </div>
+                </div>
             </div>
         </footer>
 
