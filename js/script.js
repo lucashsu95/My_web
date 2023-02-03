@@ -377,7 +377,7 @@ const app = Vue.createApp({
             sorts: ['A', 'B', 'C', 'D'],
             ans: ['@', 'C', 'A', 'B', 'D', 'A'],
             tests: [{
-                title: '<h1 style="font-weight:800;color:#0fd9b6;"><i class="bi bi-controller"></i>減碳知識王</h1>',
+                title: '<h1 style="font-weight:800;color:#0fd9b6;"><i class="bi bi-controller"></i> 減碳知識王</h1>',
                 question: '',
                 options: [],
                 user: '',
