@@ -1,8 +1,21 @@
-// <!--------------------------------------------------------main Start-------------------------------------------------------->
+// <!-----------------------main Start--------------------------------->
 var flag = '';
 var flag2 = 1;
 const root = document.querySelector(':root');
+let nav = document.querySelector('.nav__class');
+let oldTop = 0;
+// console.log(nav.classList);
+window.onscroll = () => {
+    let nowTop = document.documentElement.scrollTop;
+    if(nowTop > oldTop){
+        nav.style.transform = 'translateY(-100%);';
+    }else{
+        nav.style.transform = 'translateY(0);';
+    }
+    oldTop = nowTop;
+}
 
+// <!-----------------------Vue Start--------------------------------->
 const app = Vue.createApp({
     data() {
         return {
@@ -89,6 +102,7 @@ const app = Vue.createApp({
                 }
             ],
             shopingCart_toggle_img: "<i class='bi bi-cart4'></i>",
+            select_container:['全部','減脂系列','增肌系列','豪華系列'],
             products: [{
                 // 減脂系列
                 img: './images/元氣滿滿雞肉餐.jpg',
@@ -363,7 +377,7 @@ const app = Vue.createApp({
             sorts: ['A', 'B', 'C', 'D'],
             ans: ['@', 'C', 'A', 'B', 'D', 'A'],
             tests: [{
-                title: '<h1 style="font-weight:800;color:#0fd9b6;">減碳知識王</h1>',
+                title: '<h1 style="font-weight:800;color:#0fd9b6;"><i class="bi bi-controller"></i>減碳知識王</h1>',
                 question: '',
                 options: [],
                 user: '',

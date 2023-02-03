@@ -32,11 +32,8 @@
 
 <body>
     <div id="app">
-
         <a href="#Top" class="ToTop"></a>
         <div id='Top'></div>
-
-
         <!-- Nav Start -->
         <nav class="navbar navbar-expand-lg nav__class">
             <div class="container-fluid">
@@ -75,6 +72,9 @@
                         </li>
                         <li class="nav-item">
                             <a href="#footer" class="nav-link">聯絡我們</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-link" data-bs-toggle="modal" data-bs-target="#MoreNews_modal">更多資訊</a>
                         </li>
                     </ul>
                 </div>
@@ -160,7 +160,7 @@
         <!-- 排碳計算機 Start -->
         <section id="carbonComputer" data-aos="zoom-in">
             <div class="Computer_container">
-                <h1><i class="bi bi-calculator"></i>排碳計算機</h1>
+                <h1><i class="bi bi-calculator"></i>　排碳計算機</h1>
                 <div class="Computer_Grid">
                     <div class="Computer_img" @click="computer_now = 'first'">
                         <img src="./images/六大食物分類_01_全穀雜糧類.jpg" alt="六大食物分類_01_全穀雜糧類.jpg">
@@ -201,48 +201,33 @@
         <!-- 排碳計算機 End -->
         <!-- 購物車 Start -->
         <section id="ShoppingCart">
-            <h1 data-aos="fade-right"><img src="./images/豬會飛LOGO.jpg" class="icon">豬會飛 <span
-                    style="color:#ff7b00">線上訂購</span></h1>
-            <div class="select_container" data-aos="filp-up">
-                <input type="radio" id="r1" name="drone" value="全部" v-model="select_value" checked>
-                <div>
-                    <label for="r1" class="select_radio">全部</label>
-                </div>
-                <input type="radio" id="r2" name="drone" value="減脂系列" v-model="select_value">
-                <div>
-                    <label for="r2" class="select_radio">減脂系列</label>
-                </div>
-                <input type="radio" id="r3" name="drone" value="增肌系列" v-model="select_value">
-                <div>
-                    <label for="r3" class="select_radio">增肌系列</label>
-                </div>
-                <input type="radio" id="r4" name="drone" value="豪華系列" v-model="select_value">
-                <div>
-                    <label for="r4" class="select_radio">豪華系列</label>
+            <h1><img src="./images/豬會飛LOGO.jpg">豬會飛 <span style="color:#ff7b00">線上訂購</span></h1>
+            <div class="select_container" data-aos="fade-right">
+                <input type="radio" v-for="el,i in select_container" :id="'r' + i" name="drone" :value="el"
+                    v-model="select_value">
+                <div v-for="el,i in select_container">
+                    <label :for="'r'+ i" class="select_radio" :class="select_value === el && 'select_on'">{{el}}</label>
                 </div>
             </div>
-            <div class="ShoppingCart_bg">
-                <div class="ShoppingCart_container">
-                    <template v-for="product in products">
-                        <div v-if="product.product_class == select_value || select_value == '全部'"
-                            class="ShoppingCart_box">
-                            <img :src="product.img" alt="">
-                            <p class="product-name">{{product.name}}</p>
-                            <div class="shoppingCart_hidden">
-                                <p class="carbn">{{'碳排量:' + product.carbon_content}}</p>
-                                <p class="price">{{'$' + product.price}}</p>
-                                <div class="buy">
-                                    <button @click="fs_updateValue(product,product.amount - 1)"
-                                        class="btn btn-outline-warning">-</button>
-                                    <input type="text" class="amount" v-model='product.amount' value="product.amount">
+            <div class="ShoppingCart_container">
+                <template v-for="product in products">
+                    <div v-if="product.product_class == select_value || select_value == '全部'" class="ShoppingCart_box">
+                        <img :src="product.img" alt="">
+                        <p class="product-name">{{product.name}}</p>
+                        <div class="shoppingCart_hidden">
+                            <p class="carbn">{{'碳排量:' + product.carbon_content}}</p>
+                            <p class="price">{{'$' + product.price}}</p>
+                            <div class="buy">
+                                <button @click="fs_updateValue(product,product.amount - 1)"
+                                    class="btn btn-outline-warning">-</button>
+                                <input type="text" class="amount" v-model='product.amount' value="product.amount">
 
-                                    <button @click="fs_updateValue(product,product.amount + 1)"
-                                        class="btn btn-outline-warning">+</button>
-                                </div>
+                                <button @click="fs_updateValue(product,product.amount + 1)"
+                                    class="btn btn-outline-warning">+</button>
                             </div>
                         </div>
-                    </template>
-                </div>
+                    </div>
+                </template>
             </div>
 
             <p>
@@ -286,7 +271,7 @@
 
         <!-- 熱銷推薦 Start -->
         <section id="Chart">
-            <h1><i class="bi bi-bar-chart-line"></i>熱銷推薦</h1>
+            <h1><i class="bi bi-bar-chart-line"></i>　熱銷推薦</h1>
             <canvas id="myChart" width='230' height='230'></canvas>
         </section>
         <!-- 熱銷推薦 End -->
@@ -351,6 +336,7 @@
                                 </span>
                                 {{option}}。
                             </div>
+
                         </label><br>
                     </template>
                     <template v-if='idx == 0'>
@@ -372,11 +358,13 @@
                         </button>
                     </template>
                 </div>
+
             </div>
             <div class="test_result">
                 {{test_result}}分
             </div>
         </section>
+
         <!-- test End -->
 
         <!-- Main Content End -->
@@ -384,7 +372,7 @@
         <footer id="footer">
             <div class="footer-container">
                 <div class="footer-left">
-                    <h2 class="title">店家資訊</h2>
+                    <div class="title">店家資訊</div>
                     <p>
                         服務選項: 內用 · 外帶 · 無接觸送餐服務<br>
                         地址： 242新北市新莊區中原東路61號<br>
@@ -396,15 +384,15 @@
                         <div class="title">聯絡我們</div>
                         <br>
                         <p>
-                        <h4>姓名*</h4>
+                        <h5>姓名*</h5>
                         <input type="text" v-model="userName" class="form-control" required name="username">
                         </p>
                         <p>
-                        <h4>電子信箱*</h4>
+                        <h5>電子信箱*</h5>
                         <input type="email" v-model="userGmail" class="form-control" required name="usergmail">
                         </p>
                         <p>
-                        <h4>留言*</h4>
+                        <h5>留言*</h5>
                         <textarea v-model="usercontent" id="usercontent" rows="5" class="form-control" required
                             name="usercontent"></textarea>
                         </p>
@@ -416,11 +404,11 @@
                 </div>
                 <div class="footer-right">
                     <div class="footer-right-top">
-                        <h2 class="title">競賽資訊</h2>
+                        <div class="title">競賽資訊</div>
                         <a href="/創意低碳便當設計.docx" download class="btn btn-link">下載word</a>
                     </div>
                     <div class="footer-right-bottom">
-                        <h2 class="title">快速連結</h2>
+                        <div class="title">快速連結</div>
                         <a href="#main" class="btn btn-link">低碳小觀念</a>
                         <a href="#carbonComputer" class="btn btn-link">排碳計算機</a>
                         <a href="#ShoppingCart" class="btn btn-link">線上訂購服務</a>
@@ -430,7 +418,7 @@
                         <a href="#footer" class="btn btn-link">聯絡我們</a>
                         <a href="https://lucashsu95.github.io/Topic2/%E6%B8%9B%E7%A2%B3%E7%9B%B8%E6%A9%9F/%E6%B8%9B%E7%A2%B3%E7%9B%B8%E6%A9%9F.html"
                             class="btn btn-link" target="_blank">減碳相機</a>
-                        <a href="" class="btn btn-link">減碳大作戰</a>
+                        <!-- <a href="" class="btn btn-link">減碳大作戰</a> -->
                         <a class="btn btn-link" data-bs-toggle="modal" data-bs-target="#MoreNews_modal">更多資訊</a>
                     </div>
                 </div>
