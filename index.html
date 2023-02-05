@@ -2,474 +2,465 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- bootstrap JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-        crossorigin="anonymous"></script>
-    <!-- bootstrap CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <!-- bootstrap icon -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
-    <!-- aos.js -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <!-- Chart.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.0.1/chart.umd.js"
-        integrity="sha512-gQhCDsnnnUfaRzD8k1L5llCCV6O9HN09zClIzzeJ8OJ9MpGmIlCxm+pdCkqTwqJ4JcjbojFr79rl2F1mzcoLMQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <!-- Vue3 -->
-    <script src="https://unpkg.com/vue@next"></script>
+  <!-- bootstrap JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+  <!-- bootstrap CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <!-- bootstrap icon -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+  <!-- aos.js -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- Chart.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.0.1/chart.umd.js"
+    integrity="sha512-gQhCDsnnnUfaRzD8k1L5llCCV6O9HN09zClIzzeJ8OJ9MpGmIlCxm+pdCkqTwqJ4JcjbojFr79rl2F1mzcoLMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- Vue3 -->
+  <script src="https://unpkg.com/vue@next"></script>
 
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="icon" href="./images/logo.png">
-    <title>碳棄</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="icon" href="./images/logo.png">
+  <title>碳棄</title>
 </head>
 
 <body>
-    <div id="app">
-        <a href="#Top" class="ToTop"></a>
-        <div id='Top'></div>
-        <!-- Nav Start -->
-        <nav class="navbar navbar-expand-lg nav__class">
-            <div class="container-fluid">
+  <div id="app">
+    <a href="#Top" class="ToTop"></a>
+    <div id='Top'></div>
+    <!-- Nav Start -->
+    <nav class="navbar navbar-expand-lg nav__class">
+      <div class="container-fluid">
 
-                <!-- LOGO -->
-                <div class="nav-left" data-aos="fade-right">
-                    <a href="index.html">「碳」棄</a>
-                </div>
-
-                <!-- 第一部份:手機版 -->
-                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#linkbar">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <!-- 第二部份:電腦版 -->
-
-                <div class="collapse navbar-collapse " id="linkbar">
-                    <ul class="navbar-nav" style="margin-left:auto; font-size: 18px;" data-aos="fade-left">
-                        <li class="nav-item">
-                            <a href="#main" class="nav-link">低碳小觀念</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#carbonComputer" class="nav-link">排碳計算機</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#ShoppingCart" class="nav-link">線上訂購服務</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#Chart" class="nav-link">熱銷推薦</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#services" class="nav-link">餐盒小故事</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#test" class="nav-link">減碳知識王</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#footer" class="nav-link">聯絡我們</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" data-bs-toggle="modal" data-bs-target="#MoreNews_modal">更多資訊</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <!-- Nav End -->
-        <!-- Carousel Start -->
-
-
-        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-aos-duration='1000'>
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
-                    class="active"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="./images/carousel1.jpg" class="d-block w-100" alt="carousel1.jpg">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h3 data-aos='fade-right' class="test1">2050淨零碳排不僅是全球的目標</h3>
-                        <p data-aos='fade-left'>淨零軌跡與行動路徑探討生活轉型</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="./images/carousel2.jpg" class="d-block w-100" alt="carousel2.jpg">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h3 data-aos='fade-right'>減碳「酷」地球</h3>
-                        <p data-aos='fade-left'> 行政院環境保護署於2009年12月發布碳標籤圖示<br>台灣成為全世界第11個推動碳標籤的國家</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="./images/carousel3.jpg" class="d-block w-100" alt="carousel3.jpg">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h3 data-aos='fade-right'>每人平均碳排放量為10.77公噸</h3>
-                        <p data-aos='fade-left'>我國2019年能源使用CO2排放總量為256.0百萬公噸<br>占全球排放總量的0.76 %；每人平均排放量為10.77公噸。</p>
-                    </div>
-                </div>
-            </div>
-            <button class="carousel-control-prev" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </button>
-            <button class="carousel-control-next" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </button>
-            <a href="#main" class="ToBottom"></a>
+        <!-- LOGO -->
+        <div class="nav-left" data-aos="fade-right">
+          <a href="index.html">「碳」棄</a>
         </div>
-        <!-- Carousel End -->
-        <!-- Main Content Start -->
-        <section class="main-section" id='main'>
-            <article class="main-article">
-                <h3>碳中和(Carbon Neutral)</h3>
-                <hr>
-                <p data-aos="fade-up-left">
-                    「碳中和」（Carbon Neutral）指的是，企業、組織或政府在特定一段時間的二氧化碳排放量，透過植樹、使用再生能源等方式累積的減碳量相互抵銷、清除。
-                    不同於淨零排放是強調「人為造成的溫室氣體排放量」。 也就是說，在特定期間內，「碳排放量」與「碳清除量」相等、無增無減，達成「碳中和」的狀態
-                </p>
-            </article>
-            <article class="main-article">
-                <h3>淨零排放(Net Zero)</h3>
-                <hr>
-                <p data-aos="fade-up-left">
-                    「淨零排放」指的是在特定一段時間內，全球人為造成的溫室氣體排放量，扣除人為移除的量等於零。 也就是，淨零並不是不排放，而是盡力讓人為造成的溫室氣體排放極小化。
-                    為了達到淨零排放，許多政府和企業會透過負碳技術（利用碳捕集封存、再利用CCS、CCUS）、自然碳匯（森林碳匯、海洋吸附）等方式抵消碳排放。
-                </p>
-            </article>
-            <article class="main-article">
-                <h3>台灣的淨零碳排政策</h3>
-                <hr>
-                <p data-aos="fade-up-left">
-                    2022年3月30日，在眾人的期盼下，行政院國家發展委員會公布了「台灣2050淨零排放路徑及策略」，預計在2030年前編列約9000億預算，執行能源、產業、生活、社會四大轉型策略，以及科技研發、氣候法制兩大治理基礎，並輔以12項關鍵戰略，計畫於2050年與世界同步邁向淨零目標。
-                </p>
-            </article>
-            <article class="main-article">
-                <h3>低碳飲食</h3>
-                <hr>
-                <p data-aos="fade-up-left">
-                    低碳飲食是在每日飲食中減少碳水化合物的攝取量，並提高蛋白質、油脂、纖維質在飲食中的比重，低碳飲食全名為低碳水化合物飲食，也稱作低醣飲食，顧名思義就是降低碳水化合物，也就是醣類的攝取量，提高天然蛋白質及優良脂質的攝取。
-                    低碳飲食近年來很熱門，它沒有生酮飲食嚴格、也不需要精確計算熱量，是比較彈性、簡單的減重方式。
-                </p>
-            </article>
-        </section>
-        <!-- 排碳計算機 Start -->
-        <section id="carbonComputer" data-aos="zoom-in">
-            <div class="Computer_container">
-                <h1><i class="bi bi-calculator"></i> 排碳計算機</h1>
-                <div class="Computer_Grid">
-                    <div class="Computer_img" @click="computer_now = 'first'">
-                        <img src="./images/六大食物分類_01_全穀雜糧類.jpg" alt="六大食物分類_01_全穀雜糧類.jpg">
-                    </div>
-                    <div class="Computer_img" @click="computer_now = 'second'">
-                        <img src="./images/六大食物分類_02_豆魚蛋肉類.jpg" alt="六大食物分類_02_豆魚蛋肉類.jpg">
-                    </div>
-                    <div class="Computer_img" @click="computer_now = 'third'">
-                        <img src="./images/六大食物分類_03_蔬菜類.jpg" alt="六大食物分類_03_蔬菜類.jpg">
-                    </div>
-                    <div class="Computer_img" @click="computer_now = 'fourth'">
-                        <img src="./images/六大食物分類_04_水果類.jpg" alt="六大食物分類_04_水果類.jpg">
-                    </div>
-                    <div class="Computer_img" @click="computer_now = 'fifth'">
-                        <img src="./images/六大食物分類_05_乳品類.jpg" alt="六大食物分類_05_乳品類.jpg">
-                    </div>
-                    <div class="Computer_img" @click="computer_now = 'sixth'">
-                        <img src="./images/六大食物分類_06_油脂與堅果種子類.jpg" alt="六大食物分類_06_油脂與堅果種子類.jpg">
-                    </div>
-                </div>
-                <div class="Computer_sum">
-                    <h3>{{carbon_sum}}</h3>
-                </div>
-                <div class="Computer_table">
-                    <template v-for="computer in computers">
-                        <template v-if="computer.class == computer_now">
-                            <div class="computer_tr" :style="'background:'+computer.bg">
-                                <h4 class="computer_td_1">{{computer.name}}</h4>
-                                <input type="text" class="form-control computer_td_2" v-model="computer.amount"
-                                    placeholder="請輸入公克數">
-                                <div class="computer_td_3">1g排出{{computer.carbon}}g</div>
-                            </div>
-                        </template>
-                    </template>
-                </div>
-            </div>
-        </section>
-        <!-- 排碳計算機 End -->
-        <!-- 購物車 Start -->
-        <section id="ShoppingCart">
-            <h1><img src="./images/豬會飛LOGO.jpg">豬會飛 <span style="color:#ff7b00">線上訂購</span></h1>
-            <div class="select_container" data-aos="fade-right">
-                <input type="radio" v-for="el,i in select_container" :id="'r' + i" name="drone" :value="el"
-                    v-model="select_value">
-                <div v-for="el,i in select_container">
-                    <label :for="'r'+ i" class="select_radio" :class="select_value === el && 'select_on'">{{el}}</label>
-                </div>
-            </div>
-            <div class="ShoppingCart_container">
-                <template v-for="product in products">
-                    <div v-if="product.product_class == select_value || select_value == '全部'" class="ShoppingCart_box">
-                        <img :src="product.img" alt="">
-                        <p class="product-name">{{product.name}}</p>
-                        <div class="shoppingCart_hidden">
-                            <p class="carbn">{{'碳排量:' + product.carbon_content}}</p>
-                            <p class="price">{{'$' + product.price}}</p>
-                            <div class="buy">
-                                <button @click="fs_updateValue(product,product.amount - 1)"
-                                    class="btn btn-outline-warning">-</button>
-                                <input type="text" class="amount" v-model='product.amount' value="product.amount">
 
-                                <button @click="fs_updateValue(product,product.amount + 1)"
-                                    class="btn btn-outline-warning">+</button>
-                            </div>
-                        </div>
-                    </div>
-                </template>
-            </div>
+        <!-- 第一部份:手機版 -->
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#linkbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-            <p>
-                <a @click="fs_shopingCartToggle" class="shopingCart_toggle" v-html="shopingCart_toggle_img"></a>
-            <form action="index.html" method="get">
-                <div class="sum_box">
-                    <h3>購物車</h3>
-                    <p class="product_content">
-                    <div v-if="Lsum == 0">您目前還未訂購任何商品</div>
-                    <template v-for="product in products">
-                        <template v-if="product.amount > 0">
-                            <p>
-                                <img :src="product.img">{{product.name +' '+ product.amount + '盒'}}　
-                                <button @click="fs_updateValue(product,product.amount - product.amount)"
-                                    class="btn btn-outline-danger">取消</button>
-                                <input type="hidden" :name="product.name" :value="product.amount">
-                            </p>
-                        </template>
-                    </template>
-                    <div v-if="Lsum != 0">
-                        姓名*
-                        <input type="text" name="name" class='form-control ' placeholder="請輸入姓名" required>
-                        地址*
-                        <input type="text" name="address" class='form-control ' placeholder="請輸入地址" required>
-                        備註
-                        <input type="text" name="content" class='form-control'>
-                    </div>
-                    </p>
-                    <p>
-                        {{'總額:$'+Lsum+'元'}}
-                    </p>
-                    <p style="margin:auto;">
-                        <input v-if='Lsum != 0' type="submit" value="送出" class="btn btn-warning">
-                        <input type="hidden" name="Lsum" :value="Lsum">
-                    </p>
-                </div>
-            </form>
-            </p>
-        </section>
-        <!-- 購物車 End -->
+        <!-- 第二部份:電腦版 -->
 
-        <!-- 熱銷推薦 Start -->
-        <section id="Chart">
-            <h1><i class="bi bi-bar-chart-line"></i> 熱銷推薦</h1>
-            <canvas id="myChart" width='230' height='230'></canvas>
-        </section>
-        <!-- 熱銷推薦 End -->
-
-        <!-- 資訊列 Start -->
-        <section id="services">
-            <h1><i class="bi bi-book-fill"></i> 餐盒小故事</h1>
-            <div class="slide">
-                <div class="slide-control">
-
-
-                    <div class="slide-prev" @click="slide_id = slide_id == 0 ? 2 : slide_id - 1">
-                        <span class="carousel-control-prev-icon"></span>
-                    </div>
-                    <div class="slide-next" @click="slide_id = slide_id == 2 ? 0 : slide_id + 1"><span
-                            class="carousel-control-next-icon"></span></div>
-                </div>
-                <div class="slide-container">
-                    <div class="slide-project"
-                        :class="(index === slide_id && 'show') || ((index + 1) % 3 === slide_id && 'prev') || ((index + 2 ) % 3 === slide_id && 'next')"
-                        v-for="i , index in slide">
-                        <div class="slide-header">
-                            <h2>{{i.title}}</h2>
-                            <h3 :class="i.color">{{i.english}}</h3>
-                        </div>
-                        <div class="slide-body">
-                            <div>{{i.content}}</div>
-                        </div>
-                        <!-- <div class="slide-footer">
-                                <button class="btn" :class="i.class" @click="toggle(index)">{{i.btn}}</button>
-                            </div> -->
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- 資訊列 End -->
-
-        <!-- test Start-->
-        <section id="test">
-            <div class="test_container">
-                <div v-for='test,idx in tests' :class="'test_box'+ ` t${idx - test_change}`" v-show="test.show">
-                    <span v-html="test.title"></span>
-                    <div class="test_title">
-                        <template v-if="idx != 0">
-                            {{"Q" + idx}} <span v-html="test.question"></span>
-                        </template>
-                        <template v-else>
-                            準備好測驗了嗎？<br>
-                            可以在網站上方找到答案喔！
-                        </template>
-                    </div>
-                    <hr>
-                    <template v-for="option,idx2 in test.options">
-                        <input type="radio" :name="test.title" :id="option" :value='sorts[idx2]' v-model="test.user">
-                        <label :for="option">
-                            <div>
-                                <span v-if="test.user == sorts[idx2]" class="test_flag">
-                                    {{sorts[idx2]}}
-                                </span>
-                                <span v-else>
-                                    {{sorts[idx2]}}
-                                </span>
-                                {{option}}。
-                            </div>
-
-                        </label><br>
-                    </template>
-                    <template v-if='idx == 0'>
-                        <button @click="tests[idx].show = !tests[idx].show,test_change++"
-                            class="btn btn-lg btn-secondary">
-                            開始作答
-                        </button>
-                    </template>
-                    <template v-else-if="idx+1 == tests.length">
-                        <button @click="tests[idx].show = !tests[idx].show,test_change++"
-                            class="btn btn-lg btn-secondary">
-                            作答完畢
-                        </button>
-                    </template>
-                    <template v-else-if="test.user">
-                        <button @click="tests[idx].show = !tests[idx].show,test_change++"
-                            class="btn btn-lg btn-secondary">
-                            下一題
-                        </button>
-                    </template>
-                </div>
-
-            </div>
-            <div class="test_result">
-                {{test_result}}分
-            </div>
-        </section>
-
-        <!-- test End -->
-
-        <!-- Main Content End -->
-        <!-- footer Start -->
-        <footer id="footer">
-            <div class="footer-container">
-                <div class="footer-left">
-                    <div class="title">店家資訊</div>
-                    <p>
-                        服務選項: 內用 · 外帶 · 無接觸送餐服務<br>
-                        地址： 242新北市新莊區中原東路61號<br>
-                        電話： 02 2277 7833<br>
-                        點餐: ubereats.com, foodpanda.com.tw<br>
-
-                    </p>
-                    <form action="index.html" method="get">
-                        <div class="title">聯絡我們</div>
-                        <br>
-                        <p>
-                        <h5>姓名*</h5>
-                        <input type="text" v-model="userName" class="form-control" required name="username">
-                        </p>
-                        <p>
-                        <h5>電子信箱*</h5>
-                        <input type="email" v-model="userGmail" class="form-control" required name="usergmail">
-                        </p>
-                        <p>
-                        <h5>留言*</h5>
-                        <textarea v-model="usercontent" id="usercontent" rows="5" class="form-control" required
-                            name="usercontent"></textarea>
-                        </p>
-                        <p>
-                            <input type="submit" @click="fs_footerSubmit" value="送出" class="btn btn-outline-light">
-                            <input type="reset" value="重製" class="btn btn-outline-light" style="margin-left:10px;">
-                        </p>
-                    </form>
-                </div>
-                <div class="footer-right">
-                    <div class="footer-right-top">
-                        <h2 class="title">競賽資訊</h2>
-                        <a href="創意低碳便當設計.docx" download class="btn btn-link">下載word</a>
-                    </div>
-                    <div class="footer-right-bottom">
-                        <div class="title">快速連結</div>
-                        <a href="#main" class="btn btn-link">低碳小觀念</a>
-                        <a href="#carbonComputer" class="btn btn-link">排碳計算機</a>
-                        <a href="#ShoppingCart" class="btn btn-link">線上訂購服務</a>
-                        <a href="#Chart" class="btn btn-link">熱銷推薦</a>
-                        <a href="#services" class="btn btn-link">餐盒小故事</a>
-                        <a href="#test" class="btn btn-link">減碳知識王</a>
-                        <a href="#footer" class="btn btn-link">聯絡我們</a>
-                        <a href="https://lucashsu95.github.io/Topic2/%E6%B8%9B%E7%A2%B3%E7%9B%B8%E6%A9%9F/%E6%B8%9B%E7%A2%B3%E7%9B%B8%E6%A9%9F.html"
-                            class="btn btn-link" target="_blank">減碳相機</a>
-                        <!-- <a href="" class="btn btn-link">減碳大作戰</a> -->
-                        <a class="btn btn-link" data-bs-toggle="modal" data-bs-target="#MoreNews_modal">更多資訊</a>
-                    </div>
-                </div>
-            </div>
-        </footer>
-
-
-        <!-- footer End -->
-        <!-- 更多資訊 Start -->
-        <div class="modal fade" id="MoreNews_modal">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h2>更多資訊</h2>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                    </div>
-                    <!-- Start -->
-                    <div class="modal-body">
-                        <div id="MoreNews">
-                            <div v-for="data in datas" class="MoreNews_container" :id="data.id"
-                                @click="fs_click_modalMoveTop(data.id)">
-                                <img :src="data.img">
-                            </div>
-                            <div class="MoreNews_content" @click="fs_click_modalMoveTop('close')">
-                                <h5>{{text_h}}</h5>
-                                <div v-html="text_content"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End -->
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-outline-link" data-bs-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
+        <div class="collapse navbar-collapse " id="linkbar">
+          <ul class="navbar-nav" style="margin-left:auto; font-size: 18px;" data-aos="fade-left">
+            <li class="nav-item">
+              <a href="#main" class="nav-link">低碳小觀念</a>
+            </li>
+            <li class="nav-item">
+              <a href="#carbonComputer" class="nav-link">排碳計算機</a>
+            </li>
+            <li class="nav-item">
+              <a href="#ShoppingCart" class="nav-link">線上訂購服務</a>
+            </li>
+            <li class="nav-item">
+              <a href="#Chart" class="nav-link">熱銷推薦</a>
+            </li>
+            <li class="nav-item">
+              <a href="#services" class="nav-link">餐盒小故事</a>
+            </li>
+            <li class="nav-item">
+              <a href="#test" class="nav-link">減碳知識王</a>
+            </li>
+            <li class="nav-item">
+              <a href="#footer" class="nav-link">聯絡我們</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="modal" data-bs-target="#MoreNews_modal">更多資訊</a>
+            </li>
+          </ul>
         </div>
-        <!-- 更多資訊 End -->
+      </div>
+    </nav>
+    <!-- Nav End -->
+    <!-- Carousel Start -->
+
+
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-aos-duration='1000'>
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./images/carousel1.jpg" class="d-block w-100" alt="carousel1.jpg">
+          <div class="carousel-caption d-none d-md-block">
+            <h3 data-aos='fade-right' class="test1">2050<br>淨零碳排不僅是全球的目標</h3>
+            <p data-aos='fade-left'>淨零軌跡與行動路徑探討生活轉型</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./images/carousel2.jpg" class="d-block w-100" alt="carousel2.jpg">
+          <div class="carousel-caption d-none d-md-block">
+            <h3 data-aos='fade-right'>減碳「酷」地球</h3>
+            <p data-aos='fade-left'>台灣成為全世界第11個推動碳標籤的國家</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./images/carousel3.jpg" class="d-block w-100" alt="carousel3.jpg">
+          <div class="carousel-caption d-none d-md-block">
+            <h3 data-aos='fade-right'>每人平均碳排放量為10.77公噸</h3>
+            <p data-aos='fade-left'>我國2019年能源使用CO2排放總量為256.0百萬公噸<br>占全球排放總量的0.76 %<br>每人平均排放量為10.77公噸</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+      <a href="#main" class="ToBottom"></a>
     </div>
+    <!-- Carousel End -->
+    <!-- services Start -->
+    <section id="services">
+      <h1 class="sech1"><i class="bi bi-newspaper"></i> 低碳小觀念</h1>
+      <div class="slide">
+        <div class="slide-control">
+          <div class="slide-prev" @click="slide_id = slide_id == 0 ? 3 : slide_id - 1">
+            <span class="carousel-control-prev-icon"></span>
+          </div>
+          <div class="slide-next" @click="slide_id = slide_id == 3 ? 0 : slide_id + 1"><span
+              class="carousel-control-next-icon"></span></div>
+        </div>
+        <div class="slide-container">
+          <div class="slide-project"
+            :class="(index === slide_id && 'show') || ((index + 1) % 4 === slide_id && 'prev') || ((index + 2 ) % 4 === slide_id && 'back') || ((index + 3 ) % 4 === slide_id && 'next')"
+            v-for="i , index in slide">
+            <div class="slide-header" :style="'background:' + i.color">
+              <h1>{{i.title}}</h1>
+              <h3>{{i.english}}</h3>
+            </div>
+            <p class="slide-body" v-text="i.content">
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- services End -->
 
-    <!-- script.js Start -->
-    <script src="./js/script.js">
+    <!-- 排碳計算機 Start -->
+    <section id="carbonComputer" data-aos="zoom-in">
+      <div class="Computer_container">
 
-    </script>
-    <!-- script.js End -->
-    <!-- AOS Start -->
-    <script>
-        AOS.init({
-            duration: 800,
-        });
-    </script>
-    <!-- AOS End -->
+        <div class="content">
+          <h1 class="sech1"><i class="bi bi-calculator"></i> 排碳計算機</h1>
+          <hr>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt fugit tempora corrupti distinctio! Dicta
+            alias perferendis enim ducimus exercitationem in iure quos voluptatem, omnis architecto beatae reiciendis.
+            Labore, maxime voluptatibus?
+          </p>
+        </div>
+
+        <div class="computer">
+          <div class="select-computer">
+            <div class="select-tag" @click="computer_now = 'first'">
+              <img src="./images/bread.png" alt="">
+              全穀雜糧類
+            </div>
+            <div class="select-tag" @click="computer_now = 'second'">
+              <img src="./images/meat.png" alt="">
+              大魚肉蛋類
+            </div>
+            <div class="select-tag" @click="computer_now = 'third'">
+              <img src="./images/vegetable.png" alt="">
+              蔬菜類
+            </div>
+            <div class="select-tag" @click="computer_now = 'fourth'">
+              <img src="./images/healthy-food.png" alt="">
+              水果類
+            </div>
+            <div class="select-tag" @click="computer_now = 'fifth'">
+              <img src="./images/dairy.png" alt="">
+              乳品類
+            </div>
+            <div class="select-tag" @click="computer_now = 'sixth'">
+              <img src="./images/nuts.png" alt="">
+              堅果種子類
+            </div>
+          </div>
+          <hr>
+          <div class="Computer_sum">
+            <h2>{{carbon_sum}}</h2>
+          </div>
+          <div class="Computer_table">
+            <template v-for="computer in computers">
+              <template v-if="computer.class == computer_now">
+                <div class="computer_tr">
+                  <div>{{computer.name}}</div>
+                  <input type="text" v-model="computer.amount" placeholder="請輸入公克數">
+                  <div>1g排出{{computer.carbon}}g</div>
+                </div>
+              </template>
+            </template>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- 排碳計算機 End -->
+    <!-- 購物車 Start -->
+    <section id="ShoppingCart">
+      <h1 class="sech1">
+        <img src="./images/豬會飛LOGO2.png">豬會飛 <span style="color:#ff7b00">線上訂購</span>
+      </h1>
+      <div class="select_container" data-aos="fade-right">
+        <input type="radio" v-for="el,i in select_container" :id="'r' + i" name="drone" :value="el"
+          v-model="select_value">
+        <div v-for="el,i in select_container">
+          <label :for="'r'+ i" class="select_radio" :class="select_value === el && 'select_on'">{{el}}</label>
+        </div>
+      </div>
+      <div class="ShoppingCart_container">
+        <div class="center">
+
+          <template v-for="product in products">
+            <div v-if="product.product_class == select_value || select_value == '全部'" class="ShoppingCart_box">
+              <img :src="product.img" alt="">
+              <p class="product-name">{{product.name}}</p>
+              <div class="shoppingCart_hidden">
+                <p class="carbn">{{'碳排量:' + product.carbon_content}}</p>
+                <p class="price">{{'$' + product.price}}</p>
+                <div class="buy">
+                  <button @click="fs_updateValue(product,product.amount - 1)" class="btn btn-outline-warning">-</button>
+                  <input type="text" class="amount" v-model='product.amount' value="product.amount" maxlength="3">
+                  <button @click="fs_updateValue(product,product.amount + 1)" class="btn btn-outline-warning">+</button>
+                  <!-- <select name="amount" id="amount" v-model="product.amount" @change="fs_updateValue(product,product.amount)" class="amount">
+                    <option v-for='i in 20' :value="i">{{i}}</option>
+                  </select>
+                  <button @click="add()">add</button> -->
+                </div>
+              </div>
+            </div>
+          </template>
+        </div>
+      </div>
+
+      <a @click="fs_shopingCartToggle" class="shopingCart_toggle" v-html="shopingCart_toggle_img"></a>
+      <form action="index.html" method="get">
+        <div class="sum_box">
+          <h3>購物車</h3>
+          <p class="product_content">
+          <div v-if="Lsum == 0">您目前還未訂購任何商品</div>
+          <template v-for="product in products">
+            <template v-if="product.amount > 0">
+              <p>
+                <img :src="product.img">{{product.name +' '+ product.amount + '盒'}}　
+                <button @click="fs_updateValue(product,product.amount - product.amount)"
+                  class="btn btn-outline-danger">取消</button>
+                <input type="hidden" :name="product.name" :value="product.amount">
+              </p>
+            </template>
+          </template>
+          <div v-if="Lsum != 0">
+            姓名*
+            <input type="text" name="name" class='form-control ' placeholder="請輸入姓名" required>
+            地址*
+            <input type="text" name="address" class='form-control ' placeholder="請輸入地址" required>
+            備註
+            <input type="text" name="content" class='form-control'>
+          </div>
+          </p>
+          <p>
+            {{'總額:$'+Lsum+'元'}}
+          </p>
+          <p style="margin:auto;">
+            <input v-if='Lsum != 0' type="submit" value="送出" class="btn btn-warning">
+            <input type="hidden" name="Lsum" :value="Lsum">
+        </div>
+      </form>
+    </section>
+    <!-- 購物車 End -->
+    <section id="CharInformation">
+
+      <!-- 熱銷推薦 Start -->
+      <section id="Chart">
+        <h1 class="sech1"><i class="bi bi-bar-chart-line"></i> 熱銷推薦</h1>
+        <canvas id="myChart" width='230' height='230'></canvas>
+      </section>
+      <!-- 熱銷推薦 End -->
+      
+      <!-- 資訊列 Start -->
+      <section id="information">
+        <h1 class="sech1"><i class="bi bi-bar-chart-line"></i> 餐盒小故事</h1>
+        <div class="information-container">
+          <div class="informat" v-for="el,i in information">
+            <div>{{el.title}}　{{el.english}}</div>
+            <div>{{el.content}}</div>
+            <br>
+          </div>
+        </div>
+      </section>
+      <!-- 資訊列 End -->
+    </section>
+
+    <!-- test Start-->
+    <section id="test">
+      <div class="test_container">
+        <div v-for='test,idx in tests' :class="'test_box'+ ` t${idx - test_change}`" v-show="test.show">
+          <span v-html="test.title"></span>
+          <div class="test_title">
+            <template v-if="idx != 0">
+              {{"Q" + idx}} <span v-html="test.question"></span>
+            </template>
+            <template v-else>
+              準備好測驗了嗎？<br>
+              可以在網站上方找到答案喔！
+            </template>
+          </div>
+          <hr>
+          <template v-for="option,idx2 in test.options">
+            <input type="radio" :name="test.title" :id="option" :value='sorts[idx2]' v-model="test.user">
+            <label :for="option">
+              <div>
+                <span v-if="test.user == sorts[idx2]" class="test_flag">
+                  {{sorts[idx2]}}
+                </span>
+                <span v-else>
+                  {{sorts[idx2]}}
+                </span>
+                {{option}}。
+              </div>
+
+            </label><br>
+          </template>
+          <template v-if='idx == 0'>
+            <button @click="tests[idx].show = !tests[idx].show,test_change++" class="btn btn-lg btn-secondary">
+              開始作答
+            </button>
+          </template>
+          <template v-else-if="idx+1 == tests.length">
+            <button @click="tests[idx].show = !tests[idx].show,test_change++" class="btn btn-lg btn-secondary">
+              作答完畢
+            </button>
+          </template>
+          <template v-else-if="test.user">
+            <button @click="tests[idx].show = !tests[idx].show,test_change++" class="btn btn-lg btn-secondary">
+              下一題
+            </button>
+          </template>
+        </div>
+
+      </div>
+      <div class="test_result">
+        {{test_result}}分
+      </div>
+    </section>
+
+    <!-- test End -->
+
+    <!-- footer Start -->
+    <footer id="footer">
+      <div class="footer-container">
+        <div class="footer-left">
+          <div class="title">店家資訊</div>
+          <p>
+            服務選項: 內用 · 外帶 · 無接觸送餐服務<br>
+            地址： 242新北市新莊區中原東路61號<br>
+            電話： 02 2277 7833<br>
+            點餐: ubereats.com, foodpanda.com.tw<br>
+
+          </p>
+          <form action="index.html" method="get">
+            <div class="title">聯絡我們</div>
+            <br>
+            <p>
+            <h5>姓名*</h5>
+            <input type="text" v-model="userName" class="form-control" required name="username">
+            </p>
+            <p>
+            <h5>電子信箱*</h5>
+            <input type="email" v-model="userGmail" class="form-control" required name="usergmail">
+            </p>
+            <p>
+            <h5>留言*</h5>
+            <textarea v-model="usercontent" id="usercontent" rows="5" class="form-control" required
+              name="usercontent"></textarea>
+            </p>
+            <p>
+              <input type="submit" @click="fs_footerSubmit" value="送出" class="btn btn-outline-light">
+              <input type="reset" value="重製" class="btn btn-outline-light" style="margin-left:10px;">
+            </p>
+          </form>
+        </div>
+        <div class="footer-right">
+          <div class="footer-right-top">
+            <h2 class="title">競賽資訊</h2>
+            <a href="創意低碳便當設計.docx" download class="btn btn-link">下載word</a>
+          </div>
+          <div class="footer-right-bottom">
+            <div class="title">快速連結</div>
+            <a href="#main" class="btn btn-link">低碳小觀念</a>
+            <a href="#carbonComputer" class="btn btn-link">排碳計算機</a>
+            <a href="#ShoppingCart" class="btn btn-link">線上訂購服務</a>
+            <a href="#Chart" class="btn btn-link">熱銷推薦</a>
+            <a href="#services" class="btn btn-link">餐盒小故事</a>
+            <a href="#test" class="btn btn-link">減碳知識王</a>
+            <a href="#footer" class="btn btn-link">聯絡我們</a>
+            <a href="https://lucashsu95.github.io/Topic2/%E6%B8%9B%E7%A2%B3%E7%9B%B8%E6%A9%9F/%E6%B8%9B%E7%A2%B3%E7%9B%B8%E6%A9%9F.html"
+              class="btn btn-link" target="_blank">減碳相機</a>
+            <a href="https://lucashsu95.github.io/Topic2/減碳大作戰/減碳大作戰.html" class="btn btn-link">減碳大作戰</a>
+            <a class="btn btn-link" data-bs-toggle="modal" data-bs-target="#MoreNews_modal">更多資訊</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- footer End -->
+    <!-- 更多資訊 Start -->
+    <div class="modal fade" id="MoreNews_modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2>更多資訊</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <!-- Start -->
+          <div class="modal-body">
+            <div id="MoreNews">
+              <div v-for="data in datas" class="MoreNews_container" :id="data.id"
+                @click="fs_click_modalMoveTop(data.id)">
+                <img :src="data.img">
+              </div>
+              <div class="MoreNews_content" @click="fs_click_modalMoveTop('close')">
+                <h5>{{text_h}}</h5>
+                <div v-html="text_content"></div>
+              </div>
+            </div>
+          </div>
+          <!-- End -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-link" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 更多資訊 End -->
+  </div>
+
+  <!-- script.js Start -->
+  <script src="./js/script.js">
+
+  </script>
+  <!-- script.js End -->
+  <!-- AOS Start -->
+  <script>
+    AOS.init({
+      duration: 800,
+    });
+  </script>
+  <!-- AOS End -->
 
 
 
