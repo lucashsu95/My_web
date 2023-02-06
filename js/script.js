@@ -2,15 +2,13 @@
 var flag = '';
 var flag2 = 1;
 const root = document.querySelector(':root');
-let nav = document.querySelector('.nav__class');
 let oldTop = 0;
-// console.log(nav.classList);
 window.onscroll = () => {
-    let nowTop = document.documentElement.scrollTop;
+    var nowTop = document.documentElement.scrollTop;
     if (nowTop > oldTop) {
-        nav.style.transform = 'translateY(-100%);';
+        document.querySelector('nav').classList.add('nav_active');
     } else {
-        nav.style.transform = 'translateY(0);';
+        document.querySelector('nav').classList.remove('nav_active');
     }
     oldTop = nowTop;
 }
@@ -456,10 +454,10 @@ const app = Vue.createApp({
         test_result() {
             let test_total = 0
             const fraction = 100 / (this.tests.length - 1);
-            console.log(this.tests);
+            // console.log(this.tests);
             this.tests.forEach((test, i) => {
                 console.log(test.user, this.ans[i]);
-                test_total += test.user == this.ans[i] ? fraction : 0;
+                test_total += test.user === this.ans[i] ? fraction : 0;
             });
             return test_total.toFixed(1)
         }
@@ -535,6 +533,13 @@ const app = Vue.createApp({
                 this.shopingCart_toggle_img = '<i class="bi bi-arrow-left-square-fill"></i>';
             }
             flag2++;
+        },
+        fs_gameAgain() {
+            this.test_change = 0;
+            this.tests.forEach(test => {
+                test.show = true;
+                test.user = '';
+            })
         },
         fs_footerSubmit() {
             if (this.userName != '' && this.userGmail != '' && this.usercontent != '') {

@@ -40,7 +40,7 @@
 
         <!-- LOGO -->
         <div class="nav-left" data-aos="fade-right">
-          <a href="index.html">「碳」棄</a>
+          <a href="index.html"><span>碳</span>棄</a>
         </div>
 
         <!-- 第一部份:手機版 -->
@@ -53,7 +53,7 @@
         <div class="collapse navbar-collapse " id="linkbar">
           <ul class="navbar-nav" style="margin-left:auto; font-size: 18px;" data-aos="fade-left">
             <li class="nav-item">
-              <a href="#main" class="nav-link">低碳小觀念</a>
+              <a href="#services" class="nav-link">低碳小觀念</a>
             </li>
             <li class="nav-item">
               <a href="#carbonComputer" class="nav-link">排碳計算機</a>
@@ -65,7 +65,7 @@
               <a href="#Chart" class="nav-link">熱銷推薦</a>
             </li>
             <li class="nav-item">
-              <a href="#services" class="nav-link">餐盒小故事</a>
+              <a href="#information" class="nav-link">餐盒小故事</a>
             </li>
             <li class="nav-item">
               <a href="#test" class="nav-link">減碳知識王</a>
@@ -167,33 +167,31 @@
           <div class="select-computer">
             <div class="select-tag" @click="computer_now = 'first'">
               <img src="./images/bread.png" alt="">
-              全穀雜糧類
+              <span>全穀雜糧類</span>
             </div>
             <div class="select-tag" @click="computer_now = 'second'">
               <img src="./images/meat.png" alt="">
-              大魚肉蛋類
+              <span>大魚肉蛋類</span>
             </div>
             <div class="select-tag" @click="computer_now = 'third'">
               <img src="./images/vegetable.png" alt="">
-              蔬菜類
+              <span>蔬菜類</span>
             </div>
             <div class="select-tag" @click="computer_now = 'fourth'">
               <img src="./images/healthy-food.png" alt="">
-              水果類
+              <span>水果類</span>
             </div>
             <div class="select-tag" @click="computer_now = 'fifth'">
               <img src="./images/dairy.png" alt="">
-              乳品類
+              <span>乳品類</span>
             </div>
             <div class="select-tag" @click="computer_now = 'sixth'">
               <img src="./images/nuts.png" alt="">
-              堅果種子類
+              <span>堅果種子類</span>
             </div>
           </div>
           <hr>
-          <div class="Computer_sum">
-            <h2>{{carbon_sum}}</h2>
-          </div>
+            <h5>{{carbon_sum}}</h5>
           <div class="Computer_table">
             <template v-for="computer in computers">
               <template v-if="computer.class == computer_now">
@@ -284,14 +282,14 @@
     <section id="CharInformation">
 
       <!-- 熱銷推薦 Start -->
-      <section id="Chart">
+      <section id="Chart" data-aos="fade-right">
         <h1 class="sech1"><i class="bi bi-bar-chart-line"></i> 熱銷推薦</h1>
         <canvas id="myChart" width='230' height='230'></canvas>
       </section>
       <!-- 熱銷推薦 End -->
       
       <!-- 資訊列 Start -->
-      <section id="information">
+      <section id="information" data-aos="fade-left">
         <h1 class="sech1"><i class="bi bi-bar-chart-line"></i> 餐盒小故事</h1>
         <div class="information-container">
           <div class="informat" v-for="el,i in information">
@@ -329,6 +327,8 @@
                 <span v-else>
                   {{sorts[idx2]}}
                 </span>
+              </div>
+              <div>
                 {{option}}。
               </div>
 
@@ -353,6 +353,7 @@
 
       </div>
       <div class="test_result">
+        <button @click="fs_gameAgain()">再玩一次</button>
         {{test_result}}分
       </div>
     </section>
@@ -375,15 +376,15 @@
             <div class="title">聯絡我們</div>
             <br>
             <p>
-            <h5>姓名*</h5>
+            <div>姓名*</div>
             <input type="text" v-model="userName" class="form-control" required name="username">
             </p>
             <p>
-            <h5>電子信箱*</h5>
+            <div>電子信箱*</div>
             <input type="email" v-model="userGmail" class="form-control" required name="usergmail">
             </p>
             <p>
-            <h5>留言*</h5>
+            <div>留言*</div>
             <textarea v-model="usercontent" id="usercontent" rows="5" class="form-control" required
               name="usercontent"></textarea>
             </p>
