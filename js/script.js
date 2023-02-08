@@ -238,147 +238,141 @@ const app = Vue.createApp({
                 carbon: 14,
                 amount: '',
                 class: "first",
-                bg: '#f7b650',
             }, {
                 name: '玉米',
                 carbon: 1,
                 amount: '',
                 class: 'first',
-                bg: '#f7b650',
             }, {
                 name: '米',
                 carbon: 4,
                 amount: '',
                 class: 'first',
-                bg: '#f7b650',
             }, {
                 name: '木薯',
                 carbon: 1,
                 amount: '',
                 class: 'first',
-                bg: '#f7b650',
             }, {
                 name: '牛肉',
                 carbon: 60,
                 amount: '',
                 class: 'second',
-                bg: '#7ecae0',
-
             }, {
                 name: '羊肉',
                 carbon: 24,
                 amount: '',
-                bg: '#7ecae0',
                 class: 'second',
             }, {
                 name: '蝦',
                 carbon: 12,
                 amount: '',
-                bg: '#7ecae0',
                 class: 'second',
             }, {
                 name: '豬肉',
                 carbon: 7,
                 amount: '',
-                bg: '#7ecae0',
                 class: 'second',
             }, {
                 name: '禽肉',
                 carbon: 6,
                 amount: '',
-                bg: '#7ecae0',
                 class: 'second',
             }, {
                 name: '魚肉',
                 carbon: 3,
                 amount: '',
-                bg: '#7ecae0',
                 class: 'second',
             }, {
                 name: '蛋',
                 carbon: 4.5,
                 amount: '',
-                bg: '#7ecae0',
                 class: 'second',
             }, {
                 name: '豆漿',
                 carbon: 0.9,
                 amount: '',
-                bg: '#7ecae0',
                 class: 'second',
             }, {
                 name: '根莖類蔬菜',
                 carbon: 0.4,
                 amount: '',
                 class: 'third',
-                bg: '#d9df00',
             }, {
                 name: '豌豆',
                 carbon: 0.9,
                 amount: '',
-                bg: '#d9df00',
+                class: 'third',
+            }, {
+                name: '黑木耳',
+                carbon: 1.25,
+                amount: '',
+                class: 'third',
+            }, {
+                name: '夏雪菇',
+                carbon: 1.25,
+                amount: '',
+                class: 'third',
+            }, {
+                name: '杏鮑菇',
+                carbon: 1,
+                amount: '',
+                class: 'third',
+            }, {
+                name: '鮑魚菇',
+                carbon: 1,
+                amount: '',
                 class: 'third',
             }, {
                 name: '番茄',
                 carbon: 14,
                 amount: '',
-                bg: '#fd9aaf',
                 class: 'fourth',
             }, {
                 name: '香蕉',
                 carbon: 0.7,
                 amount: '',
-                bg: '#fd9aaf',
                 class: 'fourth',
             }, {
                 name: '蘋果',
                 carbon: 0.4,
                 amount: '',
-                bg: '#fd9aaf',
                 class: 'fourth',
             }, {
                 name: '柑橘類水果',
                 carbon: 0.3,
                 amount: '',
-                bg: '#fd9aaf',
                 class: 'fourth',
             }, {
                 name: '奶酪',
                 carbon: 21,
-                bg: '#999',
                 amount: '',
                 class: 'fifth',
             }, {
                 name: '牛奶',
                 carbon: 3,
                 amount: '',
-                bg: '#999',
                 class: 'fifth',
             }, {
                 name: '花生',
                 carbon: 25,
                 amount: '',
-                bg: '#c99f63',
                 class: 'sixth',
-                bg: '#c99f63',
             }, {
                 name: '橄欖油',
                 carbon: 6,
                 amount: '',
                 class: 'sixth',
-                bg: '#c99f63',
             }, {
                 name: '棕櫚油',
                 carbon: 8,
                 amount: '',
                 class: 'sixth',
-                bg: '#c99f63',
             }, {
                 name: '堅果',
                 carbon: 0.3,
                 amount: '',
                 class: 'sixth',
-                bg: '#c99f63',
             }],
             information: [{
                 title: '年齡層的影響',
@@ -456,13 +450,11 @@ const app = Vue.createApp({
             const fraction = 100 / (this.tests.length - 1);
             // console.log(this.tests);
             this.tests.forEach((test, i) => {
-                console.log(test.user, this.ans[i]);
                 test_total += test.user === this.ans[i] ? fraction : 0;
             });
             return test_total.toFixed(1)
         }
     }, methods: {
-
         fs_click_modalMoveTop(idx) {
             console.log(idx);
             if (flag == '') {
@@ -510,7 +502,7 @@ const app = Vue.createApp({
         },
         fs_updateValue(product, amount) {
             if (flag2 == 1) {
-                document.querySelector('.sum_box').classList.toggle('sum_box_active');
+                this.$refs.sum_box.classList.toggle('sum_box_active');
                 document.querySelector('.shopingCart_toggle').classList.toggle('shopingCart_toggle_active');
                 this.shopingCart_toggle_img = '<i class="bi bi-arrow-left-square-fill"></i>';
                 flag2++;
