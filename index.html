@@ -223,7 +223,7 @@
       <div class="ShoppingCart_container">
         <div class="center">
           <template v-for="product in products">
-            <div v-if="product.product_class == select_value || select_value == '全部'" class="ShoppingCart_box">
+            <div v-if="product.product_class == select_value" class="ShoppingCart_box">
               <img :src="product.img" alt="img" />
               <p class="product-name">{{product.name}}</p>
               <div class="shoppingCart_hidden">
@@ -276,7 +276,8 @@
           </div>
           <p>{{'總額:$'+Lsum+'元'}}</p>
           <p style="margin: auto">
-            <input v-if="Lsum != 0" type="submit" value="送出" class="btn btn-warning" />
+            <!-- <input v-if="Lsum != 0" type="submit" value="送出" class="btn btn-warning" /> -->
+            <input v-if="Lsum != 0" type="button" value="送出" class="btn btn-warning" />
             <input type="hidden" name="Lsum" :value="Lsum" />
           </p>
         </div>
@@ -377,7 +378,8 @@
             <textarea v-model="usercontent" id="usercontent" rows="5" class="form-control" required
               name="usercontent"></textarea>
             <p>
-              <input type="submit" @click="fs_footerSubmit" value="送出" class="btn btn-outline-light" />
+              <!-- <input type="submit" @click="fs_footerSubmit" value="送出" class="btn btn-outline-light" /> -->
+              <input type="button" @click="fs_footerSubmit" value="送出" class="btn btn-outline-light" />
               <input type="reset" value="重製" class="btn btn-outline-light" style="margin-left: 10px" />
             </p>
           </form>

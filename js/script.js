@@ -20,7 +20,7 @@ const app = Vue.createApp({
             text_h: '',
             text_content: '',
             Lsum: 0,
-            select_value: '全部',
+            select_value: '減脂系列',
             product_ary: [],
             datas: [
                 {
@@ -100,7 +100,7 @@ const app = Vue.createApp({
                 }
             ],
             shopingCart_toggle_img: "<i class='bi bi-cart4'></i>",
-            select_container: ['全部', '減脂系列', '增肌系列', '豪華系列'],
+            select_container: ['減脂系列', '增肌系列', '豪華系列'],
             products: [{
                 // 減脂系列
                 img: './images/元氣滿滿雞肉餐.jpg',
@@ -456,10 +456,10 @@ const app = Vue.createApp({
         }
     }, methods: {
         fs_click_modalMoveTop(idx) {
-            console.log(idx);
+            // console.log(idx);
             if (flag == '') {
                 flag = idx;
-                //取root裡的--MoreNews_container_height值
+                //取root裡的--MoreNews_container_height
                 MoreNews_container_height = getComputedStyle(root).getPropertyValue('--MoreNews_container_height').slice(0, -2);
                 // slice(start,end) 取字串某個部分
                 root.style.setProperty('--move', `${((idx - 1) * MoreNews_container_height + 10 * (idx - 1)) * -1}px`)
@@ -490,7 +490,6 @@ const app = Vue.createApp({
 
         },
         fs_submit() {
-            // console.log(this);
             let total = 0
             this.products.forEach(product => {
                 total += product.price * product.amount

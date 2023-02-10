@@ -67,7 +67,8 @@ a {
   letter-spacing: 4px;
   font-weight: 900;
   text-align: center;
-  padding-top: 4rem;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
 }
 
 /* Nav Start */
@@ -75,7 +76,7 @@ a {
   width: 98%;
 
   position: fixed;
-  padding: 1.5% 5%;
+  padding: 1.2% 5%;
   left: 50%;
   margin-top: 1rem;
   display: flex;
@@ -108,6 +109,7 @@ a {
   font-size: 1.3rem;
   position: relative;
   transition: all 0.3s;
+  margin-right: 20px;
 }
 .nav-item::before {
   content: "";
@@ -129,7 +131,8 @@ a {
   transform: scaleX(1);
 }
 .nav-left {
-  font-size: 1.7rem;
+  margin-left: 20px;
+  font-size: 2.3rem;
 }
 
 .nav-left a {
@@ -231,6 +234,7 @@ a {
   text-align: center;
   gap: 1rem;
   padding: 2rem;
+  margin-top: 20px;
 
   opacity: 0.95;
   background-color: #fff;
@@ -259,6 +263,7 @@ a {
 @media (min-width: 768px) {
   #services .slide .slide-project {
     width: 450px;
+    margin-top: 0;
   }
 
   #services .slide .slide-project {
@@ -341,13 +346,13 @@ a {
 }
 #carbonComputer .select-computer {
   display: flex;
+  justify-content: center;
 }
 
 #carbonComputer .select-tag {
   display: flex;
   flex: 1;
   flex-direction: column;
-  margin-right: 1.3rem;
   cursor: pointer;
   transition: 0.1s;
   font-size: 1.25rem;
@@ -401,15 +406,27 @@ a {
     width: 40px;
     align-items: center;
   }
+  #carbonComputer .select-tag {
+    margin-right: 1.3rem;
+  }
 }
 
 /* Computer End */
 
 /* ShoppingCart_container Start */
 #ShoppingCart {
+  height: 150vh;
+  overflow: auto;
   background: #ffe7e0;
 }
-
+#ShoppingCart::-webkit-scrollbar {
+  width: 10px;
+  height: 2px;
+}
+#ShoppingCart::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #888;
+}
 .select_container {
   width: 100%;
   background: #ffe7e0;
@@ -444,14 +461,10 @@ a {
 }
 
 #ShoppingCart .ShoppingCart_container {
-  width: auto;
-  margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  justify-items: center;
   background: #ffd0c5;
-  position: relative;
   padding: 25px;
 }
 
@@ -626,6 +639,7 @@ a {
   grid-template-columns: 50% 50%;
   align-items: start;
   overflow: hidden;
+  padding: 20px;
 }
 #CharInformation section {
   padding: 25px;
@@ -648,6 +662,7 @@ a {
   }
   #CharInformation {
     grid-template-columns: none;
+    padding: 0;
   }
 }
 
@@ -673,6 +688,7 @@ a {
 
 .informat > div:nth-child(2) {
   font-size: 1.2rem;
+  padding-left: 20px;
 }
 
 /* information End */
