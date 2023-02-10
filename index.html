@@ -249,7 +249,7 @@
       </div>
 
       <a @click="fs_shopingCartToggle" class="shopingCart_toggle" v-html="shopingCart_toggle_img"></a>
-      <form action="index.html" method="get">
+      <form action="./php/buy.php" method="get">
         <div class="sum_box" ref="sum_box">
           <h3>購物車</h3>
           <p class="product_content"></p>
@@ -277,7 +277,7 @@
           <p>{{'總額:$'+Lsum+'元'}}</p>
           <p style="margin: auto">
             <!-- <input v-if="Lsum != 0" type="submit" value="送出" class="btn btn-warning" /> -->
-            <input v-if="Lsum != 0" type="button" value="送出" class="btn btn-warning" />
+            <button v-if="Lsum != 0" class="btn btn-warning" @click="fs_submit()">送出</button>
             <input type="hidden" name="Lsum" :value="Lsum" />
           </p>
         </div>
@@ -363,11 +363,13 @@
       <div class="footer-container">
         <div class="footer-left">
           <div class="title">店家資訊</div>
-          服務選項: 內用 · 外帶 · 無接觸送餐服務<br />
-          地址： 242新北市新莊區中原東路61號<br />
-          電話： 02 2277 7833<br />
-          點餐: ubereats.com, foodpanda.com.tw<br />
-          <form action="index.html" method="get">
+          <div>
+            服務選項: 內用 · 外帶 · 無接觸送餐服務<br />
+            地址： 242新北市新莊區中原東路61號<br />
+            電話： 02 2277 7833<br />
+            點餐: ubereats.com, foodpanda.com.tw<br />
+          </div>
+          <form action="./php/information.php" method="get">
             <div class="title">聯絡我們</div>
             <br />
             <div>姓名*</div>
@@ -377,31 +379,31 @@
             <div>留言*</div>
             <textarea v-model="usercontent" id="usercontent" rows="5" class="form-control" required
               name="usercontent"></textarea>
-            <p>
+            <div>
               <!-- <input type="submit" @click="fs_footerSubmit" value="送出" class="btn btn-outline-light" /> -->
               <input type="button" @click="fs_footerSubmit" value="送出" class="btn btn-outline-light" />
-              <input type="reset" value="重製" class="btn btn-outline-light" style="margin-left: 10px" />
-            </p>
+              <input type="reset" value="重製" class="btn btn-outline-light" />
+            </div>
           </form>
         </div>
         <div class="footer-right">
           <div class="footer-right-top">
             <h2 class="title">競賽資訊</h2>
-            <a href="創意低碳便當設計.docx" download class="btn btn-link">下載word</a>
+            <a href="file/創意低碳便當設計.docx" download class="btn">下載word</a>
           </div>
           <div class="footer-right-bottom">
             <div class="title">快速連結</div>
-            <a href="#main" class="btn btn-link">低碳小觀念</a>
-            <a href="#carbonComputer" class="btn btn-link">排碳計算機</a>
-            <a href="#ShoppingCart" class="btn btn-link">線上訂購服務</a>
-            <a href="#Chart" class="btn btn-link">熱銷推薦</a>
-            <a href="#services" class="btn btn-link">餐盒小故事</a>
-            <a href="#test" class="btn btn-link">減碳知識王</a>
-            <a href="#footer" class="btn btn-link">聯絡我們</a>
+            <a href="#main" class="btn">低碳小觀念</a>
+            <a href="#carbonComputer" class="btn">排碳計算機</a>
+            <a href="#ShoppingCart" class="btn">線上訂購服務</a>
+            <a href="#Chart" class="btn">熱銷推薦</a>
+            <a href="#services" class="btn">餐盒小故事</a>
+            <a href="#test" class="btn">減碳知識王</a>
+            <a href="#footer" class="btn">聯絡我們</a>
             <a href="https://lucashsu95.github.io/Topic2/%E6%B8%9B%E7%A2%B3%E7%9B%B8%E6%A9%9F/%E6%B8%9B%E7%A2%B3%E7%9B%B8%E6%A9%9F.html"
-              class="btn btn-link" target="_blank">減碳相機</a>
-            <a href="https://lucashsu95.github.io/Topic2/減碳大作戰/減碳大作戰.html" class="btn btn-link">減碳大作戰</a>
-            <a class="btn btn-link" data-bs-toggle="modal" data-bs-target="#MoreNews_modal">更多資訊</a>
+              class="btn" target="_blank">減碳相機</a>
+            <a href="https://lucashsu95.github.io/Topic2/減碳大作戰/減碳大作戰.html" class="btn">減碳大作戰</a>
+            <a class="btn" data-bs-toggle="modal" data-bs-target="#MoreNews_modal">更多資訊</a>
           </div>
         </div>
       </div>
