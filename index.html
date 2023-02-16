@@ -64,7 +64,10 @@
               <a href="#Chart" class="nav-link">熱銷推薦</a>
             </li>
             <li class="nav-item">
-              <a href="#information" class="nav-link">餐盒小故事</a>
+              <a href="#information" class="nav-link">餐盒Q&A</a>
+            </li>
+            <li class="nav-item">
+              <a href="#story" class="nav-link">餐盒小故事</a>
             </li>
             <li class="nav-item">
               <a href="#test" class="nav-link">減碳知識王</a>
@@ -225,7 +228,9 @@
           <template v-for="product in products">
             <div v-if="product.product_class == select_value" class="ShoppingCart_box">
               <img :src="product.img" alt="img" />
-              <p class="product-name">{{product.name}}</p>
+              <p class="product-name"
+                :class="product.product_class === '減脂系列' && 'productClass1' || product.product_class === '增肌系列' && 'productClass2'|| product.product_class === '豪華系列' &&'productClass3'">
+                {{product.name}}</p>
               <div class="shoppingCart_hidden">
                 <p class="carbn">{{'碳排量:' + product.carbon_content}}</p>
                 <p class="price">{{'$' + product.price}}</p>
@@ -292,19 +297,55 @@
       </section>
       <!-- 熱銷推薦 End -->
 
-      <!-- 資訊列 Start -->
+      <!-- 餐盒Q&A Start -->
       <section id="information" data-aos="fade-left">
-        <h1 class="sech1"><i class="bi bi-bar-chart-line"></i> 餐盒小故事</h1>
+        <h1 class="sech1"><i class="bi bi-bar-chart-line"></i> 餐盒Q&A</h1>
         <div class="information-container">
           <div class="informat" v-for="el,i in information">
-            <div>{{el.title}}　{{el.english}}</div>
+            <div>Q{{i+1}} : {{el.title}}　{{el.english}}</div>
             <div>{{el.content}}</div>
             <br />
           </div>
         </div>
       </section>
-      <!-- 資訊列 End -->
+      <!-- 餐盒Q&A End -->
     </section>
+    <!-- 餐盒小故事 Start -->
+    <section id="story">
+      <h1 class="sech1">
+        <i class="bi bi-book-half"></i>
+        餐盒小故事
+      </h1>
+
+      <div class="container">
+        <!-- 1 -->
+        <div class="card">
+          <img src="./images/test-box.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title1</h5>
+            <p class="card-text">使用SGS認證之食材、餐盒種類多、餐盒少油低卡、使用環保材質製作餐盒、餐盒每天製作，食材新鮮。</p>
+          </div>
+        </div>
+        <!-- 2 -->
+        <div class="card">
+          <img src="./images/test-box.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title2</h5>
+            <p class="card-text">減少碳排放量、可以請店家親自送會更有親和力、一次性餐具泛指塑膠刀叉湯匙、免洗竹筷、紙碟、紙杯等，使用後免洗可直接丟的廉價餐具。</p>
+          </div>
+        </div>
+        <!-- 3 -->
+        <div class="card">
+          <img src="./images/test-box.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title3</h5>
+            <p class="card-text">一次性餐具可避免唾液傳染的傳染病也可以當在外方便吃東西的餐具，使用後不僅造成垃圾與環保的處理問題，也產生了碳排放量。</p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <!-- 餐盒小故事 End -->
 
     <!-- test Start-->
     <section id="test">

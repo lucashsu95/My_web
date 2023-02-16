@@ -62,13 +62,30 @@ a {
 }
 
 .sech1 {
-  font-size: 3rem;
   color: rgb(100, 100, 100);
   letter-spacing: 4px;
   font-weight: 900;
   text-align: center;
   padding-top: 3rem;
   padding-bottom: 1rem;
+  margin: auto;
+  display: flex;
+  align-items: center;
+}
+@media (min-width: 900px) {
+  .sech1 {
+    font-size: 3rem;
+  }
+}
+.sech1::before,
+.sech1::after {
+  content: "";
+  display: block;
+  width: auto;
+  height: 4px;
+  flex-grow: 1;
+  background: #878787;
+  margin: auto 30px;
 }
 
 /* Nav Start */
@@ -320,9 +337,9 @@ a {
   }
 
   #carbonComputer .Computer_container {
-    width: 75%;
+    width: 85%;
     display: grid;
-    grid-template-columns: 2fr 3fr;
+    grid-template-columns: 5fr 6fr;
   }
 }
 
@@ -352,7 +369,7 @@ a {
 
 #carbonComputer .select-tag {
   display: flex;
-  flex: 1;
+  flex: 1 1 auto;
   flex-direction: column;
   cursor: pointer;
   transition: 0.1s;
@@ -420,6 +437,12 @@ a {
   overflow: auto;
   background: #ffe7e0;
 }
+#services .sech1,
+#ShoppingCart .sech1,
+#story .sech1 {
+  width: 80%;
+}
+
 #ShoppingCart::-webkit-scrollbar {
   width: 10px;
   height: 2px;
@@ -511,6 +534,16 @@ a {
   background: #fff;
   border-radius: 3px;
   padding: 1% 4%;
+}
+
+#ShoppingCart .productClass1 {
+  background-color: #fda;
+}
+#ShoppingCart .productClass2 {
+  background-color: #fad;
+}
+#ShoppingCart .productClass3 {
+  background-color: #faa;
 }
 
 #ShoppingCart .buy {
@@ -693,6 +726,37 @@ a {
 }
 
 /* information End */
+
+/* story Start */
+
+#story > .container {
+  display: flex;
+  margin: 30px auto;
+  width: 80%;
+}
+
+#story .card {
+  flex: 1;
+  margin: 25px;
+}
+
+#story img {
+  width: 100%;
+  height: 35vh;
+  object-fit: cover;
+}
+#story .card-text {
+  line-height: 30px;
+}
+@media (max-width: 900px) {
+  #story > .container {
+    flex-flow: column;
+  }
+  #story img {
+    height: 20vh;
+  }
+}
+/* story End */
 
 /* test Start */
 
@@ -919,7 +983,7 @@ footer .footer-left,
 footer .footer-right {
   padding: 10%;
 }
-.footer-left>div:nth-child(2){
+.footer-left > div:nth-child(2) {
   margin: 20px;
   line-height: 30px;
 }
