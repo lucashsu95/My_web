@@ -17,9 +17,6 @@ a {
   --move: 0px;
   --MoreNews_container_height: 120px;
 }
-section {
-  padding-top: 25px;
-}
 .ToTop {
   position: fixed;
   right: 50px;
