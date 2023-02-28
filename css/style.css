@@ -922,7 +922,7 @@ input[type="radio"] {
   transform: rotate(25deg) translateY(-150px);
 }
 
-#test .btn {
+#test .btn.btn-secondary {
   position: absolute;
   right: 10%;
   bottom: 5%;

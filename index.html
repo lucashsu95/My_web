@@ -547,9 +547,11 @@
             </template>
           </div>
         </div>
-        <div class="test_result">
-          <button @click="fs_gameAgain()">再玩一次</button>
-          {{test_result}}分
+        <div class="test_result" v-show="test_change === 6">
+          <p>{{test_result}}分</p>
+          <button @click="fs_gameAgain()" class="btn btn-lg btn-outline-light">
+            再玩一次
+          </button>
         </div>
       </section>
 
