@@ -147,8 +147,8 @@ a {
   transform: scaleX(1);
 }
 .nav-left {
-  margin-left: 20px;
-  font-size: 2.3rem;
+  margin-left: 10px;
+  font-size: 2.2rem;
 }
 
 .nav-left a {
@@ -156,7 +156,7 @@ a {
   font-weight: 600;
   opacity: 0.7;
   transition: 0.5s all;
-  letter-spacing: 5px;
+  letter-spacing: 2px;
 }
 .nav-left span {
   color: #20c997;
