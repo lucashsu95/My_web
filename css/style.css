@@ -149,7 +149,7 @@ a {
 .nav-left {
   margin-left: 10px;
   font-size: 2.2rem;
-  width: 200px
+  width: 200px;
 }
 
 .nav-left a {
@@ -1064,6 +1064,11 @@ footer .title {
   height: var(--MoreNews_container_height);
   cursor: pointer;
   object-fit: cover;
+  transition: .3s all;
+}
+
+.MoreNews_container img:hover {
+  transform: scale(1.1);
 }
 
 .top_title_modal {
@@ -1093,7 +1098,7 @@ footer .title {
   font-size: 1rem;
 }
 
-.MoreNews_content_title{
+.MoreNews_content_title {
   border-left: 4px solid #fea;
   padding-left: 10px;
 }
@@ -1110,6 +1115,10 @@ footer .title {
   padding: 0;
   height: 70vh;
   overflow: auto;
+}
+
+.modal-body.active{
+  overflow: hidden;
 }
 
 /* 跳出視窗內容 End */
