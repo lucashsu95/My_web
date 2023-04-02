@@ -26,30 +26,46 @@ const app = Vue.createApp({
                 {
                     id: 1,
                     img: './images/image1.png',
-                    h: '',
+                    h: '低碳便當設計比賽',
                     content: `
                         
                         `
                 }, {
                     id: 2,
                     img: './images/image2.png',
-                    h: '',
-                    content: ``,
+                    h: '減碳大作戰 !',
+                    content: `
+                    
+                    `,
                 }, {
                     id: 3,
                     img: './images/image3.png',
-                    h: '5大低碳飲食祕訣',
-                    content: `1. 不需複雜計算熱量，避開澱粉類就好!<br>
-                    2. 選擇好的蛋白質食物！<br>
-                    3. 搭配優質油脂食用！<br>
-                    4. 嚴禁攝取大量含砂糖的食物！<br>
-                    5. 充分攝取低碳蔬菜、多喝水！`,
+                    h: '碳計算APP無線版',
+                    content: `
+                    為了讓我們可以簡單得知我們一餐含多少碳足跡，於是我們製作了碳計算App可以輸入公克數目的方式來獲得碳足跡，
+                    可能會覺得說網站上不就有一個排碳計算機了?不過這是一個可以不用網路也可以使用的<b>「減碳計算APP無線版!」<b>
+                    只要點擊下方連結就可以下載
+                    <a href='./file/carbon.apk' download>下載減碳計算APP無線版</a>
+                    `,
                 }, {
                     id: 4,
                     img: './images/image4.png',
-                    h: '',
+                    h: 'AI減碳相機',
                     content: `
-                    
+                    如果你是一個不想自己查食物碳排並且手機沒有下載減碳計算APP無線版的話，我們強力推薦您這款「AI減碳相機」!，
+                    AI的部分主要是用網路上一個軟體要teachable的軟體，可以透過上傳圖片的方式生成模型，就可以使用網站的攝像頭
+                    來去辨識出是什麼食物。
+                    <a href='https://lucashsu95.github.io/url/%E6%B8%9B%E7%A2%B3%E7%9B%B8%E6%A9%9F/%E6%B8%9B%E7%A2%B3%E7%9B%B8%E6%A9%9F.html'>AI減碳相機</a>
+                    `,
+                }, {
+                    id: 5,
+                    img: './images/image4.png',
+                    h: 'AI減碳相機',
+                    content: `
+                    如果你是一個不想自己查食物碳排並且手機沒有下載減碳計算APP無線版的話，我們強力推薦您這款「AI減碳相機」!，
+                    AI的部分主要是用網路上一個軟體要teachable的軟體，可以透過上傳圖片的方式生成模型，就可以使用網站的攝像頭
+                    來去辨識出是什麼食物。
+                    <a href='https://lucashsu95.github.io/url/%E6%B8%9B%E7%A2%B3%E7%9B%B8%E6%A9%9F/%E6%B8%9B%E7%A2%B3%E7%9B%B8%E6%A9%9F.html'>AI減碳相機</a>
                     `,
                 }
             ],
