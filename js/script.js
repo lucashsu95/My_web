@@ -312,6 +312,12 @@ const app = Vue.createApp({
           class: "third",
         },
         {
+          name: "胡蘿菠",
+          carbon: 0.8,
+          amount: "",
+          class: "third",
+        },
+        {
           name: "豌豆",
           carbon: 0.9,
           amount: "",
@@ -511,8 +517,8 @@ const app = Vue.createApp({
   methods: {
     fs_click_modalMoveTop(idx) {
       // console.log(idx);
-      const modalBody = document.querySelector('.modal-body')
-      modalBody.classList.toggle('active');
+      const modalBody = document.querySelector(".modal-body");
+      modalBody.classList.toggle("active");
       modalBody.scrollTop = 0;
 
       if (flag == "") {
@@ -527,7 +533,6 @@ const app = Vue.createApp({
           `${((idx - 1) * MoreNews_container_height + 10 * (idx - 1)) * -1}px`
         );
 
-        
         document.getElementById(idx).classList.toggle("top_title_modal");
         document
           .querySelector(".MoreNews_content")

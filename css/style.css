@@ -1064,7 +1064,7 @@ footer .title {
   height: var(--MoreNews_container_height);
   cursor: pointer;
   object-fit: cover;
-  transition: .3s all;
+  transition: 0.3s all;
 }
 
 .MoreNews_container img:hover {
@@ -1117,7 +1117,7 @@ footer .title {
   overflow: auto;
 }
 
-.modal-body.active{
+.modal-body.active {
   overflow: hidden;
 }
 
