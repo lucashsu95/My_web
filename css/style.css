@@ -17,6 +17,7 @@ a {
   --move: 0px;
   --MoreNews_container_height: 120px;
 }
+
 .ToTop {
   position: fixed;
   right: 50px;
@@ -403,7 +404,7 @@ a {
   margin-left: 10px;
 }
 
-#carbonComputer .computer_tr input[type="text"] {
+#carbonComputer .computer_tr input[type="number"] {
   margin: auto;
   width: 15rem;
   height: 2.2rem;
@@ -576,10 +577,7 @@ a {
 
   text-align: center;
   margin: 0 5px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding-left: 9%;
 }
 
 #ShoppingCart .price {
@@ -740,12 +738,18 @@ a {
   margin: 25px;
 }
 
+#story .card-title {
+  color: #333;
+  font-weight: bold;
+}
+
 #story img {
   width: 100%;
   height: 35vh;
   object-fit: cover;
 }
 #story .card-text {
+  color: #344;
   line-height: 30px;
 }
 @media (max-width: 900px) {
@@ -883,7 +887,8 @@ a {
 }
 
 input[type="radio"] {
-  -webkit-appearance: none;
+  /* -webkit-appearance: none; */
+  display: none;
 }
 
 .test_flag {

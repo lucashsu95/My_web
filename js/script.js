@@ -30,7 +30,7 @@ const app = Vue.createApp({
           content: `
                     張老闆希望讓更多年輕人知道健康的重要性，而推廣了低碳餐盒，但吃久了就會想換別的吃，那不如自己親手做一個低碳便當，不僅能更了解低碳的知識，也能吃得健康
                         我們介由低碳便碳設計比賽了解現在年輕人口味，自製低碳便當~請大家自己動手做一餐低碳便當，把食材、成品的圖片上傳，填寫食材、使用多少克、還有食材的碳排放量，製作過程不僅能了解低碳知識，也能吃得健康，請大家踴躍參與。
-                        <a href="./file/創意低碳便當設計.docx" download>下載word</a>
+                        <a href="./file/創意低碳便當設計.docx" download>下載報名表</a>
                         `,
         },
         {
@@ -69,7 +69,7 @@ const app = Vue.createApp({
           h: "LINE貼圖",
           content: `
                     為了可以在日常生活中呼籲更多人減碳，我們設計出可愛的動物LINE貼圖，可以到LINE貼圖小鋪看看喔!
-                    只要在LINE的官方的貼圖小鋪裡搜尋「減碳」，就可以看到我們可愛動物LINE貼圖了喔!
+                    只要在LINE的官方的貼圖小鋪裡搜尋「減碳」，就可以看到我們可愛動物LINE貼圖了喔!<a href='https://store.line.me/stickershop/product/22416348/zh-Hant'>LINE貼圖減碳小動物</a>
                     `,
         },
         {
@@ -312,7 +312,7 @@ const app = Vue.createApp({
           class: "third",
         },
         {
-          name: "胡蘿菠",
+          name: "胡蘿蔔",
           carbon: 0.8,
           amount: "",
           class: "third",
@@ -617,7 +617,10 @@ const app = Vue.createApp({
         this.userGmail != "" &&
         this.usercontent != ""
       ) {
+        this.userName = this.userGmail = this.usercontent = "";
         alert("我們己經接收到您的留言!\r");
+      } else {
+        console.log("請填完整填寫資料");
       }
     },
   },
