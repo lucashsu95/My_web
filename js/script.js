@@ -407,6 +407,12 @@ const app = Vue.createApp({
           amount: "",
           class: "sixth",
         },
+        {
+          name: "咖啡",
+          carbon: 0.4,
+          amount: "",
+          class: "sixth",
+        },
       ],
       information: [
         {
