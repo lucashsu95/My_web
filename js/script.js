@@ -82,7 +82,7 @@ const app = Vue.createApp({
           img: "./images/image6.png",
           h: "Youtube減碳小短片",
           content: `
-                    美日一碳排，關注我們!
+                    每日一碳排，關注我們!
                     <a href='https://www.youtube.com/@pcf 0517' target="_blank">點我去我們的Youtube官網</a>
                     `,
         },

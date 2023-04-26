@@ -180,7 +180,7 @@ a {
 
 .carousel p {
   text-shadow: 3px 3px 7px black;
-  line-height: 42px;
+  line-height: 30px;
   font-size: 1.5rem;
   font-weight: bold;
 }
@@ -199,7 +199,6 @@ a {
 
 #services .slide {
   position: relative;
-  width: 75%;
   margin: auto;
 
   display: flex;
@@ -213,6 +212,7 @@ a {
 
   #services .slide {
     height: calc(500px + 4rem);
+    width: 75%;
   }
 }
 
@@ -276,8 +276,7 @@ a {
 
 #services .slide .slide-project .slide-body {
   text-align: justify;
-  line-height: 2;
-  font-size: 1.3rem;
+  font-size: 1.3em;
 }
 
 @media (min-width: 768px) {
@@ -347,7 +346,12 @@ a {
 
 #carbonComputer .Computer_container > div {
   margin: 0 auto;
-  padding: 1.2rem;
+}
+
+@media (min-width: 900px) {
+  #carbonComputer .Computer_container > div {
+    padding: 10px;
+  }
 }
 
 #carbonComputer .sech1 {
@@ -408,8 +412,13 @@ a {
   display: grid;
   border: 2px solid #ddd;
   margin: 5px auto;
-  grid-template-columns: 1fr 2fr 1fr;
   padding: 1.2rem;
+}
+
+@media (min-width: 900px) {
+  #carbonComputer .computer_tr {
+    grid-template-columns: 1fr 2fr 1fr;
+  }
 }
 
 #carbonComputer .computer_tr div {
@@ -452,10 +461,13 @@ a {
   overflow: auto;
   background: #ffe7e0;
 }
-#services .sech1,
-#ShoppingCart .sech1,
-#story .sech1 {
-  width: 80%;
+
+@media (min-width: 900px) {
+  #services .sech1,
+  #ShoppingCart .sech1,
+  #story .sech1 {
+    width: 80%;
+  }
 }
 
 #ShoppingCart::-webkit-scrollbar {
@@ -481,7 +493,7 @@ a {
 
 .select_container .select_radio {
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: bold;
   background: #ffc629;
   border-radius: 4px;
@@ -591,7 +603,12 @@ a {
 
   text-align: center;
   margin: 0 5px;
-  padding-left: 9%;
+}
+
+@media (min-width: 900px) {
+  #ShoppingCart .amount {
+    padding-left: 9%;
+  }
 }
 
 #ShoppingCart .price {
@@ -688,10 +705,14 @@ a {
   padding: 20px;
 }
 #CharInformation section {
-  padding: 25px;
   width: 100%;
   height: 100%;
   margin: 0 auto;
+}
+@media (min-width: 900px) {
+  #CharInformation section {
+    padding: 25px;
+  }
 }
 #CharInformation section > div {
   display: flex;
@@ -744,7 +765,6 @@ a {
 #story > .container {
   display: flex;
   margin: 30px auto;
-  width: 80%;
 }
 
 #story .card {
@@ -802,7 +822,6 @@ a {
 #test .test_box {
   position: absolute;
   width: 95%;
-  height: 80%;
 
   border-radius: 20px;
   padding: 25px;
@@ -817,6 +836,11 @@ a {
 
   background: url("../images/test-box.jpg");
   background-size: cover;
+}
+@media (min-width: 900px) {
+  #test .test_box {
+    height: 80%;
+  }
 }
 #test .test_box > span {
   font-size: 1.2em;
@@ -1004,7 +1028,7 @@ footer .footer-right {
 }
 .footer-left > div:nth-child(2) {
   margin: 20px;
-  line-height: 30px;
+  line-height: 20px;
 }
 .footer-left > form > div:nth-last-child(1) {
   display: flex;
@@ -1065,7 +1089,7 @@ footer .title {
   background-color: #0fd9b6;
   color: #eeff;
   text-align: center;
-  line-height: 40px;
+  line-height: 30px;
 }
 /* copyright End */
 /* 跳出視窗內容 Start */
@@ -1121,10 +1145,9 @@ footer .title {
 
   opacity: 0;
   transform: scale(0);
-  transition: all 0.3s;
+  transition: all 0.5s;
 
-  text-shadow: 2px 2px 7px black;
-  line-height: 32px;
+  line-height: 30px;
   font-size: 1rem;
 }
 
