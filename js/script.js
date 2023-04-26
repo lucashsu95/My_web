@@ -28,9 +28,11 @@ const app = Vue.createApp({
           img: "./images/image1.png",
           h: "低碳便當設計比賽",
           content: `
-                    張老闆希望讓更多年輕人知道健康的重要性，而推廣了低碳餐盒，但吃久了就會想換別的吃，那不如自己親手做一個低碳便當，不僅能更了解低碳的知識，也能吃得健康
-                        我們介由低碳便碳設計比賽了解現在年輕人口味，自製低碳便當~請大家自己動手做一餐低碳便當，把食材、成品的圖片上傳，填寫食材、使用多少克、還有食材的碳排放量，製作過程不僅能了解低碳知識，也能吃得健康，請大家踴躍參與。
-                        <a href="./file/創意低碳便當設計.docx" download>點我下載報名表</a>
+                    張老闆希望讓更多年輕人知道健康的重要性，而推廣了低碳餐盒，但吃久了就會想換別的吃
+                    ，那不如自己親手做一個低碳便當，不僅能更了解低碳的知識，也能吃得健康我們介由低碳
+                    便碳設計比賽了解現在年輕人口味，自製低碳便當~請大家自己動手做一餐低碳便當，把食
+                    材、成品的圖片上傳，填寫食材、使用多少克、還有食材的碳排放量，製作過程不僅能了解
+                    低碳知識，也能吃得健康，請大家踴躍參與。<a href="./file/創意低碳便當設計.docx" download>點我下載報名表</a>
                         `,
         },
         {
@@ -38,7 +40,9 @@ const app = Vue.createApp({
           img: "./images/image2.png",
           h: "減碳大作戰 !",
           content: `
-          我們還有設計出有趣的平台遊戲，遊戲名稱為減碳大作戰。遊戲內容主要是以玩家操控角色躲避高碳食物吃到低碳食物，介由玩遊戲的方式讓玩家了解到什麼是低碳食物什麼是高碳食物。<a href='https://reurl.cc/MR5yM4'>減碳大作戰</a>
+          我們還有設計出有趣的平台遊戲，遊戲名稱為減碳大作戰。遊戲內容主要是以玩家操控角色躲避
+          高碳食物吃到低碳食物，介由玩遊戲的方式讓玩家了解到什麼是低碳食物什麼是高碳食物。
+          <a href='https://reurl.cc/MR5yM4' target="_blank">減碳大作戰</a>
                     `,
         },
         {
@@ -60,7 +64,7 @@ const app = Vue.createApp({
                     如果你是一個不想自己查食物碳排並且手機沒有下載減碳計算APP無線版的話，我們強力推薦您這款「AI減碳相機」!，
                     AI的部分主要是用網路上一個軟體要teachable的軟體，可以透過上傳圖片的方式生成模型，就可以使用網站的攝像頭
                     來去辨識出是什麼食物。
-                    <a href='https://reurl.cc/EGl1mR'>點我去AI減碳相機</a>
+                    <a href='https://reurl.cc/EGl1mR' target="_blank">點我去AI減碳相機</a>
                     `,
         },
         {
@@ -69,7 +73,8 @@ const app = Vue.createApp({
           h: "LINE貼圖",
           content: `
                     為了可以在日常生活中呼籲更多人減碳，我們設計出可愛的動物LINE貼圖，可以到LINE貼圖小鋪看看喔!
-                    只要在LINE的官方的貼圖小鋪裡搜尋「減碳」，就可以看到我們可愛動物LINE貼圖了喔!<a href='https://store.line.me/stickershop/product/22416348/zh-Hant'>點我去LINE貼圖減碳小動物</a>
+                    只要在LINE的官方的貼圖小鋪裡搜尋「減碳」，就可以看到我們可愛動物LINE貼圖了喔!
+                    <a href='https://store.line.me/stickershop/product/22416348/zh-Hant' target="_blank">點我去LINE貼圖減碳小動物</a>
                     `,
         },
         {
@@ -78,7 +83,7 @@ const app = Vue.createApp({
           h: "Youtube減碳小短片",
           content: `
                     美日一碳排，關注我們!
-                    <a href='https://www.youtube.com/@pcf 0517'>點我去我們的Youtube官網</a>
+                    <a href='https://www.youtube.com/@pcf 0517' target="_blank">點我去我們的Youtube官網</a>
                     `,
         },
       ],
