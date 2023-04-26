@@ -822,6 +822,7 @@ a {
 #test .test_box {
   position: absolute;
   width: 95%;
+  height: 80%;
 
   border-radius: 20px;
   padding: 25px;
@@ -837,11 +838,7 @@ a {
   background: url("../images/test-box.jpg");
   background-size: cover;
 }
-@media (min-width: 900px) {
-  #test .test_box {
-    height: 80%;
-  }
-}
+
 #test .test_box > span {
   font-size: 1.2em;
 }
