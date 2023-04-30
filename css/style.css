@@ -9,6 +9,10 @@ body {
   overflow-x: hidden;
 }
 
+body.loading {
+  overflow: hidden;
+}
+
 a {
   text-decoration: none;
 }
@@ -87,6 +91,83 @@ a {
   background: #878787;
   margin: auto 30px;
 }
+
+/* ----------loading-animation Start ---------- */
+body.loading .loading_modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading_modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #eee;
+}
+
+.loading-animation {
+  position: fixed;
+  top: 48%;
+  left: 48%;
+  transform: translate(-50%, -50%);
+}
+
+.bo {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  animation: loading 1s infinite;
+}
+
+.bo1 {
+  animation-delay: 0s;
+  background-color: #faa;
+}
+
+.bo2 {
+  animation-delay: -0.25s;
+  background-color: #bff;
+}
+
+.bo3 {
+  animation-delay: -0.5s;
+  background-color: #ead;
+}
+
+.bo4 {
+  animation-delay: -0.75s;
+  background-color: #dfa;
+}
+
+@keyframes loading {
+  0% {
+    top: -45px;
+    left: -45px;
+  }
+  25% {
+    top: -45px;
+    left: 45px;
+  }
+  50% {
+    top: 45px;
+    left: 45px;
+  }
+  75% {
+    top: 45px;
+    left: -45px;
+  }
+  100% {
+    top: -45px;
+    left: -45px;
+  }
+}
+/* ----------loading-animation End ---------- */
 
 /* Nav Start */
 .nav__class {

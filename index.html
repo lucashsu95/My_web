@@ -30,6 +30,18 @@
 </head>
 
 <body>
+
+  <script>
+    document.querySelector('body').classList.add("loading");
+  </script>
+  <div class="loading_modal">
+    <div class="loading-animation">
+      <div class="bo bo1"></div>
+      <div class="bo bo2"></div>
+      <div class="bo bo3"></div>
+      <div class="bo bo4"></div>
+    </div>
+  </div>
   <div id="app">
     <a href="#Top" class="ToTop"></a>
     <div id="Top"></div>
@@ -168,27 +180,27 @@
         <div class="computer">
           <div class="select-computer">
             <div class="select-tag" @click="computer_now = 'first'">
-              <img src="./images/bread.png" alt="" />
+              <img src="./images/bread.png" alt=""  draggable="false"/>
               <span>全穀雜糧類</span>
             </div>
             <div class="select-tag" @click="computer_now = 'second'">
-              <img src="./images/meat.png" alt="" />
+              <img src="./images/meat.png" alt=""  draggable="false"/>
               <span>大魚肉蛋類</span>
             </div>
             <div class="select-tag" @click="computer_now = 'third'">
-              <img src="./images/vegetable.png" alt="" />
+              <img src="./images/vegetable.png" alt=""  draggable="false"/>
               <span>蔬菜類</span>
             </div>
             <div class="select-tag" @click="computer_now = 'fourth'">
-              <img src="./images/healthy-food.png" alt="" />
+              <img src="./images/healthy-food.png" alt=""  draggable="false"/>
               <span>水果類</span>
             </div>
             <div class="select-tag" @click="computer_now = 'fifth'">
-              <img src="./images/dairy.png" alt="" />
+              <img src="./images/dairy.png" alt=""  draggable="false"/>
               <span>乳品類</span>
             </div>
             <div class="select-tag" @click="computer_now = 'sixth'">
-              <img src="./images/nuts.png" alt="" />
+              <img src="./images/nuts.png" alt=""  draggable="false"/>
               <span>堅果種子類</span>
             </div>
           </div>
@@ -212,7 +224,7 @@
     <!-- 購物車 Start -->
     <section id="ShoppingCart">
       <h1 class="sech1">
-        <img src="./images/豬會飛LOGO2.png" />豬會飛
+        <img src="./images/豬會飛LOGO2.png" draggable="false" />豬會飛
         <span style="color: #ff7b00">線上訂購</span>
       </h1>
       <div class="select_container" data-aos="fade-right">
@@ -226,7 +238,7 @@
         <div class="center">
           <template v-for="product in products">
             <div v-if="product.product_class == select_value" class="ShoppingCart_box">
-              <img :src="product.img" alt="img" />
+              <img :src="product.img" alt="img" draggable="false"/>
               <p class="product-name"
                 :class="product.product_class === '減脂系列' && 'productClass1' || product.product_class === '增肌系列' && 'productClass2'|| product.product_class === '豪華系列' &&'productClass3'">
                 {{product.name}}
@@ -259,7 +271,7 @@
           <template v-for="product in products">
             <template v-if="product.amount > 0">
               <p>
-                <img :src="product.img" />{{product.name +' '+ product.amount
+                <img :src="product.img" draggable="false" />{{product.name +' '+ product.amount
                 + '盒'}}　
                 <button @click="fs_updateValue(product,product.amount - product.amount)" class="btn btn-outline-danger">
                   取消
@@ -319,7 +331,7 @@
       <div class="container">
         <!-- 1 -->
         <div class="card">
-          <img src="./images/餐盒1.jpg" class="card-img-top" alt="..." />
+          <img src="./images/餐盒1.jpg" class="card-img-top" alt="..." draggable="false"/>
           <div class="card-body">
             <h3 class="card-title">食材</h3>
             <p class="card-text">
@@ -329,7 +341,7 @@
         </div>
         <!-- 2 -->
         <div class="card">
-          <img src="./images/餐盒2.jpg" class="card-img-top" alt="..." />
+          <img src="./images/餐盒2.jpg" class="card-img-top" alt="..." draggable="false"/>
           <div class="card-body">
             <h3 class="card-title">餐具</h3>
             <p class="card-text">
@@ -339,7 +351,7 @@
         </div>
         <!-- 3 -->
         <div class="card">
-          <img src="./images/餐盒3.jpg" class="card-img-top" alt="..." />
+          <img src="./images/餐盒3.jpg" class="card-img-top" alt="..." draggable="false"/>
           <div class="card-body">
             <h3 class="card-title">環保</h3>
             <p class="card-text">
@@ -473,7 +485,7 @@
             <div id="MoreNews">
               <div v-for="data in datas" class="MoreNews_container" :id="data.id"
                 @click="fs_click_modalMoveTop(data.id)">
-                <img :src="data.img" />
+                <img :src="data.img" draggable="false"/>
               </div>
               <div class="MoreNews_content" @click="fs_click_modalMoveTop('close')">
                 <h4 class="MoreNews_content_title">{{text_h}}</h4>
@@ -503,6 +515,10 @@
     });
   </script>
   <!-- AOS End -->
+
+  <script>
+    document.querySelector('body').classList.remove("loading");
+  </script>
 </body>
 
 </html>
